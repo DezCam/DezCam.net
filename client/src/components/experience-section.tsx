@@ -7,7 +7,7 @@ const experiences = [
     period: "Jan 2019 - July 2024",
     description: "Performed multiple product management functions including SDR, CSM, APM, GTM, software development, and tech support while maintaining profitable trading record. Collaborated cross-functionally with teams to scale training processes and improve user satisfaction.",
     image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-    color: "navy"
+    color: "berkeley-blue"
   },
   {
     title: "Production Coordinator & Talent Liaison",
@@ -22,7 +22,7 @@ const experiences = [
     company: "Primerica Life Insurance",
     period: "Jan 2017 - Dec 2018",
     description: "Ranked #7 in California and #13 nationally in life insurance sales during 2017. Consistently surpassed $10k monthly sales quota through data-driven client relationship building and empathetic approach to addressing financial concerns.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400",
+    image: "/attached_assets/Pro Profile 20222 copy_1751482375328.JPG",
     color: "gray-500"
   },
   {
@@ -46,7 +46,7 @@ export default function ExperienceSection() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl font-bold text-navy mb-4">Professional Experience</h2>
+          <h2 className="text-4xl font-bold text-berkeley-blue mb-4">Professional Experience</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             A timeline of my professional journey and key accomplishments
           </p>
@@ -70,12 +70,12 @@ export default function ExperienceSection() {
                 <div className="md:grid md:grid-cols-2 md:gap-8 items-center">
                   <div className={index % 2 === 0 ? "md:text-right" : "md:order-2"}>
                     <div className={`bg-white p-6 rounded-lg shadow-lg border-l-4 ${
-                      exp.color === 'navy' ? 'border-navy' : 
+                      exp.color === 'berkeley-blue' ? 'border-berkeley-blue' : 
                       exp.color === 'blue-500' ? 'border-blue-500' : 
                       exp.color === 'green-600' ? 'border-green-600' :
                       'border-gray-500'
                     }`}>
-                      <h3 className="text-xl font-bold text-navy mb-2">{exp.title}</h3>
+                      <h3 className="text-xl font-bold text-berkeley-blue mb-2">{exp.title}</h3>
                       <p className="text-gray-600 mb-2">{exp.company}</p>
                       <p className="text-sm text-gray-500 mb-4">{exp.period}</p>
                       <p className="text-gray-700">{exp.description}</p>

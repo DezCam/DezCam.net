@@ -11,7 +11,7 @@ export default function AboutSection() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl font-bold text-navy mb-4">About Me</h2>
+          <h2 className="text-4xl font-bold text-berkeley-blue mb-4">About Me</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             UC Berkeley Haas graduate with entrepreneurial experience and a passion for turning 
             user insights into successful product strategies that drive business growth.
@@ -26,8 +26,8 @@ export default function AboutSection() {
             viewport={{ once: true }}
           >
             <img 
-              src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
-              alt="Modern office workspace" 
+              src="/attached_assets/Desmond Sather Tower_1751482345649.jpg" 
+              alt="Desmond Campbell at UC Berkeley Sather Tower" 
               className="rounded-xl shadow-lg w-full h-auto"
             />
           </motion.div>
@@ -54,7 +54,7 @@ export default function AboutSection() {
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.2 }}
               >
-                <div className="text-3xl font-bold text-navy">#7</div>
+                <div className="text-3xl font-bold text-berkeley-blue">#7</div>
                 <div className="text-gray-600">CA Insurance Ranking</div>
               </motion.div>
               <motion.div 
@@ -62,7 +62,7 @@ export default function AboutSection() {
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.2 }}
               >
-                <div className="text-3xl font-bold text-navy">5+</div>
+                <div className="text-3xl font-bold text-berkeley-blue">5+</div>
                 <div className="text-gray-600">Years Experience</div>
               </motion.div>
             </div>

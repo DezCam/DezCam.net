@@ -59,8 +59,8 @@ export default function HeroSection() {
           >
             <div className="w-80 h-80 rounded-full overflow-hidden shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=800" 
-                alt="Professional headshot" 
+                src="/attached_assets/Profile Haas_1751482315555.JPG" 
+                alt="Desmond Campbell at UC Berkeley Haas School of Business" 
                 className="w-full h-full object-cover"
               />
             </div>

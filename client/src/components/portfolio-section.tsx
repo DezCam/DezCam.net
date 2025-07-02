@@ -34,7 +34,7 @@ export default function PortfolioSection() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl font-bold text-navy mb-4">Featured Projects</h2>
+          <h2 className="text-4xl font-bold text-berkeley-blue mb-4">Featured Projects</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Showcasing key projects and achievements that demonstrate my expertise
           </p>
@@ -57,7 +57,7 @@ export default function PortfolioSection() {
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
-                <h3 className="text-xl font-bold text-navy mb-2">{project.title}</h3>
+                <h3 className="text-xl font-bold text-berkeley-blue mb-2">{project.title}</h3>
                 <p className="text-gray-600 mb-4 leading-relaxed">
                   {project.description}
                 </p>
@@ -67,8 +67,8 @@ export default function PortfolioSection() {
                       key={tagIndex} 
                       variant="secondary"
                       className={`${
-                        tagIndex === 0 ? 'bg-navy text-white hover:bg-navy/90' :
-                        tagIndex === 1 ? 'bg-blue-500 text-white hover:bg-blue-500/90' :
+                        tagIndex === 0 ? 'bg-berkeley-blue text-white hover:bg-berkeley-blue/90' :
+                        tagIndex === 1 ? 'bg-california-gold text-berkeley-blue hover:bg-california-gold/90' :
                         'bg-gray-500 text-white hover:bg-gray-500/90'
                       }`}
                     >
@@ -76,7 +76,7 @@ export default function PortfolioSection() {
                     </Badge>
                   ))}
                 </div>
-                <button className="text-navy font-semibold hover:text-blue-500 transition-colors flex items-center">
+                <button className="text-berkeley-blue font-semibold hover:text-california-gold transition-colors flex items-center">
                   View Case Study 
                   <ArrowRight className="ml-1 h-4 w-4" />
                 </button>

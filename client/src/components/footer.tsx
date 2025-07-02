@@ -39,7 +39,9 @@ export default function Footer() {
               </svg>
             </motion.a>
             <motion.a 
-              href="#" 
+              href="https://github.com/DezCam" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-california-gold hover:text-white transition-colors"
               whileHover={{ scale: 1.2 }}
               transition={{ duration: 0.2 }}

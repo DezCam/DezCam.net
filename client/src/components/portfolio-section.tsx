@@ -61,7 +61,11 @@ export default function PortfolioSection() {
               <img 
                 src={project.image} 
                 alt={project.title}
-                className="w-full h-48 object-cover"
+                className={`w-full h-48 ${
+                  project.image.includes('loyalpup-logo') 
+                    ? 'object-contain bg-gradient-to-br from-yellow-100 to-yellow-50 p-4' 
+                    : 'object-cover'
+                }`}
               />
               <div className="p-6">
                 <h3 className="text-xl font-bold text-berkeley-blue mb-2">{project.title}</h3>

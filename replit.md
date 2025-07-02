@@ -159,6 +159,12 @@ Changelog:
   * Added quantitative achievement to about section statistics
   * Highlighted data analysis and risk management skills for PM roles
   * Updated about section narrative to include trading performance context
+- July 02, 2025. Integrated LoyalPup startup branding and link:
+  * Replaced pet product placeholder with authentic LoyalPup logo
+  * Added direct Instagram link (https://www.instagram.com/loyalpup_ucb/)
+  * Updated project description to highlight organic treats for working dogs and mental health awareness
+  * Enhanced portfolio component to support clickable external links
+  * Fixed image serving by migrating all photos to public directory
 ```
 
 ## User Preferences

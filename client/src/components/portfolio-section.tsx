@@ -10,10 +10,11 @@ const projects = [
     tags: ["Data Analysis", "Risk Management", "Quantitative Skills"]
   },
   {
-    title: "Pet Product Startup - UC Berkeley Entrepreneurship Challenge",
-    description: "Led team to 3rd place finish in Haas entrepreneurship challenge, launching pet product business that generated several hundred dollars in first week. Later validated product-market fit when Trader Joe's stocked similar product at identical price point.",
-    image: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
-    tags: ["Entrepreneurship", "Product-Market Fit", "Team Leadership"]
+    title: "LoyalPup - Organic Treats for Working Dogs",
+    description: "Co-founded pet product startup earning 3rd place at UC Berkeley Haas Entrepreneurship Challenge. Developed organic treats targeting working dogs while supporting mental health awareness, demonstrating product-market fit validation and social impact integration.",
+    image: "/images/loyalpup-logo.png",
+    tags: ["Entrepreneurship", "Product-Market Fit", "Social Impact"],
+    link: "https://www.instagram.com/loyalpup_ucb/"
   },
   {
     title: "Trading Platform Multi-Function Product Management",
@@ -82,10 +83,22 @@ export default function PortfolioSection() {
                     </Badge>
                   ))}
                 </div>
-                <button className="text-berkeley-blue font-semibold hover:text-california-gold transition-colors flex items-center">
-                  View Case Study 
-                  <ArrowRight className="ml-1 h-4 w-4" />
-                </button>
+                {project.link ? (
+                  <a 
+                    href={project.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-berkeley-blue font-semibold hover:text-california-gold transition-colors flex items-center"
+                  >
+                    View Project 
+                    <ArrowRight className="ml-1 h-4 w-4" />
+                  </a>
+                ) : (
+                  <button className="text-berkeley-blue font-semibold hover:text-california-gold transition-colors flex items-center">
+                    View Case Study 
+                    <ArrowRight className="ml-1 h-4 w-4" />
+                  </button>
+                )}
               </div>
             </motion.div>
           ))}

@@ -31,7 +31,7 @@ const projects = [
   {
     title: "Kratos Combat Club - Martial Arts Academy",
     description: "Founded and operated martial arts academy (2007-2014) serving at-risk youth programs, children's birthday parties, women's self-defense classes, and private training. Built foundation of discipline, resilience, and leadership that drives entrepreneurial success. Taught intangibles: self-control, focus, mental toughness, humility, and respect.",
-    image: "/images/kratos-combat-club.png",
+    image: "/images/kratos-combat-club-jump.jpg",
     tags: ["Entrepreneurship", "Leadership Development", "Community Impact"]
   }
 ];
@@ -71,7 +71,7 @@ export default function PortfolioSection() {
                   project.image.includes('loyalpup-logo') 
                     ? 'object-contain bg-gradient-to-br from-yellow-100 to-yellow-50 p-4' 
                     : project.image.includes('kratos-combat-club')
-                    ? 'object-cover brightness-110 contrast-105'
+                    ? 'object-cover object-center'
                     : 'object-cover'
                 }`}
               />

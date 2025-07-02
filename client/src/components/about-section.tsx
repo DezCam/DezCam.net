@@ -48,7 +48,20 @@ export default function AboutSection() {
               business that generated several hundred dollars in its first week. I later saw validation of 
               our product-market fit when Trader Joe's began stocking a similar product at our exact price point.
             </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              My analytical skills are demonstrated through exceptional trading performance, achieving a 1,400% 
+              return in just 4 months. This quantitative success showcases the data-driven decision making and 
+              risk management abilities I bring to product management roles.
+            </p>
             <div className="grid grid-cols-2 gap-4 pt-4">
+              <motion.div 
+                className="text-center p-4 bg-white rounded-lg shadow-sm"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.2 }}
+              >
+                <div className="text-3xl font-bold text-berkeley-blue">1,400%</div>
+                <div className="text-gray-600">Trading Return (4 months)</div>
+              </motion.div>
               <motion.div 
                 className="text-center p-4 bg-white rounded-lg shadow-sm"
                 whileHover={{ scale: 1.05 }}
@@ -56,14 +69,6 @@ export default function AboutSection() {
               >
                 <div className="text-3xl font-bold text-berkeley-blue">#7</div>
                 <div className="text-gray-600">CA Insurance Ranking</div>
-              </motion.div>
-              <motion.div 
-                className="text-center p-4 bg-white rounded-lg shadow-sm"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.2 }}
-              >
-                <div className="text-3xl font-bold text-berkeley-blue">5+</div>
-                <div className="text-gray-600">Years Experience</div>
               </motion.div>
             </div>
           </motion.div>

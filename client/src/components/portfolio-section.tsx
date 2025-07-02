@@ -4,6 +4,12 @@ import { Badge } from "@/components/ui/badge";
 
 const projects = [
   {
+    title: "Trading Performance: $100K to $1.5M in 4 Months",
+    description: "Achieved exceptional 1,400% return in paper trading account, demonstrating advanced quantitative analysis, risk management, and data-driven decision making. This performance showcases analytical skills directly applicable to product management and business strategy.",
+    image: "/attached_assets/Screenshot%202025-07-02%20at%2012.26.22%20PM_1751484387397.png",
+    tags: ["Data Analysis", "Risk Management", "Quantitative Skills"]
+  },
+  {
     title: "Pet Product Startup - UC Berkeley Entrepreneurship Challenge",
     description: "Led team to 3rd place finish in Haas entrepreneurship challenge, launching pet product business that generated several hundred dollars in first week. Later validated product-market fit when Trader Joe's stocked similar product at identical price point.",
     image: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",

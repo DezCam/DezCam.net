@@ -154,6 +154,11 @@ Changelog:
   * Added Sather Tower evening photo to about section
   * Used professional headshot in experience section
   * All placeholder images replaced with authentic professional photos
+- July 02, 2025. Added trading performance showcase:
+  * Featured exceptional 1,400% trading return (4 months) as lead portfolio project
+  * Added quantitative achievement to about section statistics
+  * Highlighted data analysis and risk management skills for PM roles
+  * Updated about section narrative to include trading performance context
 ```
 
 ## User Preferences

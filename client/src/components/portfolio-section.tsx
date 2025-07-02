@@ -30,9 +30,14 @@ const projects = [
   },
   {
     title: "Kratos Combat Club - Martial Arts Academy",
-    description: "Founded and operated martial arts academy (2007-2014) serving at-risk youth programs, children's birthday parties, women's self-defense classes, and private training. Built foundation of discipline, resilience, and leadership that drives entrepreneurial success. Taught intangibles: self-control, focus, mental toughness, humility, and respect.",
+    description: "Founded and operated martial arts academy (2007-2014) serving diverse communities with dual black belts in Tae Kwon Do and Ninjutsu. Specialized programs included Coalition for At Risk Youth (CARY) where I trained hundreds of kids over intensive 3-day cycles, women's self-defense classes, children's birthday parties, and private training. Built entrepreneurial foundation teaching intangibles: self-control, focus, mental toughness, humility, and respect.",
     image: "/images/kratos-combat-club-jump.jpg",
-    tags: ["Entrepreneurship", "Leadership Development", "Community Impact"]
+    tags: ["Entrepreneurship", "Leadership Development", "Community Impact"],
+    caseStudy: {
+      challenge: "Serve at-risk youth through martial arts education while building sustainable business model",
+      solution: "Developed intensive training programs cycling hundreds of students through structured sessions, emphasizing character development alongside physical skills",
+      impact: "Built foundation of discipline and resilience that drives current entrepreneurial success and leadership approach"
+    }
   }
 ];
 
@@ -105,6 +110,15 @@ export default function PortfolioSection() {
                     View Project 
                     <ArrowRight className="ml-1 h-4 w-4" />
                   </a>
+                ) : project.caseStudy ? (
+                  <div className="mt-4 p-4 bg-gray-50 rounded-lg">
+                    <h4 className="font-semibold text-berkeley-blue mb-2">Case Study Highlights:</h4>
+                    <div className="text-sm text-gray-700 space-y-2">
+                      <p><strong>Challenge:</strong> {project.caseStudy.challenge}</p>
+                      <p><strong>Solution:</strong> {project.caseStudy.solution}</p>
+                      <p><strong>Impact:</strong> {project.caseStudy.impact}</p>
+                    </div>
+                  </div>
                 ) : (
                   <button className="text-berkeley-blue font-semibold hover:text-california-gold transition-colors flex items-center">
                     View Case Study 

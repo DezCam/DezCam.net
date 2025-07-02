@@ -59,7 +59,7 @@ export default function HeroSection() {
           >
             <div className="w-80 h-80 rounded-full overflow-hidden shadow-2xl">
               <img 
-                src="/attached_assets/Profile Haas_1751482315555.JPG" 
+                src="/attached_assets/Profile%20Haas_1751482315555.JPG" 
                 alt="Desmond Campbell at UC Berkeley Haas School of Business" 
                 className="w-full h-full object-cover"
               />

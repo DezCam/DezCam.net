@@ -26,7 +26,7 @@ export default function AboutSection() {
             viewport={{ once: true }}
           >
             <img 
-              src="/attached_assets/Desmond Sather Tower_1751482345649.jpg" 
+              src="/attached_assets/Desmond%20Sather%20Tower_1751482345649.jpg" 
               alt="Desmond Campbell at UC Berkeley Sather Tower" 
               className="rounded-xl shadow-lg w-full h-auto"
             />

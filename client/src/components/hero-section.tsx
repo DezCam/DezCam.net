@@ -31,7 +31,7 @@ export default function HeroSection() {
               Product Management & Business Strategy Expert
             </p>
             <p className="text-lg mb-8 text-blue-100 leading-relaxed">
-              UC Berkeley Haas graduate with proven entrepreneurial experience and expertise in turning data insights into successful product strategies.
+              UC Berkeley Haas graduate with entrepreneurial experience building MVPs and launching successful products. Passionate about creating products that inspire and change people's lives.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 

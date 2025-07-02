@@ -71,8 +71,8 @@ export default function ContactSection() {
     {
       icon: Mail,
       title: "Email",
-      value: "desmondcampbell@berkeley.edu",
-      href: "mailto:desmondcampbell@berkeley.edu"
+      value: "Desmondjr88@gmail.com",
+      href: "mailto:Desmondjr88@gmail.com"
     },
     {
       icon: Phone,
@@ -100,7 +100,7 @@ export default function ContactSection() {
         >
           <h2 className="text-4xl font-bold text-navy mb-4">Get In Touch</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Let's discuss how we can work together to drive innovation and growth
+            Ready to build products that inspire people to create lives they love. Currently developing multiple MVPs to bridge into product management.
           </p>
         </motion.div>
         

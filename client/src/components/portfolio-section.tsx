@@ -4,22 +4,22 @@ import { Badge } from "@/components/ui/badge";
 
 const projects = [
   {
-    title: "Trading Platform User Experience Optimization",
-    description: "Collaborated with development teams to scale user training processes at Toshi Markets, resulting in 4% user-to-customer conversion rate improvement and increased user satisfaction with trading products and services.",
+    title: "Pet Product Startup - UC Berkeley Entrepreneurship Challenge",
+    description: "Led team to 3rd place finish in Haas entrepreneurship challenge, launching pet product business that generated several hundred dollars in first week. Later validated product-market fit when Trader Joe's stocked similar product at identical price point.",
+    image: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
+    tags: ["Entrepreneurship", "Product-Market Fit", "Team Leadership"]
+  },
+  {
+    title: "Trading Platform Multi-Function Product Management",
+    description: "Performed multiple product management functions at Toshi Markets including SDR, CSM, APM, and GTM while maintaining profitable trading record. Led cross-functional collaboration to scale user training processes and improve satisfaction.",
     image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
-    tags: ["User Research", "Cross-functional", "Product Strategy"]
+    tags: ["Product Management", "Cross-functional", "User Experience"]
   },
   {
     title: "High-Profile Event Production Management",
-    description: "Managed stakeholder alignment and cross-functional collaboration for major events including Grammys, E3, and Samsung campaigns. Delivered camera-ready results through effective project coordination and vendor management.",
+    description: "Managed stakeholder alignment and cross-functional collaboration for major events including Grammys, E3, and Samsung campaigns. Transformed creative ideas into tangible results under tight deadlines through effective coordination.",
     image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
-    tags: ["Project Management", "Stakeholder", "Coordination"]
-  },
-  {
-    title: "Financial Services Customer Success Program",
-    description: "Built strong client relationships at Primerica by addressing financial concerns with empathy, achieving #7 ranking in California and consistently exceeding $10k monthly sales quotas through data-driven insights.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
-    tags: ["Customer Success", "Sales Strategy", "Relationship Building"]
+    tags: ["Project Management", "Creative Vision", "Stakeholder Management"]
   }
 ];
 

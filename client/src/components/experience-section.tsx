@@ -5,7 +5,7 @@ const experiences = [
     title: "Trading Analyst",
     company: "Toshi Markets",
     period: "Jan 2019 - July 2024",
-    description: "Collaborated cross-functionally with development and management teams to scale training processes, resulting in increased user satisfaction. Analyzed economic data and market trends, achieving 4% user-to-customer conversion rate and ~0.8% positive market movement per trade.",
+    description: "Performed multiple product management functions including SDR, CSM, APM, GTM, software development, and tech support while maintaining profitable trading record. Collaborated cross-functionally with teams to scale training processes and improve user satisfaction.",
     image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
     color: "navy"
   },
@@ -21,9 +21,17 @@ const experiences = [
     title: "District Leader",
     company: "Primerica Life Insurance",
     period: "Jan 2017 - Dec 2018",
-    description: "Consistently surpassed $10k monthly sales quota and ranked #7 leading life insurance salesman in California in 2017. Achieved regional office record for fastest certification and promotion through outstanding client service and collaborative teamwork.",
+    description: "Ranked #7 in California and #13 nationally in life insurance sales during 2017. Consistently surpassed $10k monthly sales quota through data-driven client relationship building and empathetic approach to addressing financial concerns.",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400",
     color: "gray-500"
+  },
+  {
+    title: "Mobile Martial Arts Business Owner",
+    company: "Self-Employed",
+    period: "Early Career",
+    description: "Built and operated mobile martial arts business, contracting with at-risk youth programs. Developed entrepreneurial mindset, discipline, and resilience that later fueled passion for product management and creating products that change lives.",
+    image: "https://images.unsplash.com/photo-1555597408-3a5c1aa1b4b4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400",
+    color: "green-600"
   }
 ];
 
@@ -64,6 +72,7 @@ export default function ExperienceSection() {
                     <div className={`bg-white p-6 rounded-lg shadow-lg border-l-4 ${
                       exp.color === 'navy' ? 'border-navy' : 
                       exp.color === 'blue-500' ? 'border-blue-500' : 
+                      exp.color === 'green-600' ? 'border-green-600' :
                       'border-gray-500'
                     }`}>
                       <h3 className="text-xl font-bold text-navy mb-2">{exp.title}</h3>
@@ -84,6 +93,7 @@ export default function ExperienceSection() {
                 <div className={`absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full hidden md:block ${
                   exp.color === 'navy' ? 'bg-navy' : 
                   exp.color === 'blue-500' ? 'bg-blue-500' : 
+                  exp.color === 'green-600' ? 'bg-green-600' :
                   'bg-gray-500'
                 }`} style={{ top: '2rem' }}></div>
               </motion.div>

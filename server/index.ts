@@ -1,13 +1,25 @@
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
+import path from "path";
 
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// Serve attached assets
-app.use('/attached_assets', express.static('attached_assets'));
+// Serve attached assets with proper MIME types
+app.use('/attached_assets', express.static('attached_assets', {
+  setHeaders: (res, filePath) => {
+    const ext = path.extname(filePath).toLowerCase();
+    if (ext === '.png') {
+      res.setHeader('Content-Type', 'image/png');
+    } else if (ext === '.jpg' || ext === '.jpeg') {
+      res.setHeader('Content-Type', 'image/jpeg');
+    } else if (ext === '.gif') {
+      res.setHeader('Content-Type', 'image/gif');
+    }
+  }
+}));
 
 app.use((req, res, next) => {
   const start = Date.now();

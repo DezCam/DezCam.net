@@ -6,7 +6,7 @@ const projects = [
   {
     title: "Trading Performance: $100K to $1.5M in 4 Months",
     description: "Achieved exceptional 1,400% return in paper trading account, demonstrating advanced quantitative analysis, risk management, and data-driven decision making. This performance showcases analytical skills directly applicable to product management and business strategy.",
-    image: "/attached_assets/Screenshot%202025-07-02%20at%2012.26.22%20PM_1751484387397.png",
+    image: "/images/trading-performance.png",
     tags: ["Data Analysis", "Risk Management", "Quantitative Skills"]
   },
   {

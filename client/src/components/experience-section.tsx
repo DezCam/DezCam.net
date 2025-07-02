@@ -30,7 +30,7 @@ const experiences = [
     company: "Self-Employed",
     period: "Early Career",
     description: "Built and operated mobile martial arts business, contracting with at-risk youth programs. Developed entrepreneurial mindset, discipline, and resilience that later fueled passion for product management and creating products that change lives.",
-    image: "https://images.unsplash.com/photo-1555597408-3a5c1aa1b4b4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400",
+    image: "/images/martial-arts-students.jpg",
     color: "green-600"
   }
 ];

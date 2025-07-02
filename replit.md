@@ -144,6 +144,11 @@ Changelog:
   * Updated About section with Trader Joe's product validation story
   * Updated contact info to use primary Gmail address
   * Added MVP development messaging to contact section
+- July 02, 2025. Implemented UC Berkeley color theme:
+  * Updated primary color scheme to Berkeley Blue (hsl(217, 89%, 25%)) and California Gold (hsl(45, 100%, 51%))
+  * Applied Berkeley colors throughout navigation, hero section, skills, contact, and footer
+  * Maintained accessibility with proper contrast ratios
+  * Updated CSS variables and utility classes for consistent theming
 ```
 
 ## User Preferences

@@ -15,17 +15,18 @@
   --card-foreground: hsl(222, 84%, 5%);
   --border: hsl(214, 32%, 91%);
   --input: hsl(214, 32%, 91%);
-  --primary: hsl(221, 83%, 53%);
+  --primary: hsl(217, 89%, 25%);
   --primary-foreground: hsl(210, 40%, 98%);
   --secondary: hsl(210, 40%, 96%);
-  --secondary-foreground: hsl(222, 84%, 5%);
-  --accent: hsl(210, 40%, 96%);
-  --accent-foreground: hsl(222, 84%, 5%);
+  --secondary-foreground: hsl(217, 89%, 25%);
+  --accent: hsl(45, 100%, 51%);
+  --accent-foreground: hsl(217, 89%, 25%);
   --destructive: hsl(0, 84%, 60%);
   --destructive-foreground: hsl(210, 40%, 98%);
-  --ring: hsl(221, 83%, 53%);
+  --ring: hsl(217, 89%, 25%);
   --radius: 0.5rem;
-  --navy: hsl(221, 83%, 53%);
+  --berkeley-blue: hsl(217, 89%, 25%);
+  --california-gold: hsl(45, 100%, 51%);
   --light-gray: hsl(210, 40%, 98%);
 }
 
@@ -68,19 +69,44 @@
 
 @layer utilities {
   .gradient-bg {
-    background: linear-gradient(135deg, hsl(221, 83%, 53%) 0%, hsl(217, 91%, 60%) 100%);
+    background: linear-gradient(135deg, hsl(217, 89%, 25%) 0%, hsl(217, 89%, 35%) 100%);
   }
   
+  .text-berkeley-blue {
+    color: hsl(217, 89%, 25%);
+  }
+  
+  .bg-berkeley-blue {
+    background-color: hsl(217, 89%, 25%);
+  }
+  
+  .border-berkeley-blue {
+    border-color: hsl(217, 89%, 25%);
+  }
+  
+  .text-california-gold {
+    color: hsl(45, 100%, 51%);
+  }
+  
+  .bg-california-gold {
+    background-color: hsl(45, 100%, 51%);
+  }
+  
+  .border-california-gold {
+    border-color: hsl(45, 100%, 51%);
+  }
+  
+  /* Legacy navy classes for compatibility */
   .text-navy {
-    color: hsl(221, 83%, 53%);
+    color: hsl(217, 89%, 25%);
   }
   
   .bg-navy {
-    background-color: hsl(221, 83%, 53%);
+    background-color: hsl(217, 89%, 25%);
   }
   
   .border-navy {
-    border-color: hsl(221, 83%, 53%);
+    border-color: hsl(217, 89%, 25%);
   }
   
   .bg-light-gray {

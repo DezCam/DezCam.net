@@ -5,7 +5,7 @@ const skillCategories = [
   {
     title: "Product Management",
     icon: Users,
-    color: "navy",
+    color: "berkeley-blue",
     skills: [
       { name: "User Research", level: 4 },
       { name: "Project Management", level: 5 },
@@ -15,7 +15,7 @@ const skillCategories = [
   {
     title: "Data & Analytics",
     icon: BarChart3,
-    color: "blue-500",
+    color: "california-gold",
     skills: [
       { name: "SQL & Python", level: 4 },
       { name: "Financial Modeling", level: 5 },
@@ -25,7 +25,7 @@ const skillCategories = [
   {
     title: "Business Strategy",
     icon: TrendingUp,
-    color: "gray-600",
+    color: "berkeley-blue",
     skills: [
       { name: "Entrepreneurship", level: 5 },
       { name: "Sales & Marketing", level: 4 },
@@ -39,19 +39,19 @@ const certifications = [
     title: "BS Business Administration",
     institution: "UC Berkeley, Haas School of Business",
     icon: GraduationCap,
-    color: "navy"
+    color: "berkeley-blue"
   },
   {
     title: "Product Management First Steps",
     institution: "LinkedIn Learning",
     icon: Tag,
-    color: "blue-500"
+    color: "california-gold"
   },
   {
     title: "Professional Forex Trader",
     institution: "Online Trading Academy",
     icon: Award,
-    color: "gray-600"
+    color: "berkeley-blue"
   }
 ];
 
@@ -100,8 +100,8 @@ export default function SkillsSection() {
               >
                 <div className="text-center mb-6">
                   <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 ${
-                    category.color === 'navy' ? 'bg-navy' :
-                    category.color === 'blue-500' ? 'bg-blue-500' :
+                    category.color === 'berkeley-blue' ? 'bg-berkeley-blue' :
+                    category.color === 'california-gold' ? 'bg-california-gold' :
                     'bg-gray-600'
                   }`}>
                     <IconComponent className="text-white h-8 w-8" />
@@ -113,8 +113,8 @@ export default function SkillsSection() {
                     <div key={skillIndex} className="flex items-center justify-between">
                       <span className="text-gray-700">{skill.name}</span>
                       <div className={`${
-                        category.color === 'navy' ? 'text-navy' :
-                        category.color === 'blue-500' ? 'text-blue-500' :
+                        category.color === 'berkeley-blue' ? 'text-berkeley-blue' :
+                        category.color === 'california-gold' ? 'text-california-gold' :
                         'text-gray-600'
                       }`}>
                         <SkillLevel level={skill.level} />
@@ -147,14 +147,14 @@ export default function SkillsSection() {
                   transition={{ duration: 0.2 }}
                 >
                   <div className={`w-12 h-12 rounded-full flex items-center justify-center ${
-                    cert.color === 'navy' ? 'bg-navy' :
-                    cert.color === 'blue-500' ? 'bg-blue-500' :
+                    cert.color === 'berkeley-blue' ? 'bg-berkeley-blue' :
+                    cert.color === 'california-gold' ? 'bg-california-gold' :
                     'bg-gray-600'
                   }`}>
                     <IconComponent className="text-white h-6 w-6" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-navy">{cert.title}</h4>
+                    <h4 className="font-semibold text-berkeley-blue">{cert.title}</h4>
                     <p className="text-gray-600 text-sm">{cert.institution}</p>
                   </div>
                 </motion.div>

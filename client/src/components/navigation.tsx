@@ -32,43 +32,43 @@ export default function Navigation() {
     <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="font-bold text-xl text-navy">Desmond Campbell</div>
+          <div className="font-bold text-xl text-berkeley-blue">Desmond Campbell</div>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             <button 
               onClick={() => scrollToSection('home')}
-              className="text-gray-600 hover:text-navy transition-colors"
+              className="text-gray-600 hover:text-berkeley-blue transition-colors"
             >
               Home
             </button>
             <button 
               onClick={() => scrollToSection('about')}
-              className="text-gray-600 hover:text-navy transition-colors"
+              className="text-gray-600 hover:text-berkeley-blue transition-colors"
             >
               About
             </button>
             <button 
               onClick={() => scrollToSection('experience')}
-              className="text-gray-600 hover:text-navy transition-colors"
+              className="text-gray-600 hover:text-berkeley-blue transition-colors"
             >
               Experience
             </button>
             <button 
               onClick={() => scrollToSection('skills')}
-              className="text-gray-600 hover:text-navy transition-colors"
+              className="text-gray-600 hover:text-berkeley-blue transition-colors"
             >
               Skills
             </button>
             <button 
               onClick={() => scrollToSection('portfolio')}
-              className="text-gray-600 hover:text-navy transition-colors"
+              className="text-gray-600 hover:text-berkeley-blue transition-colors"
             >
               Portfolio
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="text-gray-600 hover:text-navy transition-colors"
+              className="text-gray-600 hover:text-berkeley-blue transition-colors"
             >
               Contact
             </button>
@@ -80,7 +80,7 @@ export default function Navigation() {
               variant="ghost"
               size="sm"
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-600 hover:text-navy"
+              className="text-gray-600 hover:text-berkeley-blue"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
@@ -94,37 +94,37 @@ export default function Navigation() {
           <div className="px-2 pt-2 pb-3 space-y-1">
             <button
               onClick={() => scrollToSection('home')}
-              className="block w-full text-left px-3 py-2 text-gray-600 hover:text-navy"
+              className="block w-full text-left px-3 py-2 text-gray-600 hover:text-berkeley-blue"
             >
               Home
             </button>
             <button
               onClick={() => scrollToSection('about')}
-              className="block w-full text-left px-3 py-2 text-gray-600 hover:text-navy"
+              className="block w-full text-left px-3 py-2 text-gray-600 hover:text-berkeley-blue"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection('experience')}
-              className="block w-full text-left px-3 py-2 text-gray-600 hover:text-navy"
+              className="block w-full text-left px-3 py-2 text-gray-600 hover:text-berkeley-blue"
             >
               Experience
             </button>
             <button
               onClick={() => scrollToSection('skills')}
-              className="block w-full text-left px-3 py-2 text-gray-600 hover:text-navy"
+              className="block w-full text-left px-3 py-2 text-gray-600 hover:text-berkeley-blue"
             >
               Skills
             </button>
             <button
               onClick={() => scrollToSection('portfolio')}
-              className="block w-full text-left px-3 py-2 text-gray-600 hover:text-navy"
+              className="block w-full text-left px-3 py-2 text-gray-600 hover:text-berkeley-blue"
             >
               Portfolio
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="block w-full text-left px-3 py-2 text-gray-600 hover:text-navy"
+              className="block w-full text-left px-3 py-2 text-gray-600 hover:text-berkeley-blue"
             >
               Contact
             </button>

@@ -4,7 +4,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-navy text-white py-12">
+    <footer className="bg-berkeley-blue text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           className="text-center"
@@ -14,13 +14,13 @@ export default function Footer() {
           viewport={{ once: true }}
         >
           <h3 className="text-2xl font-bold mb-4">Desmond Campbell</h3>
-          <p className="text-blue-200 mb-6">Product Management & Business Strategy Expert</p>
+          <p className="text-california-gold mb-6">Product Management & Business Strategy Expert</p>
           <div className="flex justify-center space-x-6 mb-8">
             <motion.a 
               href="https://linkedin.com/in/desmondcampbell" 
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-200 hover:text-white transition-colors"
+              className="text-california-gold hover:text-white transition-colors"
               whileHover={{ scale: 1.2 }}
               transition={{ duration: 0.2 }}
             >
@@ -30,7 +30,7 @@ export default function Footer() {
             </motion.a>
             <motion.a 
               href="#" 
-              className="text-blue-200 hover:text-white transition-colors"
+              className="text-california-gold hover:text-white transition-colors"
               whileHover={{ scale: 1.2 }}
               transition={{ duration: 0.2 }}
             >
@@ -40,7 +40,7 @@ export default function Footer() {
             </motion.a>
             <motion.a 
               href="#" 
-              className="text-blue-200 hover:text-white transition-colors"
+              className="text-california-gold hover:text-white transition-colors"
               whileHover={{ scale: 1.2 }}
               transition={{ duration: 0.2 }}
             >
@@ -49,7 +49,7 @@ export default function Footer() {
               </svg>
             </motion.a>
           </div>
-          <p className="text-blue-200 text-sm">
+          <p className="text-california-gold text-sm">
             © {currentYear} Desmond Campbell. All rights reserved.
           </p>
         </motion.div>

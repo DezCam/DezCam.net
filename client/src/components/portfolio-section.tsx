@@ -14,7 +14,13 @@ const projects = [
     description: "Co-founded pet product startup earning 3rd place at UC Berkeley Haas Entrepreneurship Challenge. Developed organic treats targeting working dogs while supporting mental health awareness, demonstrating product-market fit validation and social impact integration.",
     image: "/images/loyalpup-logo.png",
     tags: ["Entrepreneurship", "Product-Market Fit", "Social Impact"],
-    link: "https://www.instagram.com/loyalpup_ucb/"
+    link: "https://www.instagram.com/loyalpup_ucb/",
+    instagramPost: "https://www.instagram.com/p/CnyK35QLTMb/",
+    caseStudy: {
+      challenge: "Create sustainable pet product business addressing working dog nutrition needs while promoting mental health awareness",
+      solution: "Developed organic treat formulation specifically for working dogs, integrating social impact mission with entrepreneurship challenge requirements",
+      impact: "Achieved 3rd place at prestigious UC Berkeley Haas Entrepreneurship Challenge, validated product-market fit through Trader Joe's stocking similar product at identical price point"
+    }
   },
   {
     title: "Trading Platform Multi-Function Product Management",
@@ -101,15 +107,38 @@ export default function PortfolioSection() {
                   ))}
                 </div>
                 {project.link ? (
-                  <a 
-                    href={project.link} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-berkeley-blue font-semibold hover:text-california-gold transition-colors flex items-center"
-                  >
-                    View Project 
-                    <ArrowRight className="ml-1 h-4 w-4" />
-                  </a>
+                  <div className="space-y-2">
+                    <a 
+                      href={project.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-berkeley-blue font-semibold hover:text-california-gold transition-colors flex items-center"
+                    >
+                      View Project 
+                      <ArrowRight className="ml-1 h-4 w-4" />
+                    </a>
+                    {project.instagramPost && (
+                      <a 
+                        href={project.instagramPost} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-sm text-gray-600 hover:text-berkeley-blue transition-colors flex items-center"
+                      >
+                        View Instagram Case Study
+                        <ArrowRight className="ml-1 h-3 w-3" />
+                      </a>
+                    )}
+                    {project.caseStudy && (
+                      <div className="mt-4 p-4 bg-gray-50 rounded-lg">
+                        <h4 className="font-semibold text-berkeley-blue mb-2">Case Study Highlights:</h4>
+                        <div className="text-sm text-gray-700 space-y-2">
+                          <p><strong>Challenge:</strong> {project.caseStudy.challenge}</p>
+                          <p><strong>Solution:</strong> {project.caseStudy.solution}</p>
+                          <p><strong>Impact:</strong> {project.caseStudy.impact}</p>
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 ) : project.caseStudy ? (
                   <div className="mt-4 p-4 bg-gray-50 rounded-lg">
                     <h4 className="font-semibold text-berkeley-blue mb-2">Case Study Highlights:</h4>

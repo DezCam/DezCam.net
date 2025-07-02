@@ -13,8 +13,8 @@ export default function AboutSection() {
         >
           <h2 className="text-4xl font-bold text-navy mb-4">About Me</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Dedicated professional with over 15 years of experience in technology leadership, 
-            strategic planning, and team development.
+            UC Berkeley Haas graduate with entrepreneurial experience and a passion for turning 
+            user insights into successful product strategies that drive business growth.
           </p>
         </motion.div>
         
@@ -39,12 +39,14 @@ export default function AboutSection() {
             viewport={{ once: true }}
           >
             <p className="text-lg text-gray-700 leading-relaxed">
-              I am a results-driven technology executive with a proven track record of leading 
-              digital transformation initiatives and building scalable solutions that drive business growth.
+              I'm a product-focused business professional with expertise in data analysis, user research, 
+              and cross-functional collaboration. My experience spans trading analysis, project coordination, 
+              and team leadership across diverse industries.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
-              My expertise spans strategic planning, team leadership, and innovative problem-solving 
-              across various industries including fintech, healthcare, and enterprise software.
+              With a strong foundation in business analytics from UC Berkeley Haas and hands-on entrepreneurial 
+              experience, I excel at identifying market opportunities and translating user needs into 
+              compelling product strategies.
             </p>
             <div className="grid grid-cols-2 gap-4 pt-4">
               <motion.div 
@@ -52,16 +54,16 @@ export default function AboutSection() {
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.2 }}
               >
-                <div className="text-3xl font-bold text-navy">15+</div>
-                <div className="text-gray-600">Years Experience</div>
+                <div className="text-3xl font-bold text-navy">4%</div>
+                <div className="text-gray-600">User Conversion Rate</div>
               </motion.div>
               <motion.div 
                 className="text-center p-4 bg-white rounded-lg shadow-sm"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.2 }}
               >
-                <div className="text-3xl font-bold text-navy">50+</div>
-                <div className="text-gray-600">Projects Delivered</div>
+                <div className="text-3xl font-bold text-navy">5+</div>
+                <div className="text-gray-600">Years Experience</div>
               </motion.div>
             </div>
           </motion.div>

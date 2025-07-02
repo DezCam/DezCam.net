@@ -1,55 +1,55 @@
 import { motion } from "framer-motion";
-import { Users, Code, TrendingUp, GraduationCap, Award, Tag } from "lucide-react";
+import { Users, BarChart3, TrendingUp, GraduationCap, Award, Tag } from "lucide-react";
 
 const skillCategories = [
   {
-    title: "Leadership & Management",
+    title: "Product Management",
     icon: Users,
     color: "navy",
     skills: [
-      { name: "Team Leadership", level: 5 },
-      { name: "Strategic Planning", level: 4 },
-      { name: "Project Management", level: 5 }
+      { name: "User Research", level: 4 },
+      { name: "Project Management", level: 5 },
+      { name: "Cross-functional Leadership", level: 5 }
     ]
   },
   {
-    title: "Technical Excellence",
-    icon: Code,
+    title: "Data & Analytics",
+    icon: BarChart3,
     color: "blue-500",
     skills: [
-      { name: "Software Architecture", level: 5 },
-      { name: "Cloud Technologies", level: 4 },
-      { name: "DevOps & CI/CD", level: 4 }
+      { name: "SQL & Python", level: 4 },
+      { name: "Financial Modeling", level: 5 },
+      { name: "Data Analysis", level: 5 }
     ]
   },
   {
-    title: "Business Acumen",
+    title: "Business Strategy",
     icon: TrendingUp,
     color: "gray-600",
     skills: [
-      { name: "Digital Transformation", level: 5 },
-      { name: "Process Optimization", level: 4 },
-      { name: "Stakeholder Management", level: 5 }
+      { name: "Entrepreneurship", level: 5 },
+      { name: "Sales & Marketing", level: 4 },
+      { name: "Portfolio Management", level: 4 }
     ]
   }
 ];
 
 const certifications = [
   {
-    title: "MBA, Technology Management",
-    institution: "Stanford University",
+    title: "BS Business Administration",
+    institution: "UC Berkeley, Haas School of Business",
     icon: GraduationCap,
     color: "navy"
   },
   {
-    title: "AWS Solutions Architect",
-    institution: "Amazon Web Services",
+    title: "Product Management First Steps",
+    institution: "LinkedIn Learning",
     icon: Tag,
     color: "blue-500"
   },
   {
-    title: "PMP Certification",
-    institution: "Project Management Institute",
+    title: "Professional Forex Trader",
+    institution: "Online Trading Academy",
     icon: Award,
     color: "gray-600"
   }

@@ -2,27 +2,27 @@ import { motion } from "framer-motion";
 
 const experiences = [
   {
-    title: "Senior Technology Director",
-    company: "TechCorp Solutions",
-    period: "2020 - Present",
-    description: "Leading digital transformation initiatives, managing cross-functional teams of 25+ engineers, and driving strategic technology decisions that resulted in 40% efficiency improvements.",
-    image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&h=600",
+    title: "Trading Analyst",
+    company: "Toshi Markets",
+    period: "Jan 2019 - July 2024",
+    description: "Collaborated cross-functionally with development and management teams to scale training processes, resulting in increased user satisfaction. Analyzed economic data and market trends, achieving 4% user-to-customer conversion rate and ~0.8% positive market movement per trade.",
+    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
     color: "navy"
   },
   {
-    title: "Engineering Manager",
-    company: "InnovateTech Inc.",
-    period: "2017 - 2020",
-    description: "Built and managed high-performing engineering teams, implemented agile methodologies, and delivered mission-critical software solutions serving 1M+ users.",
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400",
+    title: "Production Coordinator & Talent Liaison",
+    company: "Freelance",
+    period: "Jan 2014 - Dec 2021",
+    description: "Executed creative visions for high-profile events including Grammys, E3, and Samsung. Managed stakeholder alignment and cross-functional collaboration between teams, vendors, and talent, resulting in ongoing client referrals and successful project delivery.",
+    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400",
     color: "blue-500"
   },
   {
-    title: "Senior Software Engineer",
-    company: "StartupTech",
-    period: "2014 - 2017",
-    description: "Architected and developed scalable web applications, mentored junior developers, and contributed to the company's growth from startup to Series B funding.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400",
+    title: "District Leader",
+    company: "Primerica Life Insurance",
+    period: "Jan 2017 - Dec 2018",
+    description: "Consistently surpassed $10k monthly sales quota and ranked #7 leading life insurance salesman in California in 2017. Achieved regional office record for fastest certification and promotion through outstanding client service and collaborative teamwork.",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400",
     color: "gray-500"
   }
 ];

@@ -14,7 +14,7 @@ export default function Footer() {
           viewport={{ once: true }}
         >
           <h3 className="text-2xl font-bold mb-4">Desmond Campbell</h3>
-          <p className="text-blue-200 mb-6">Strategic Technology Leader & Innovation Expert</p>
+          <p className="text-blue-200 mb-6">Product Management & Business Strategy Expert</p>
           <div className="flex justify-center space-x-6 mb-8">
             <motion.a 
               href="https://linkedin.com/in/desmondcampbell" 

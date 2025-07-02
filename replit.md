@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a professional portfolio website for Desmond Campbell, a strategic technology leader. The application is built as a full-stack web application using modern technologies with a focus on clean design, performance, and user experience. The site features a comprehensive portfolio showcase, contact functionality, and responsive design optimized for all devices.
+This is a professional portfolio website for Desmond Campbell, a product management and business strategy expert. The application is built as a full-stack web application using modern technologies with a focus on clean design, performance, and user experience. The site showcases Desmond's UC Berkeley Haas education, entrepreneurial experience, and product management expertise, with a responsive design optimized for all devices.
 
 ## System Architecture
 
@@ -130,6 +130,13 @@ This is a professional portfolio website for Desmond Campbell, a strategic techn
 ```
 Changelog:
 - July 02, 2025. Initial setup
+- July 02, 2025. Updated portfolio to focus on product management using actual resume data:
+  * Updated hero section and about content to highlight UC Berkeley Haas education
+  * Replaced experience section with real professional history (Toshi Markets, Freelance, Primerica)
+  * Updated skills to focus on Product Management, Data Analytics, and Business Strategy
+  * Updated portfolio projects to reflect actual achievements and PM-relevant experience
+  * Updated contact information with real email and phone number
+  * Fixed CSS import order issue
 ```
 
 ## User Preferences

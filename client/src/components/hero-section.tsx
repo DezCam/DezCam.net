@@ -28,10 +28,10 @@ export default function HeroSection() {
               Hi, I'm <span className="text-blue-200">Desmond</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100 leading-relaxed">
-              Strategic Technology Leader & Innovation Expert
+              Product Management & Business Strategy Expert
             </p>
             <p className="text-lg mb-8 text-blue-100 leading-relaxed">
-              Passionate about driving digital transformation and building high-performing teams that deliver exceptional results.
+              UC Berkeley Haas graduate with proven entrepreneurial experience and expertise in turning data insights into successful product strategies.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 

@@ -4,22 +4,22 @@ import { Badge } from "@/components/ui/badge";
 
 const projects = [
   {
-    title: "Digital Transformation Platform",
-    description: "Led the development of an enterprise-wide digital transformation platform that improved operational efficiency by 40% and reduced costs by $2M annually.",
-    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
-    tags: ["Cloud Architecture", "API Design", "Leadership"]
+    title: "Trading Platform User Experience Optimization",
+    description: "Collaborated with development teams to scale user training processes at Toshi Markets, resulting in 4% user-to-customer conversion rate improvement and increased user satisfaction with trading products and services.",
+    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
+    tags: ["User Research", "Cross-functional", "Product Strategy"]
   },
   {
-    title: "Real-time Analytics Dashboard",
-    description: "Architected and delivered a real-time analytics platform serving 1M+ users with 99.9% uptime and sub-second response times.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
-    tags: ["Big Data", "Real-time", "Scalability"]
+    title: "High-Profile Event Production Management",
+    description: "Managed stakeholder alignment and cross-functional collaboration for major events including Grammys, E3, and Samsung campaigns. Delivered camera-ready results through effective project coordination and vendor management.",
+    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
+    tags: ["Project Management", "Stakeholder", "Coordination"]
   },
   {
-    title: "Team Excellence Initiative",
-    description: "Developed and implemented a comprehensive team development program that increased productivity by 35% and reduced turnover by 50%.",
-    image: "https://images.unsplash.com/photo-1553028826-f4804a6dba3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
-    tags: ["Leadership", "Process", "Culture"]
+    title: "Financial Services Customer Success Program",
+    description: "Built strong client relationships at Primerica by addressing financial concerns with empathy, achieving #7 ranking in California and consistently exceeding $10k monthly sales quotas through data-driven insights.",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=300",
+    tags: ["Customer Success", "Sales Strategy", "Relationship Building"]
   }
 ];
 

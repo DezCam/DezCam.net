@@ -71,14 +71,14 @@ export default function ContactSection() {
     {
       icon: Mail,
       title: "Email",
-      value: "desmond.campbell@email.com",
-      href: "mailto:desmond.campbell@email.com"
+      value: "desmondcampbell@berkeley.edu",
+      href: "mailto:desmondcampbell@berkeley.edu"
     },
     {
       icon: Phone,
       title: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567"
+      value: "(310) 995-2476",
+      href: "tel:+13109952476"
     },
     {
       icon: MapPin,

@@ -27,6 +27,12 @@ const projects = [
     description: "Managed stakeholder alignment and cross-functional collaboration for major events including Grammys, E3, and Samsung campaigns. Transformed creative ideas into tangible results under tight deadlines through effective coordination.",
     image: "/images/grammy-awards.jpg",
     tags: ["Project Management", "Creative Vision", "Stakeholder Management"]
+  },
+  {
+    title: "Kratos Combat Club - Martial Arts Academy",
+    description: "Founded and operated martial arts academy (2007-2014) serving at-risk youth programs, children's birthday parties, women's self-defense classes, and private training. Built foundation of discipline, resilience, and leadership that drives entrepreneurial success. Taught intangibles: self-control, focus, mental toughness, humility, and respect.",
+    image: "/images/kratos-combat-club.png",
+    tags: ["Entrepreneurship", "Leadership Development", "Community Impact"]
   }
 ];
 
@@ -64,6 +70,8 @@ export default function PortfolioSection() {
                 className={`w-full h-48 ${
                   project.image.includes('loyalpup-logo') 
                     ? 'object-contain bg-gradient-to-br from-yellow-100 to-yellow-50 p-4' 
+                    : project.image.includes('kratos-combat-club')
+                    ? 'object-cover brightness-110 contrast-105'
                     : 'object-cover'
                 }`}
               />

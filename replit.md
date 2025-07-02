@@ -165,6 +165,12 @@ Changelog:
   * Updated project description to highlight organic treats for working dogs and mental health awareness
   * Enhanced portfolio component to support clickable external links
   * Fixed image serving by migrating all photos to public directory
+- July 02, 2025. Added authentic event and martial arts photos:
+  * Integrated Grammy Awards photo for High-Profile Event Production Management project
+  * Added behind-the-scenes production coordinator photo to Professional Experience
+  * Created Kratos Combat Club featured project (2007-2014) with sunset martial arts silhouette
+  * Highlighted martial arts foundation: dual black belts, youth programs, women's self-defense
+  * Emphasized character development values: discipline, resilience, humility, mental toughness
 ```
 
 ## User Preferences

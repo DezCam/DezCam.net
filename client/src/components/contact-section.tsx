@@ -164,10 +164,8 @@ export default function ContactSection() {
             </div>
 
             <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-berkeley-blue rounded-full flex items-center justify-center">
-                <svg className="text-white h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M4.5 0h15c2.485 0 4.5 2.015 4.5 4.5v15c0 2.485-2.015 4.5-4.5 4.5h-15C2.015 24 0 21.985 0 19.5v-15C0 2.015 2.015 0 4.5 0zm7.5 6c-3.314 0-6 2.686-6 6s2.686 6 6 6 6-2.686 6-6-2.686-6-6-6zm0 1.5c2.485 0 4.5 2.015 4.5 4.5s-2.015 4.5-4.5 4.5S7.5 14.485 7.5 12s2.015-4.5 4.5-4.5z"/>
-                </svg>
+              <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center">
+                <span className="text-white text-sm font-bold">TV</span>
               </div>
               <div>
                 <h3 className="font-semibold text-berkeley-blue">TradingView</h3>

@@ -36,9 +36,9 @@ export default function Footer() {
               whileHover={{ scale: 1.2 }}
               transition={{ duration: 0.2 }}
             >
-              <svg className="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M8.64 6.88L12 10.24l3.36-3.36L19.2 10.72l-7.2 7.2-7.2-7.2L8.64 6.88zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
-              </svg>
+              <div className="h-8 w-8 bg-white rounded flex items-center justify-center">
+                <span className="text-black text-xs font-bold">TV</span>
+              </div>
             </motion.a>
             <motion.a 
               href="https://github.com/DezCam" 

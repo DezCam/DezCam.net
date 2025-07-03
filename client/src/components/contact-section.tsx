@@ -23,7 +23,7 @@ export default function ContactSection() {
     subject: '',
     message: ''
   });
-  
+
   const { toast } = useToast();
 
   const contactMutation = useMutation({
@@ -103,7 +103,7 @@ export default function ContactSection() {
             Ready to build products that inspire people to create lives they love. Currently developing multiple MVPs to bridge into product management.
           </p>
         </motion.div>
-        
+
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Information */}
           <motion.div 
@@ -143,7 +143,7 @@ export default function ContactSection() {
                 </motion.div>
               );
             })}
-            
+
             <div className="flex items-center space-x-4">
               <div className="w-12 h-12 bg-berkeley-blue rounded-full flex items-center justify-center">
                 <svg className="text-white h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -162,7 +162,26 @@ export default function ContactSection() {
                 </a>
               </div>
             </div>
-            
+
+            <div className="flex items-center space-x-4">
+              <div className="w-12 h-12 bg-berkeley-blue rounded-full flex items-center justify-center">
+                <svg className="text-white h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M4.5 0h15c2.485 0 4.5 2.015 4.5 4.5v15c0 2.485-2.015 4.5-4.5 4.5h-15C2.015 24 0 21.985 0 19.5v-15C0 2.015 2.015 0 4.5 0zm7.5 6c-3.314 0-6 2.686-6 6s2.686 6 6 6 6-2.686 6-6-2.686-6-6-6zm0 1.5c2.485 0 4.5 2.015 4.5 4.5s-2.015 4.5-4.5 4.5S7.5 14.485 7.5 12s2.015-4.5 4.5-4.5z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 className="font-semibold text-berkeley-blue">TradingView</h3>
+                <a 
+                  href="https://www.tradingview.com/u/CashFalcon/"
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-berkeley-blue transition-colors"
+                >
+                  @CashFalcon
+                </a>
+              </div>
+            </div>
+
             <div className="flex items-center space-x-4">
               <div className="w-12 h-12 bg-berkeley-blue rounded-full flex items-center justify-center">
                 <svg className="text-white h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
@@ -182,7 +201,7 @@ export default function ContactSection() {
               </div>
             </div>
           </motion.div>
-          
+
           {/* Contact Form */}
           <motion.div 
             className="bg-white p-8 rounded-xl shadow-lg"
@@ -204,7 +223,7 @@ export default function ContactSection() {
                   required
                 />
               </div>
-              
+
               <div>
                 <Label htmlFor="email">Email *</Label>
                 <Input
@@ -217,7 +236,7 @@ export default function ContactSection() {
                   required
                 />
               </div>
-              
+
               <div>
                 <Label htmlFor="subject">Subject *</Label>
                 <Input
@@ -230,7 +249,7 @@ export default function ContactSection() {
                   required
                 />
               </div>
-              
+
               <div>
                 <Label htmlFor="message">Message *</Label>
                 <Textarea
@@ -243,7 +262,7 @@ export default function ContactSection() {
                   required
                 />
               </div>
-              
+
               <Button 
                 type="submit" 
                 className="w-full bg-berkeley-blue hover:bg-berkeley-blue/90 text-white"

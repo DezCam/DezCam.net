@@ -138,7 +138,7 @@ export default function SkillsSection() {
           <div className="relative h-64 md:h-48">
             <img 
               src="/images/haas-campus-sunset.webp" 
-              alt="UC Berkeley Haas School of Business Campus at Sunset" 
+              alt="UC Berkeley Haas School of Business Campus at Sunset with Campanile" 
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-berkeley-blue bg-opacity-70 flex items-center justify-center">

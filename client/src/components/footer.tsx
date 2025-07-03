@@ -36,8 +36,13 @@ export default function Footer() {
               whileHover={{ scale: 1.2 }}
               transition={{ duration: 0.2 }}
             >
-              <div className="h-8 w-8 bg-white rounded flex items-center justify-center">
-                <span className="text-black text-xs font-bold">TV</span>
+              <div className="h-8 w-8 bg-berkeley-blue rounded flex items-center justify-center">
+                <div className="flex items-center text-california-gold text-xs font-bold">
+                  <span>T</span>
+                  <svg className="h-3 w-2 ml-0.5" fill="currentColor" viewBox="0 0 10 10">
+                    <path d="M1 1 L5 8 L9 1 Z"/>
+                  </svg>
+                </div>
               </div>
             </motion.a>
             <motion.a 

@@ -140,6 +140,10 @@ export default function SkillsSection() {
               src="/images/haas-campus-sunset.webp" 
               alt="UC Berkeley Haas School of Business Campus at Sunset with Campanile" 
               className="w-full h-full object-cover"
+              onError={(e) => {
+                console.log('Image failed to load:', e.target.src);
+                e.target.style.display = 'none';
+              }}
             />
             <div className="absolute inset-0 bg-berkeley-blue bg-opacity-70 flex items-center justify-center">
               <div className="text-center text-white">

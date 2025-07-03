@@ -37,12 +37,11 @@ export default function Footer() {
               transition={{ duration: 0.2 }}
             >
               <div className="h-8 w-8 bg-berkeley-blue rounded flex items-center justify-center">
-                <div className="flex items-center text-california-gold text-xs font-bold">
-                  <span>T</span>
-                  <svg className="h-3 w-2 ml-0.5" fill="currentColor" viewBox="0 0 10 10">
-                    <path d="M1 1 L5 8 L9 1 Z"/>
-                  </svg>
-                </div>
+                <svg className="h-4 w-4 text-california-gold" fill="currentColor" viewBox="0 0 32 32">
+                  <path d="M4 4h8v4H8v16h4v4H4V4z"/>
+                  <circle cx="16" cy="16" r="2"/>
+                  <path d="M20 8l8 8-8 8V8z"/>
+                </svg>
               </div>
             </motion.a>
             <motion.a 

@@ -165,12 +165,11 @@ export default function ContactSection() {
 
             <div className="flex items-center space-x-4">
               <div className="w-12 h-12 bg-berkeley-blue rounded-full flex items-center justify-center">
-                <div className="flex items-center text-california-gold text-sm font-bold">
-                  <span>T</span>
-                  <svg className="h-4 w-3 ml-0.5" fill="currentColor" viewBox="0 0 10 10">
-                    <path d="M1 1 L5 8 L9 1 Z"/>
-                  </svg>
-                </div>
+                <svg className="h-5 w-5 text-california-gold" fill="currentColor" viewBox="0 0 32 32">
+                  <path d="M4 4h8v4H8v16h4v4H4V4z"/>
+                  <circle cx="16" cy="16" r="2"/>
+                  <path d="M20 8l8 8-8 8V8z"/>
+                </svg>
               </div>
               <div>
                 <h3 className="font-semibold text-berkeley-blue">TradingView</h3>

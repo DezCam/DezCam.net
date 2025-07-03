@@ -171,6 +171,11 @@ Changelog:
   * Created Kratos Combat Club featured project (2007-2014) with sunset martial arts silhouette
   * Highlighted martial arts foundation: dual black belts, youth programs, women's self-defense
   * Emphasized character development values: discipline, resilience, humility, mental toughness
+- July 03, 2025. Updated social media links:
+  * Replaced Twitter link with TradingView profile (@CashFalcon)
+  * Added TradingView to both footer and contact sections
+  * Maintained LinkedIn and GitHub profile links
+  * Enhanced trading performance credibility with direct TradingView connection
 ```
 
 ## User Preferences

@@ -127,39 +127,53 @@ export default function SkillsSection() {
           })}
         </div>
 
-        {/* Certifications */}
+        {/* Education & Certifications */}
         <motion.div 
-          className="bg-white p-8 rounded-xl shadow-lg"
+          className="bg-white rounded-xl shadow-lg overflow-hidden"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-2xl font-bold text-navy mb-8 text-center">Education & Certifications</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {certifications.map((cert, index) => {
-              const IconComponent = cert.icon;
-              return (
-                <motion.div 
-                  key={index}
-                  className="flex items-center space-x-4 p-4 bg-light-gray rounded-lg"
-                  whileHover={{ scale: 1.02 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <div className={`w-12 h-12 rounded-full flex items-center justify-center ${
-                    cert.color === 'berkeley-blue' ? 'bg-berkeley-blue' :
-                    cert.color === 'california-gold' ? 'bg-california-gold' :
-                    'bg-gray-600'
-                  }`}>
-                    <IconComponent className="text-white h-6 w-6" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-berkeley-blue">{cert.title}</h4>
-                    <p className="text-gray-600 text-sm">{cert.institution}</p>
-                  </div>
-                </motion.div>
-              );
-            })}
+          <div className="relative h-64 md:h-48">
+            <img 
+              src="/images/haas-campus-sunset.webp" 
+              alt="UC Berkeley Haas School of Business Campus at Sunset" 
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-berkeley-blue bg-opacity-70 flex items-center justify-center">
+              <div className="text-center text-white">
+                <h3 className="text-3xl font-bold mb-2">Education & Certifications</h3>
+                <p className="text-california-gold text-lg">UC Berkeley Haas School of Business</p>
+              </div>
+            </div>
+          </div>
+          <div className="p-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {certifications.map((cert, index) => {
+                const IconComponent = cert.icon;
+                return (
+                  <motion.div 
+                    key={index}
+                    className="flex items-center space-x-4 p-4 bg-light-gray rounded-lg"
+                    whileHover={{ scale: 1.02 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <div className={`w-12 h-12 rounded-full flex items-center justify-center ${
+                      cert.color === 'berkeley-blue' ? 'bg-berkeley-blue' :
+                      cert.color === 'california-gold' ? 'bg-california-gold' :
+                      'bg-gray-600'
+                    }`}>
+                      <IconComponent className="text-white h-6 w-6" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-berkeley-blue">{cert.title}</h4>
+                      <p className="text-gray-600 text-sm">{cert.institution}</p>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
           </div>
         </motion.div>
       </div>

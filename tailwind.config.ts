@@ -51,6 +51,9 @@ export default {
           "4": "var(--chart-4)",
           "5": "var(--chart-5)",
         },
+        "berkeley-blue": "var(--berkeley-blue)",
+        "california-gold": "var(--california-gold)",
+        "light-gray": "var(--light-gray)",
         sidebar: {
           DEFAULT: "var(--sidebar-background)",
           foreground: "var(--sidebar-foreground)",

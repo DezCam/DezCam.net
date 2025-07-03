@@ -79,7 +79,7 @@ export default function SkillsSection() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl font-bold text-navy mb-4">Skills & Expertise</h2>
+          <h2 className="text-4xl font-bold text-berkeley-blue mb-4">Skills & Expertise</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Core competencies and technical expertise across multiple domains
           </p>
@@ -106,7 +106,7 @@ export default function SkillsSection() {
                   }`}>
                     <IconComponent className="text-white h-8 w-8" />
                   </div>
-                  <h3 className="text-xl font-bold text-navy">{category.title}</h3>
+                  <h3 className="text-xl font-bold text-berkeley-blue">{category.title}</h3>
                 </div>
                 <div className="space-y-3">
                   {category.skills.map((skill, skillIndex) => (

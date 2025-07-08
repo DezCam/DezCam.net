@@ -1,4 +1,6 @@
 import { users, contacts, waitingList, type User, type InsertUser, type Contact, type InsertContact, type WaitingListEntry, type InsertWaitingList } from "@shared/schema";
+import { db } from "./db";
+import { eq } from "drizzle-orm";
 
 export interface IStorage {
   getUser(id: number): Promise<User | undefined>;
@@ -10,70 +12,48 @@ export interface IStorage {
   createWaitingListEntry(entry: InsertWaitingList): Promise<WaitingListEntry>;
 }
 
-export class MemStorage implements IStorage {
-  private users: Map<number, User>;
-  private contacts: Map<number, Contact>;
-  private currentUserId: number;
-  private currentContactId: number;
-  private waitingListEntries: WaitingListEntry[] = [];
-  private currentWaitingListId: number;
-
-  constructor() {
-    this.users = new Map();
-    this.contacts = new Map();
-    this.currentUserId = 1;
-    this.currentContactId = 1;
-    this.currentWaitingListId = 1;
-  }
-
+export class DatabaseStorage implements IStorage {
   async getUser(id: number): Promise<User | undefined> {
-    return this.users.get(id);
+    const [user] = await db.select().from(users).where(eq(users.id, id));
+    return user || undefined;
   }
 
   async getUserByUsername(username: string): Promise<User | undefined> {
-    return Array.from(this.users.values()).find(
-      (user) => user.username === username,
-    );
+    const [user] = await db.select().from(users).where(eq(users.username, username));
+    return user || undefined;
   }
 
   async createUser(insertUser: InsertUser): Promise<User> {
-    const id = this.currentUserId++;
-    const user: User = { ...insertUser, id };
-    this.users.set(id, user);
+    const [user] = await db
+      .insert(users)
+      .values(insertUser)
+      .returning();
     return user;
   }
 
   async createContact(insertContact: InsertContact): Promise<Contact> {
-    const id = this.currentContactId++;
-    const contact: Contact = { 
-      ...insertContact, 
-      id,
-      createdAt: new Date()
-    };
-    this.contacts.set(id, contact);
+    const [contact] = await db
+      .insert(contacts)
+      .values(insertContact)
+      .returning();
     return contact;
   }
 
   async getContacts(): Promise<Contact[]> {
-    return Array.from(this.contacts.values()).sort(
-      (a, b) => b.createdAt.getTime() - a.createdAt.getTime()
-    );
+    return await db.select().from(contacts);
   }
 
   async getWaitingList(): Promise<WaitingListEntry[]> {
-    return [...this.waitingListEntries].sort((a, b) => a.createdAt.getTime() - b.createdAt.getTime());
+    return await db.select().from(waitingList);
   }
 
   async createWaitingListEntry(entry: InsertWaitingList): Promise<WaitingListEntry> {
-    const id = this.currentWaitingListId++;
-    const newEntry: WaitingListEntry = {
-      ...entry,
-      id,
-      createdAt: new Date(),
-    };
-    this.waitingListEntries.push(newEntry);
+    const [newEntry] = await db
+      .insert(waitingList)
+      .values(entry)
+      .returning();
     return newEntry;
   }
 }
 
-export const storage = new MemStorage();
+export const storage = new DatabaseStorage();

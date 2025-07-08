@@ -1,4 +1,4 @@
-import { users, contacts, type User, type InsertUser, type Contact, type InsertContact } from "@shared/schema";
+import { users, contacts, waitingList, type User, type InsertUser, type Contact, type InsertContact, type WaitingListEntry, type InsertWaitingList } from "@shared/schema";
 
 export interface IStorage {
   getUser(id: number): Promise<User | undefined>;
@@ -6,6 +6,8 @@ export interface IStorage {
   createUser(user: InsertUser): Promise<User>;
   createContact(contact: InsertContact): Promise<Contact>;
   getContacts(): Promise<Contact[]>;
+  getWaitingList(): Promise<WaitingListEntry[]>;
+  createWaitingListEntry(entry: InsertWaitingList): Promise<WaitingListEntry>;
 }
 
 export class MemStorage implements IStorage {
@@ -13,12 +15,15 @@ export class MemStorage implements IStorage {
   private contacts: Map<number, Contact>;
   private currentUserId: number;
   private currentContactId: number;
+  private waitingListEntries: WaitingListEntry[] = [];
+  private currentWaitingListId: number;
 
   constructor() {
     this.users = new Map();
     this.contacts = new Map();
     this.currentUserId = 1;
     this.currentContactId = 1;
+    this.currentWaitingListId = 1;
   }
 
   async getUser(id: number): Promise<User | undefined> {
@@ -53,6 +58,21 @@ export class MemStorage implements IStorage {
     return Array.from(this.contacts.values()).sort(
       (a, b) => b.createdAt.getTime() - a.createdAt.getTime()
     );
+  }
+
+  async getWaitingList(): Promise<WaitingListEntry[]> {
+    return [...this.waitingListEntries].sort((a, b) => a.createdAt.getTime() - b.createdAt.getTime());
+  }
+
+  async createWaitingListEntry(entry: InsertWaitingList): Promise<WaitingListEntry> {
+    const id = this.currentWaitingListId++;
+    const newEntry: WaitingListEntry = {
+      ...entry,
+      id,
+      createdAt: new Date(),
+    };
+    this.waitingListEntries.push(newEntry);
+    return newEntry;
   }
 }
 

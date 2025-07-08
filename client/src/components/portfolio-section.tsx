@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import WaitingListDialog from "./waiting-list-dialog";
 
 const projects = [
   {
@@ -148,6 +149,8 @@ export default function PortfolioSection() {
                       <p><strong>Impact:</strong> {project.caseStudy.impact}</p>
                     </div>
                   </div>
+                ) : index === 0 ? (
+                  <WaitingListDialog />
                 ) : (
                   <button className="text-berkeley-blue font-semibold hover:text-california-gold transition-colors flex items-center">
                     View Case Study 

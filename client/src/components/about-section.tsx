@@ -69,7 +69,8 @@ export default function AboutSection() {
                 transition={{ duration: 0.2 }}
               >
                 <div className="text-3xl font-bold text-berkeley-blue">#7</div>
-                <div className="text-gray-600">CA Insurance Ranking</div>
+                <div className="text-gray-600">Internal Company Ranking</div>
+                <div className="text-xs text-gray-500">(CA Insurance, 2017)</div>
               </motion.div>
             </div>
           </motion.div>

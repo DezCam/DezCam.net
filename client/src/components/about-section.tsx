@@ -13,9 +13,10 @@ export default function AboutSection() {
         >
           <h2 className="text-4xl font-bold text-berkeley-blue mb-4">About Me</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            UC Berkeley Haas graduate and Trading Analyst currently building websites, operational processes, 
-            and strategies for SMBs. With entrepreneurial experience, I'm passionate about creating 
-            user-centered solutions that drive business growth and positive impact.
+            I'm a Trading Analyst and entrepreneur who carved an unconventional path from launching a mobile 
+            martial arts business to working in production coordination for major events and commercials. 
+            My career then took me into life insurance, where I ranked among California's top performers, 
+            before diving into the world of trading and achieving a 1,400% return in just four months.
           </p>
         </motion.div>
         

@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Expand } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import WaitingListDialog from "./waiting-list-dialog";
+import { useState } from "react";
 
 const projects = [
   {
@@ -49,6 +51,66 @@ const projects = [
 ];
 
 export default function PortfolioSection() {
+  const [expandedImage, setExpandedImage] = useState<string | null>(null);
+
+  const ImageWithExpand = ({ project, index }: { project: any, index: number }) => {
+    const isExpandable = project.image.includes('trading-performance');
+    
+    if (isExpandable) {
+      return (
+        <Dialog>
+          <DialogTrigger asChild>
+            <div className="relative group cursor-pointer">
+              <img 
+                src={project.image} 
+                alt={project.title}
+                className={`w-full h-48 ${
+                  project.image.includes('loyalpup-logo') 
+                    ? 'object-contain bg-gradient-to-br from-yellow-100 to-yellow-50 p-4' 
+                    : project.image.includes('kratos-combat-club')
+                    ? 'object-cover object-center filter contrast-110 brightness-105 saturate-110 transform hover:scale-105 transition-all duration-300'
+                    : 'object-cover hover:brightness-90 transition-all duration-300'
+                }`}
+              />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
+                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 rounded-full p-2">
+                  <Expand className="h-6 w-6 text-berkeley-blue" />
+                </div>
+              </div>
+            </div>
+          </DialogTrigger>
+          <DialogContent className="max-w-4xl max-h-[90vh] p-0">
+            <div className="relative">
+              <img 
+                src={project.image} 
+                alt={project.title}
+                className="w-full h-auto max-h-[85vh] object-contain"
+              />
+              <div className="p-4 bg-white">
+                <h3 className="text-xl font-bold text-berkeley-blue mb-2">{project.title}</h3>
+                <p className="text-gray-600 text-sm">{project.description}</p>
+              </div>
+            </div>
+          </DialogContent>
+        </Dialog>
+      );
+    }
+
+    return (
+      <img 
+        src={project.image} 
+        alt={project.title}
+        className={`w-full h-48 ${
+          project.image.includes('loyalpup-logo') 
+            ? 'object-contain bg-gradient-to-br from-yellow-100 to-yellow-50 p-4' 
+            : project.image.includes('kratos-combat-club')
+            ? 'object-cover object-center filter contrast-110 brightness-105 saturate-110 transform hover:scale-105 transition-all duration-300'
+            : 'object-cover'
+        }`}
+      />
+    );
+  };
+
   return (
     <section id="portfolio" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -76,17 +138,7 @@ export default function PortfolioSection() {
               viewport={{ once: true }}
               whileHover={{ scale: 1.02 }}
             >
-              <img 
-                src={project.image} 
-                alt={project.title}
-                className={`w-full h-48 ${
-                  project.image.includes('loyalpup-logo') 
-                    ? 'object-contain bg-gradient-to-br from-yellow-100 to-yellow-50 p-4' 
-                    : project.image.includes('kratos-combat-club')
-                    ? 'object-cover object-center filter contrast-110 brightness-105 saturate-110 transform hover:scale-105 transition-all duration-300'
-                    : 'object-cover'
-                }`}
-              />
+              <ImageWithExpand project={project} index={index} />
               <div className="p-6">
                 <h3 className="text-xl font-bold text-berkeley-blue mb-2">{project.title}</h3>
                 <p className="text-gray-600 mb-4 leading-relaxed">

@@ -13,8 +13,9 @@ export default function AboutSection() {
         >
           <h2 className="text-4xl font-bold text-berkeley-blue mb-4">About Me</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            UC Berkeley Haas graduate with entrepreneurial experience and a passion for turning 
-            user insights into successful product strategies that drive business growth.
+            UC Berkeley Haas graduate and Trading Analyst with entrepreneurial experience, 
+            aspiring to transition into product management through my passion for creating 
+            user-centered solutions that drive business growth.
           </p>
         </motion.div>
         
@@ -39,9 +40,9 @@ export default function AboutSection() {
             viewport={{ once: true }}
           >
             <p className="text-lg text-gray-700 leading-relaxed">
-              I'm a product management professional who carved my own unconventional path from a non-technical 
+              I'm a Trading Analyst and entrepreneur who carved my own unconventional path from a non-technical 
               background to UC Berkeley Haas. My journey includes building a mobile martial arts business, 
-              launching a pet product startup, and developing multiple MVPs to bridge into product management.
+              launching a pet product startup, and developing multiple MVPs as I transition into product management.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
               At Haas, I placed third in an entrepreneurship challenge where my team launched a pet product 
@@ -51,7 +52,7 @@ export default function AboutSection() {
             <p className="text-lg text-gray-700 leading-relaxed">
               My analytical skills are demonstrated through exceptional trading performance, achieving a 1,400% 
               return in just 4 months. This quantitative success showcases the data-driven decision making and 
-              risk management abilities I bring to product management roles.
+              risk management abilities I'm excited to bring to product management roles.
             </p>
             <div className="grid grid-cols-2 gap-4 pt-4">
               <motion.div 

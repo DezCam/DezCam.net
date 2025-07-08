@@ -22,7 +22,7 @@ export default function AboutSection() {
             <p>
               On live accounts, I achieved a 53% return by growing a $15,000 account to $23,000 in four months. 
               Separately, in a paper trading environment, I set a new record for the start-up trading firm I 
-              contracted with by delivering a 1,407.75% return, growing $100K to $1.5M in four months—demonstrating my ability 
+              contracted with by delivering a 1,407.75% return, growing $100K to $1.51M in five months—demonstrating my ability 
               to test strategies and manage risk under diverse conditions.
             </p>
             <p>
@@ -79,7 +79,7 @@ export default function AboutSection() {
               >
                 <div className="text-3xl font-bold text-berkeley-blue">1,407.75%</div>
                 <div className="text-gray-600">Paper Trading Record</div>
-                <div className="text-xs text-gray-500">($100K → $1.5M in 4 months)</div>
+                <div className="text-xs text-gray-500">($100K → $1.51M in 5 months)</div>
               </motion.div>
             </div>
           </motion.div>

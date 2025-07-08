@@ -115,7 +115,7 @@ export default function PortfolioSection() {
                       rel="noopener noreferrer"
                       className="text-berkeley-blue font-semibold hover:text-california-gold transition-colors flex items-center"
                     >
-                      View Project 
+                      Follow us on Instagram
                       <ArrowRight className="ml-1 h-4 w-4" />
                     </a>
                     {project.instagramPost && (

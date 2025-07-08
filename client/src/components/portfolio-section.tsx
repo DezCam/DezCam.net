@@ -83,7 +83,7 @@ export default function PortfolioSection() {
                   project.image.includes('loyalpup-logo') 
                     ? 'object-contain bg-gradient-to-br from-yellow-100 to-yellow-50 p-4' 
                     : project.image.includes('kratos-combat-club')
-                    ? 'object-cover object-center'
+                    ? 'object-cover object-center filter contrast-110 brightness-105 saturate-110 transform hover:scale-105 transition-all duration-300'
                     : 'object-cover'
                 }`}
               />

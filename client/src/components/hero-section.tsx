@@ -31,9 +31,7 @@ export default function HeroSection() {
               Trading Analyst | Strategy & Marketing Consultant | UC Berkeley Haas Graduate
             </p>
             <p className="text-lg mb-8 text-blue-100 leading-relaxed">
-              UC Berkeley Haas graduate and Trading Analyst with a track record of launching successful products. 
-              I help SMBs build websites, streamline operations, and develop strategies, bringing a customer-focused 
-              mindset to drive growth and positive impact.
+              Thanks for stopping by! I'm a UC Berkeley Haas graduate and Trading Analyst dedicated to helping SMBs build websites, optimize operations, and develop strategies that drive meaningful growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 

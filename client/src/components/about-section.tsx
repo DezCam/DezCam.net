@@ -34,7 +34,7 @@ export default function AboutSection() {
             <p>
               Today, I help SMBs strategize, scale, and market their businesses, bringing a blend of data-driven 
               insights, creative problem-solving, and a passion for modernizing operations, including leveraging 
-              AI integration. Across all my experiences, I've learned that great business solutions start with 
+              Ai integration. Across all my experiences, I've learned that great business solutions start with 
               understanding people. Whether building websites, improving operations, or crafting marketing 
               strategies, I'm dedicated to creating customer-centered solutions that drive growth and make a 
               lasting impact.

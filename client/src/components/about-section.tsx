@@ -16,8 +16,8 @@ export default function AboutSection() {
             <p>
               I'm a Trading Analyst and entrepreneur who carved an unconventional path from launching a mobile 
               martial arts business to working in production coordination for major events and commercials. 
-              My career then took me into life insurance, where I ranked among California's top performers, 
-              before diving into the world of trading.
+              My career then took me into life insurance, where I ranked among the nation's top performers 
+              in 2017, before diving into the world of trading.
             </p>
             <p>
               On live accounts, I achieved a 53% return by growing a $15,000 account to $23,000 in four months. 
@@ -36,7 +36,7 @@ export default function AboutSection() {
               insights, creative problem-solving, and a passion for modernizing operations, including leveraging 
               AI integration. Across all my experiences, I've learned that great business solutions start with 
               understanding people. Whether building websites, improving operations, or crafting marketing 
-              strategies, I'm dedicated to creating user-centered solutions that drive growth and make a 
+              strategies, I'm dedicated to creating customer-centered solutions that drive growth and make a 
               lasting impact.
             </p>
           </div>

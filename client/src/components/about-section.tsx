@@ -79,7 +79,7 @@ export default function AboutSection() {
               >
                 <div className="text-3xl font-bold text-berkeley-blue">1,407.75%</div>
                 <div className="text-gray-600">Paper Trading Record</div>
-                <div className="text-xs text-gray-500">(5 months)</div>
+                <div className="text-xs text-gray-500">($100K → $1.51M)</div>
               </motion.div>
             </div>
           </motion.div>

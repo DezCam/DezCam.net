@@ -31,7 +31,10 @@ export default function HeroSection() {
               Trading Analyst & Aspiring Product Manager
             </p>
             <p className="text-lg mb-8 text-blue-100 leading-relaxed">
-              UC Berkeley Haas graduate and Trading Analyst with entrepreneurial experience building MVPs and launching successful products. Passionate about transitioning into product management to create products that inspire and change people's lives.
+              UC Berkeley Haas graduate and Trading Analyst currently building websites, operational processes, 
+              and strategies for SMBs. With entrepreneurial experience developing MVPs and launching successful 
+              products, I'm passionate about transitioning into product management to create products that 
+              inspire and change people's lives.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 

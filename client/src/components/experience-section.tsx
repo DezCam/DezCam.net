@@ -6,7 +6,7 @@ const experiences = [
     company: "Toshi Markets",
     period: "Jan 2019 - July 2024",
     description: "Performed multiple product management functions including SDR, CSM, APM, GTM, software development, and tech support while maintaining profitable trading record. Collaborated cross-functionally with teams to scale training processes and improve user satisfaction.",
-    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
+    image: "/images/toshi-markets-logo.jpg",
     color: "berkeley-blue"
   },
   {

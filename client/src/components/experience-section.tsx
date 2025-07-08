@@ -6,7 +6,7 @@ const experiences = [
     company: "Toshi Markets",
     period: "Jan 2019 - July 2024",
     description: "Performed multiple product management functions including SDR, CSM, APM, GTM, software development, and tech support while maintaining profitable trading record. Collaborated cross-functionally with teams to scale training processes and improve user satisfaction.",
-    image: "/images/trading-performance.png",
+    image: "/images/toshi-markets-logo.jpg",
     color: "berkeley-blue"
   },
   {
@@ -86,8 +86,8 @@ export default function ExperienceSection() {
                       src={exp.image} 
                       alt={`${exp.title} at ${exp.company}`}
                       className={`rounded-lg shadow-lg w-full h-auto ${
-                        exp.image.includes('trading-performance') 
-                          ? 'object-contain bg-gradient-to-br from-berkeley-blue/5 to-california-gold/5 p-4' 
+                        exp.image.includes('toshi-markets-logo') 
+                          ? 'object-contain bg-gradient-to-br from-blue-500/10 to-cyan-500/10 p-6' 
                           : 'object-cover'
                       }`}
                     />

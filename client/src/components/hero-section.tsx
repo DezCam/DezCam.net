@@ -31,7 +31,7 @@ export default function HeroSection() {
               Trading Analyst | Strategy & Marketing Consultant | UC Berkeley Haas Graduate
             </p>
             <p className="text-lg mb-8 text-blue-100 leading-relaxed">
-              Thanks for stopping by! I'm a UC Berkeley Haas graduate and Trading Analyst dedicated to helping SMBs build websites, optimize operations, and develop strategies that drive meaningful growth.
+              Thanks for stopping by! I'm a proud Golden Bear and Trading Analyst dedicated to helping SMBs build websites, optimize operations, and develop strategies that drive meaningful growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 

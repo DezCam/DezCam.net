@@ -4,8 +4,8 @@ import { Badge } from "@/components/ui/badge";
 
 const projects = [
   {
-    title: "Trading Performance: $100K to $1.5M in 4 Months",
-    description: "Achieved exceptional 1,400% return in paper trading account, demonstrating advanced quantitative analysis, risk management, and data-driven decision making. This performance showcases analytical skills directly applicable to product management and business strategy.",
+    title: "Trading Performance: $100K to $1.51M in 5 Months",
+    description: "Achieved exceptional 1,407.75% return in paper trading account, demonstrating advanced quantitative analysis, risk management, and data-driven decision making. This performance showcases analytical skills directly applicable to product management and business strategy.",
     image: "/images/trading-performance.png",
     tags: ["Data Analysis", "Risk Management", "Quantitative Skills"]
   },
@@ -63,7 +63,7 @@ export default function PortfolioSection() {
             Showcasing key projects and achievements that demonstrate my expertise
           </p>
         </motion.div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <motion.div 

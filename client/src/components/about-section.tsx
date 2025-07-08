@@ -40,19 +40,18 @@ export default function AboutSection() {
             viewport={{ once: true }}
           >
             <p className="text-lg text-gray-700 leading-relaxed">
-              I'm a Trading Analyst and entrepreneur who carved my own unconventional path from a non-technical 
-              background to UC Berkeley Haas. My journey includes building a mobile martial arts business, 
-              launching a pet product startup, and developing multiple MVPs to help businesses grow.
+              My drive to keep growing led me to UC Berkeley Haas, where I expanded my skills in business, IT, 
+              and information systems. While there, I co-founded a pet product business that profited several 
+              hundred dollars in its first month—a product concept later validated when Trader Joe's stocked a 
+              similar item at our price point.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
-              At Haas, I placed third in an entrepreneurship challenge where my team launched a pet product 
-              business that generated several hundred dollars in its first week. I later saw validation of 
-              our product-market fit when Trader Joe's began stocking a similar product at our exact price point.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              My analytical skills are demonstrated through exceptional trading performance, achieving a 1,400% 
-              return in just 4 months. This quantitative success showcases the data-driven decision making and 
-              risk management abilities I bring to helping SMBs optimize their operations and strategies.
+              Today, I help SMBs strategize, scale, and market their businesses, bringing a blend of data-driven 
+              insights, creative problem-solving, and a passion for modernizing operations, including leveraging 
+              AI integration. Across all my experiences, I've learned that great business solutions start with 
+              understanding people. Whether building websites, improving operations, or crafting marketing 
+              strategies, I'm dedicated to creating customer-centered solutions that drive growth and make a 
+              lasting impact.
             </p>
             <div className="grid grid-cols-2 gap-4 pt-4">
               <motion.div 

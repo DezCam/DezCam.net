@@ -28,13 +28,12 @@ export default function HeroSection() {
               Hi, I'm <span className="text-california-gold">Desmond</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100 leading-relaxed">
-              Trading Analyst & Aspiring Product Manager
+              Trading Analyst | Strategy & Marketing Consultant
             </p>
             <p className="text-lg mb-8 text-blue-100 leading-relaxed">
-              UC Berkeley Haas graduate and Trading Analyst currently building websites, operational processes, 
-              and strategies for SMBs. With entrepreneurial experience developing MVPs and launching successful 
-              products, I'm passionate about transitioning into product management to create products that 
-              inspire and change people's lives.
+              UC Berkeley Haas graduate and Trading Analyst with a track record of launching successful products. 
+              I help SMBs build websites, streamline operations, and develop strategies, bringing a customer-focused 
+              mindset to drive growth and positive impact.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 

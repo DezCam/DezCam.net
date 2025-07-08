@@ -14,8 +14,8 @@ export default function AboutSection() {
           <h2 className="text-4xl font-bold text-berkeley-blue mb-4">About Me</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             UC Berkeley Haas graduate and Trading Analyst currently building websites, operational processes, 
-            and strategies for SMBs. With entrepreneurial experience, I'm aspiring to transition into 
-            product management through my passion for creating user-centered solutions that drive business growth.
+            and strategies for SMBs. With entrepreneurial experience, I'm passionate about creating 
+            user-centered solutions that drive business growth and positive impact.
           </p>
         </motion.div>
         
@@ -42,7 +42,7 @@ export default function AboutSection() {
             <p className="text-lg text-gray-700 leading-relaxed">
               I'm a Trading Analyst and entrepreneur who carved my own unconventional path from a non-technical 
               background to UC Berkeley Haas. My journey includes building a mobile martial arts business, 
-              launching a pet product startup, and developing multiple MVPs as I transition into product management.
+              launching a pet product startup, and developing multiple MVPs to help businesses grow.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
               At Haas, I placed third in an entrepreneurship challenge where my team launched a pet product 
@@ -52,7 +52,7 @@ export default function AboutSection() {
             <p className="text-lg text-gray-700 leading-relaxed">
               My analytical skills are demonstrated through exceptional trading performance, achieving a 1,400% 
               return in just 4 months. This quantitative success showcases the data-driven decision making and 
-              risk management abilities I'm excited to bring to product management roles.
+              risk management abilities I bring to helping SMBs optimize their operations and strategies.
             </p>
             <div className="grid grid-cols-2 gap-4 pt-4">
               <motion.div 

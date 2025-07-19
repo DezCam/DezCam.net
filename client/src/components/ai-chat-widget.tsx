@@ -280,8 +280,12 @@ export default function AIChatWidget() {
                                   className="w-full bg-white/90 hover:bg-california-gold text-berkeley-blue hover:text-white font-medium py-2 px-3 rounded-lg transition-all duration-200 text-xs"
                                   variant="secondary"
                                 >
-                                  <span className="mr-1">{option.icon}</span>
-                                  {option.label}
+                                  <div className="flex items-center space-x-3 w-full">
+                                    <div className="w-4 h-4 flex items-center justify-center flex-shrink-0">
+                                      {option.icon}
+                                    </div>
+                                    <span className="flex-1 text-left">{option.label}</span>
+                                  </div>
                                 </Button>
                               ))}
                             </div>

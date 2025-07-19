@@ -10,15 +10,15 @@ const services = [
     title: "Professional Website Development",
     description: "Custom websites and web applications built with modern technologies for businesses and organizations.",
     features: [
+      "One-page to multi-page websites",
       "Responsive design for all devices",
       "Modern UI/UX with professional aesthetics",
       "SEO optimization and performance",
-      "Content management systems",
       "E-commerce integration",
       "Database integration"
     ],
     technologies: ["React", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL"],
-    pricing: "Starting at $2,500",
+    pricing: "$700 - $3,000",
     timeline: "2-4 weeks",
     color: "berkeley-blue"
   },
@@ -35,7 +35,7 @@ const services = [
       "Ongoing maintenance and support"
     ],
     technologies: ["Python", "JavaScript", "PostgreSQL", "AWS", "Docker"],
-    pricing: "Starting at $5,000",
+    pricing: "Starting at $3,000",
     timeline: "4-8 weeks",
     color: "california-gold"
   },
@@ -44,16 +44,16 @@ const services = [
     title: "Trading Education & Consulting",
     description: "Learn proven trading strategies and risk management techniques from a consistently profitable trader.",
     features: [
-      "One-on-one trading mentorship",
+      "1-on-1 mentorship from beginner to advanced",
+      "Weekly live sessions and chat support",
       "Risk management strategies",
       "Technical analysis training",
-      "Portfolio optimization",
-      "Market psychology coaching",
-      "Live trading sessions"
+      "Trading tools and resources",
+      "Only 4 slots left"
     ],
     technologies: ["TradingView", "Risk Management", "Technical Analysis", "Psychology"],
-    pricing: "Contact for pricing",
-    timeline: "Ongoing",
+    pricing: "$500/month",
+    timeline: "1 free week trial",
     color: "green-600"
   }
 ];

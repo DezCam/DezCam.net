@@ -12,15 +12,15 @@ const services = [
     title: "Trading Education & Mentorship",
     description: "Learn proven trading strategies from someone who achieved 1,407% returns in 4 months",
     icon: <TrendingUp className="h-8 w-8" />,
-    price: "$200/month",
-    duration: "3-month program",
+    price: "$500/month",
+    duration: "1 free week trial",
     features: [
-      "1-on-1 mentorship sessions",
+      "1-on-1 mentorship from beginner to advanced",
+      "Weekly live sessions and chat support",
       "Access to proven trading strategies",
       "Risk management techniques",
-      "Market analysis and timing",
-      "Portfolio optimization methods",
-      "24/7 support community"
+      "Trading tools and resources",
+      "Only 4 slots left"
     ],
     highlight: "1,407% Returns Achieved",
     cta: "Join Waiting List",
@@ -31,14 +31,14 @@ const services = [
     title: "Website Development",
     description: "Professional websites that convert visitors into customers with modern design and functionality",
     icon: <Globe className="h-8 w-8" />,
-    price: "$2,500",
+    price: "$700 - $3,000",
     duration: "2-3 weeks delivery",
     features: [
+      "One-page to multi-page websites",
       "Custom responsive design",
       "Modern React/TypeScript development",
       "SEO optimization",
       "Contact forms and integrations",
-      "Analytics setup",
       "1 month free support"
     ],
     highlight: "Berkeley-Trained Developer",
@@ -49,7 +49,7 @@ const services = [
     title: "Custom Software Solutions",
     description: "Tailored software applications to streamline your business operations and boost productivity",
     icon: <Code className="h-8 w-8" />,
-    price: "$150/hour",
+    price: "Starting at $3,000",
     duration: "Project-based",
     features: [
       "Custom application development",

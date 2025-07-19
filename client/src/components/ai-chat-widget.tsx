@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MessageCircle, X, Bot, User, TrendingUp, Globe, Code } from "lucide-react";
+import { MessageCircle, X, TrendingUp, Globe, Code, Sparkles, Calendar, BarChart3 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import WaitingListDialog from "./waiting-list-dialog";
 
 interface Message {
@@ -38,25 +37,24 @@ export default function AIChatWidget() {
   const initialOptions: ChatOption[] = [
     {
       id: 'trading',
-      label: 'Learn How to Trade',
+      label: 'Chat now with Desmond about Trading',
       icon: <TrendingUp className="h-4 w-4" />,
       action: () => {
         addMessage('user', 'I want to learn how to trade');
         setTimeout(() => {
-          addMessage('bot', "Great choice! I can help you get started with trading education. Let me connect you with Desmond's trading classes waiting list.", [
+          addMessage('bot', "Perfect! I can connect you with Desmond's proven trading strategies. He achieved 1,407% returns and offers personalized mentorship.", [
             {
               id: 'join-waiting-list',
-              label: 'Join Trading Classes Waiting List',
+              label: 'Join Trading Classes Waiting List 📊',
               icon: <TrendingUp className="h-4 w-4" />,
               action: () => {
                 addMessage('user', 'Join Trading Classes Waiting List');
                 setTimeout(() => {
-                  // Create and trigger the waiting list dialog programmatically
                   const element = document.querySelector('[data-waiting-list-trigger]') as HTMLElement;
                   if (element) {
                     element.click();
                   }
-                  addMessage('bot', "The waiting list form has been opened for you. Please fill it out to join the trading classes waiting list!");
+                  addMessage('bot', "Great! The waiting list form is now open. Fill it out to secure your spot in Desmond's exclusive trading program.");
                 }, 500);
               }
             }
@@ -66,19 +64,19 @@ export default function AIChatWidget() {
     },
     {
       id: 'website',
-      label: 'Get a Website Built',
-      icon: <Globe className="h-4 w-4" />,
+      label: 'Schedule a meeting for Website Development',
+      icon: <Calendar className="h-4 w-4" />,
       action: () => {
         addMessage('user', 'I need a website built for my business');
         setTimeout(() => {
-          addMessage('bot', "Perfect! Desmond specializes in building professional websites for businesses and organizations. Let me show you the services available.", [
+          addMessage('bot', "Excellent! Desmond creates professional websites with modern design and full functionality. Let's explore the options.", [
             {
               id: 'view-web-services',
-              label: 'View Website Services',
+              label: 'View Website Services 🌐',
               icon: <Globe className="h-4 w-4" />,
               action: () => {
                 scrollToServices();
-                addMessage('bot', "I've scrolled you to the Services section where you can learn more about website development services and get in touch!");
+                addMessage('bot', "Perfect! I've taken you to the Services section. You can see pricing starting at $2,500 and contact Desmond directly.");
               }
             }
           ]);
@@ -87,19 +85,19 @@ export default function AIChatWidget() {
     },
     {
       id: 'software',
-      label: 'Get Software Developed',
-      icon: <Code className="h-4 w-4" />,
+      label: 'Get our Custom Software Solutions',
+      icon: <BarChart3 className="h-4 w-4" />,
       action: () => {
         addMessage('user', 'I need custom software developed');
         setTimeout(() => {
-          addMessage('bot', "Excellent! Desmond offers custom software development services for businesses needing specialized solutions. Check out the available options.", [
+          addMessage('bot', "Outstanding! Desmond develops custom business applications with full-stack expertise. Let me show you what's available.", [
             {
               id: 'view-software-services',
-              label: 'View Software Services',
+              label: 'View Software Services 💻',
               icon: <Code className="h-4 w-4" />,
               action: () => {
                 scrollToServices();
-                addMessage('bot', "I've taken you to the Services section where you can explore software development options and contact Desmond directly!");
+                addMessage('bot', "Fantastic! Check out the Software Development section for comprehensive solutions starting at $5,000.");
               }
             }
           ]);
@@ -146,10 +144,15 @@ export default function AIChatWidget() {
       >
         <Button
           onClick={handleOpen}
-          className="h-14 w-14 rounded-full bg-berkeley-blue hover:bg-berkeley-blue/90 shadow-lg hover:shadow-xl transition-all duration-300"
+          className="h-16 w-16 rounded-full bg-gradient-to-br from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-white/20"
           size="lg"
         >
-          <MessageCircle className="h-6 w-6 text-white" />
+          <div className="relative">
+            <div className="h-8 w-8 rounded-full bg-white/20 flex items-center justify-center">
+              <MessageCircle className="h-5 w-5 text-white" />
+            </div>
+            <div className="absolute -top-1 -right-1 h-3 w-3 bg-green-400 rounded-full border-2 border-white"></div>
+          </div>
         </Button>
       </motion.div>
 
@@ -157,73 +160,95 @@ export default function AIChatWidget() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed bottom-24 right-6 z-50 w-80 h-96 bg-white rounded-lg shadow-2xl border border-gray-200"
+            className="fixed bottom-24 right-6 z-50 w-80 rounded-xl shadow-2xl overflow-hidden"
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
           >
-            {/* Header */}
-            <div className="flex items-center justify-between p-4 bg-berkeley-blue text-white rounded-t-lg">
-              <div className="flex items-center space-x-2">
-                <Bot className="h-5 w-5" />
-                <span className="font-semibold">AI Assistant</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={resetChat}
-                  className="text-white hover:bg-white/20 h-8 w-8 p-0"
-                >
-                  <MessageCircle className="h-4 w-4" />
-                </Button>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={() => setIsOpen(false)}
-                  className="text-white hover:bg-white/20 h-8 w-8 p-0"
-                >
-                  <X className="h-4 w-4" />
-                </Button>
-              </div>
-            </div>
+            {/* Main Content with Gradient Background */}
+            <div className="bg-gradient-to-br from-purple-600 via-blue-600 to-indigo-700 text-white relative">
+              {/* Close Button */}
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => setIsOpen(false)}
+                className="absolute top-3 right-3 text-white/80 hover:text-white hover:bg-white/10 h-8 w-8 p-0 rounded-full z-10"
+              >
+                <X className="h-4 w-4" />
+              </Button>
 
-            {/* Messages */}
-            <div className="flex-1 p-4 h-64 overflow-y-auto space-y-3">
-              {messages.map((message, index) => (
-                <div key={index} className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}>
-                  <div className={`max-w-[80%] rounded-lg p-3 ${
-                    message.type === 'user'
-                      ? 'bg-berkeley-blue text-white'
-                      : 'bg-gray-100 text-gray-800'
-                  }`}>
-                    <div className="flex items-start space-x-2">
-                      {message.type === 'bot' && <Bot className="h-4 w-4 mt-0.5 flex-shrink-0" />}
-                      {message.type === 'user' && <User className="h-4 w-4 mt-0.5 flex-shrink-0" />}
-                      <span className="text-sm">{message.content}</span>
+              {/* Header */}
+              <div className="p-6 pb-4">
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="h-10 w-10 rounded-full bg-white/20 flex items-center justify-center">
+                    <div className="h-6 w-6 rounded-full bg-white/30 flex items-center justify-center">
+                      <Sparkles className="h-3 w-3 text-white" />
                     </div>
-                    
-                    {/* Options */}
-                    {message.options && (
-                      <div className="mt-3 space-y-2">
-                        {message.options.map((option) => (
-                          <Button
-                            key={option.id}
-                            variant="outline"
-                            size="sm"
-                            onClick={option.action}
-                            className="w-full justify-start text-xs h-8 bg-white hover:bg-berkeley-blue hover:text-white border-berkeley-blue text-berkeley-blue"
-                          >
-                            {option.icon}
-                            <span className="ml-2">{option.label}</span>
-                          </Button>
-                        ))}
-                      </div>
-                    )}
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold">Welcome to Outreach!</h3>
+                    <p className="text-white/80 text-sm">How can we help you today?</p>
                   </div>
                 </div>
-              ))}
+              </div>
+
+              {/* Initial Options or Messages */}
+              <div className="px-6 pb-6 space-y-3">
+                {messages.length === 0 ? (
+                  // Show initial options directly
+                  initialOptions.map((option) => (
+                    <Button
+                      key={option.id}
+                      onClick={option.action}
+                      className="w-full bg-white/90 hover:bg-white text-purple-700 font-medium py-3 px-4 rounded-lg transition-all duration-200 hover:shadow-md border-0 justify-start text-sm"
+                      variant="secondary"
+                    >
+                      <span className="mr-2">{option.icon}</span>
+                      {option.label}
+                    </Button>
+                  ))
+                ) : (
+                  // Show messages if conversation started
+                  <div className="max-h-64 overflow-y-auto space-y-3">
+                    {messages.map((message, index) => (
+                      <div key={index} className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}>
+                        <div className={`max-w-[85%] rounded-lg p-3 ${
+                          message.type === 'user'
+                            ? 'bg-white/20 text-white backdrop-blur-sm'
+                            : 'bg-white/95 text-gray-800'
+                        }`}>
+                          <span className="text-sm">{message.content}</span>
+                          
+                          {/* Options */}
+                          {message.options && (
+                            <div className="mt-3 space-y-2">
+                              {message.options.map((option) => (
+                                <Button
+                                  key={option.id}
+                                  onClick={option.action}
+                                  className="w-full bg-white/90 hover:bg-white text-purple-700 font-medium py-2 px-3 rounded-lg transition-all duration-200 text-xs"
+                                  variant="secondary"
+                                >
+                                  <span className="mr-1">{option.icon}</span>
+                                  {option.label}
+                                </Button>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Footer */}
+              <div className="px-6 pb-4">
+                <p className="text-xs text-white/60 leading-relaxed">
+                  By using this chat feature, you consent to all chat messages being stored according to our privacy policy.
+                </p>
+              </div>
             </div>
           </motion.div>
         )}

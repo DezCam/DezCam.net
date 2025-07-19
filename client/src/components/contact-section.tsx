@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -23,8 +23,26 @@ export default function ContactSection() {
     subject: '',
     message: ''
   });
+  const [highlightOutcome, setHighlightOutcome] = useState(false);
 
   const { toast } = useToast();
+
+  useEffect(() => {
+    // Check for highlight parameter in URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const highlight = urlParams.get('highlight');
+    
+    if (highlight === 'outcome') {
+      setHighlightOutcome(true);
+      // Clear highlight after 3 seconds
+      setTimeout(() => {
+        setHighlightOutcome(false);
+        // Clean up URL
+        const newUrl = window.location.pathname + window.location.hash;
+        window.history.replaceState({}, '', newUrl);
+      }, 3000);
+    }
+  }, []);
 
   const contactMutation = useMutation({
     mutationFn: async (data: ContactFormData) => {
@@ -280,16 +298,29 @@ export default function ContactSection() {
 
             {/* Outcome Alignment Session CTA */}
             <motion.div 
-              className="mt-8 p-6 bg-gradient-to-r from-california-gold/10 to-berkeley-blue/10 rounded-xl border border-california-gold/20"
+              className={`mt-8 p-6 rounded-xl border transition-all duration-300 ${
+                highlightOutcome 
+                  ? 'bg-gradient-to-r from-blue-50 to-california-gold/20 border-california-gold shadow-lg shadow-california-gold/30 scale-105' 
+                  : 'bg-gradient-to-r from-california-gold/10 to-berkeley-blue/10 border-california-gold/20'
+              }`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
+              animate={highlightOutcome ? {
+                scale: [1, 1.02, 1],
+                transition: { duration: 0.6, repeat: 2 }
+              } : {}}
             >
               <div className="text-center">
                 <Calendar className="h-8 w-8 text-berkeley-blue mx-auto mb-3" />
                 <h3 className="text-xl font-semibold text-berkeley-blue mb-2">
-                  Free Outcome Alignment Session
+                  {highlightOutcome && (
+                    <span className="inline-block bg-blue-100 text-berkeley-blue px-3 py-1 rounded-full text-sm font-medium mb-2">
+                      ✨ Perfect Choice! ✨
+                    </span>
+                  )}
+                  <div>Free Outcome Alignment Session</div>
                 </h3>
                 <p className="text-gray-600 mb-4">
                   This initial call is designed to understand the scope, nature, and goals of your project. Whether you're looking for trading mentorship, a website, or a custom software solution, this session helps align expectations and determine the best path forward. It's a chance for us to clarify your vision and ensure we're the right fit — no commitment required.

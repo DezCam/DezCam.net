@@ -50,10 +50,10 @@ export default function AIChatWidget() {
       action: () => {
         addMessage('user', 'I want to book a free consultation');
         setTimeout(() => {
-          addMessage('bot', "Perfect! Navigating to our contact page to book your session");
+          addMessage('bot', "Perfect! Navigating to our contact page");
           setTimeout(() => {
-            // Navigate to contact page
-            window.location.href = '/#contact';
+            // Navigate to contact page with highlight
+            window.location.href = '/#contact?highlight=outcome';
           }, 1000);
         }, 1000);
       }

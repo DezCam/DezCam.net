@@ -70,6 +70,20 @@ export default function ServicesSection() {
     }
   };
 
+  const openCalendly = (url: string) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
+  const handleServiceClick = (serviceIndex: number) => {
+    if (serviceIndex === 0) { // Website Development
+      openCalendly('https://calendly.com/your-website-consultation');
+    } else if (serviceIndex === 1) { // Custom Software
+      openCalendly('https://calendly.com/your-software-consultation');
+    } else { // Trading Education
+      scrollToContact();
+    }
+  };
+
   return (
     <section id="services" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -155,7 +169,7 @@ export default function ServicesSection() {
 
                   {/* CTA Button */}
                   <Button 
-                    onClick={scrollToContact}
+                    onClick={() => handleServiceClick(index)}
                     className={`w-full ${
                       service.color === 'berkeley-blue' ? 'bg-berkeley-blue hover:bg-berkeley-blue/90' :
                       service.color === 'california-gold' ? 'bg-california-gold text-berkeley-blue hover:bg-california-gold/90' :

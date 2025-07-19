@@ -35,6 +35,10 @@ export default function AIChatWidget() {
     }
   };
 
+  const openCalendly = (url: string) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
   const initialOptions: ChatOption[] = [
     {
       id: 'trading',
@@ -70,14 +74,26 @@ export default function AIChatWidget() {
       action: () => {
         addMessage('user', 'I need a website built for my business');
         setTimeout(() => {
-          addMessage('bot', "Excellent! Desmond creates professional websites with modern design and full functionality. Let's explore the options.", [
+          addMessage('bot', "Excellent! Desmond creates professional websites with modern design and full functionality. Let's schedule your consultation!", [
+            {
+              id: 'schedule-website-consultation',
+              label: 'Schedule Website Consultation 📅',
+              icon: <Calendar className="h-4 w-4" />,
+              action: () => {
+                addMessage('user', 'Schedule Website Consultation');
+                openCalendly('https://calendly.com/your-website-consultation');
+                setTimeout(() => {
+                  addMessage('bot', "Perfect! I've opened your Calendly booking page in a new tab. Pick a time that works best for you!");
+                }, 500);
+              }
+            },
             {
               id: 'view-web-services',
-              label: 'View Website Services 🌐',
+              label: 'View Pricing & Details 🌐',
               icon: <Globe className="h-4 w-4" />,
               action: () => {
                 scrollToServices();
-                addMessage('bot', "Perfect! I've taken you to the Services section. You can see pricing starting at $2,500 and contact Desmond directly.");
+                addMessage('bot', "Great! I've taken you to the Services section where you can see pricing ($700-$3,000) and all the details.");
               }
             }
           ]);
@@ -91,14 +107,26 @@ export default function AIChatWidget() {
       action: () => {
         addMessage('user', 'I need custom software developed');
         setTimeout(() => {
-          addMessage('bot', "Outstanding! Desmond develops custom business applications with full-stack expertise. Let me show you what's available.", [
+          addMessage('bot', "Outstanding! Desmond develops custom business applications with full-stack expertise. Let's discuss your project!", [
+            {
+              id: 'schedule-software-consultation',
+              label: 'Schedule Project Discussion 📅',
+              icon: <Calendar className="h-4 w-4" />,
+              action: () => {
+                addMessage('user', 'Schedule Project Discussion');
+                openCalendly('https://calendly.com/your-software-consultation');
+                setTimeout(() => {
+                  addMessage('bot', "Excellent! I've opened your Calendly booking page in a new tab. Let's get your project started!");
+                }, 500);
+              }
+            },
             {
               id: 'view-software-services',
-              label: 'View Software Services 💻',
+              label: 'View Pricing & Details 💻',
               icon: <Code className="h-4 w-4" />,
               action: () => {
                 scrollToServices();
-                addMessage('bot', "Fantastic! Check out the Software Development section for comprehensive solutions starting at $5,000.");
+                addMessage('bot', "Perfect! Check out the Software Development section for comprehensive solutions starting at $3,000.");
               }
             }
           ]);

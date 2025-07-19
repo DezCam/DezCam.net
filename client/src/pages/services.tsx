@@ -70,6 +70,10 @@ export default function Services() {
     window.location.href = '/#contact';
   };
 
+  const openCalendly = (url: string) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
       <Navigation />
@@ -166,6 +170,22 @@ export default function Services() {
                             {service.cta}
                           </Button>
                         </WaitingListDialog>
+                      ) : service.id === 'website' ? (
+                        <Button 
+                          onClick={() => openCalendly('https://calendly.com/your-website-consultation')}
+                          className="w-full bg-berkeley-blue hover:bg-blue-800 text-white"
+                        >
+                          <Calendar className="h-4 w-4 mr-2" />
+                          {service.cta}
+                        </Button>
+                      ) : service.id === 'software' ? (
+                        <Button 
+                          onClick={() => openCalendly('https://calendly.com/your-software-consultation')}
+                          className="w-full bg-berkeley-blue hover:bg-blue-800 text-white"
+                        >
+                          <Calendar className="h-4 w-4 mr-2" />
+                          {service.cta}
+                        </Button>
                       ) : (
                         <Button 
                           onClick={scrollToContact}

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { TrendingUp, Globe, Code, Calendar, BarChart3, Users, Clock, DollarSign, Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -65,6 +66,21 @@ const services = [
 ];
 
 export default function Services() {
+  const [highlightedService, setHighlightedService] = useState<string | null>(null);
+
+  useEffect(() => {
+    // Check for highlight parameter in URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const highlight = urlParams.get('highlight');
+    if (highlight) {
+      setHighlightedService(highlight);
+      // Remove the parameter from URL after reading it
+      window.history.replaceState({}, '', window.location.pathname);
+      // Auto-remove highlight after animation
+      setTimeout(() => setHighlightedService(null), 3000);
+    }
+  }, []);
+
   const scrollToContact = () => {
     // Navigate to home page contact section
     window.location.href = '/#contact';
@@ -101,19 +117,42 @@ export default function Services() {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <motion.div
-                key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
-              >
-                <Card className={`h-full relative ${service.popular ? 'ring-2 ring-berkeley-blue shadow-xl' : ''}`}>
-                  {service.popular && (
-                    <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-california-gold text-berkeley-blue">
-                      Most Popular
-                    </Badge>
-                  )}
+            {services.map((service, index) => {
+              const isHighlighted = highlightedService === service.id;
+              return (
+                <motion.div
+                  key={service.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ 
+                    opacity: 1, 
+                    y: 0,
+                    scale: isHighlighted ? [1, 1.05, 1, 1.05, 1] : 1,
+                    boxShadow: isHighlighted ? [
+                      "0 0 0 rgba(59, 130, 246, 0.5)",
+                      "0 0 30px rgba(59, 130, 246, 0.8)",
+                      "0 0 0 rgba(59, 130, 246, 0.5)",
+                      "0 0 30px rgba(59, 130, 246, 0.8)",
+                      "0 0 0 rgba(59, 130, 246, 0.5)"
+                    ] : "0 0 0 rgba(59, 130, 246, 0)"
+                  }}
+                  transition={{ 
+                    duration: isHighlighted ? 0.6 : 0.8, 
+                    delay: index * 0.2,
+                    repeat: isHighlighted ? 2 : 0,
+                    ease: "easeInOut"
+                  }}
+                >
+                  <Card className={`h-full relative ${service.popular || isHighlighted ? 'ring-2 ring-berkeley-blue shadow-xl' : ''} ${isHighlighted ? 'bg-gradient-to-br from-blue-50 to-white border-berkeley-blue' : ''}`}>
+                    {service.popular && !isHighlighted && (
+                      <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-california-gold text-berkeley-blue">
+                        Most Popular
+                      </Badge>
+                    )}
+                    {isHighlighted && (
+                      <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-berkeley-blue text-white animate-pulse">
+                        ✨ Recommended for You ✨
+                      </Badge>
+                    )}
                   
                   <CardHeader className="text-center pb-4">
                     <div className="flex justify-center mb-4">
@@ -199,7 +238,8 @@ export default function Services() {
                   </CardContent>
                 </Card>
               </motion.div>
-            ))}
+            );
+            })}
           </div>
         </div>
       </section>

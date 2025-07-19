@@ -47,23 +47,11 @@ export default function AIChatWidget() {
       action: () => {
         addMessage('user', 'I want to learn how to trade');
         setTimeout(() => {
-          addMessage('bot', "Perfect! I can connect you with Desmond's proven trading strategies. He achieved 1,407% returns and offers personalized mentorship.", [
-            {
-              id: 'join-waiting-list',
-              label: 'Join Trading Classes Waiting List 📊',
-              icon: <TrendingUp className="h-4 w-4" />,
-              action: () => {
-                addMessage('user', 'Join Trading Classes Waiting List');
-                setTimeout(() => {
-                  const element = document.querySelector('[data-waiting-list-trigger]') as HTMLElement;
-                  if (element) {
-                    element.click();
-                  }
-                  addMessage('bot', "Great! The waiting list form is now open. Fill it out to secure your spot in Desmond's exclusive trading program.");
-                }, 500);
-              }
-            }
-          ]);
+          addMessage('bot', "Perfect! I'll take you to our Trading Education service page where you can learn more and join the waiting list.");
+          setTimeout(() => {
+            // Navigate to services page with trading highlight
+            window.location.href = '/services?highlight=trading';
+          }, 1000);
         }, 1000);
       }
     },
@@ -74,29 +62,11 @@ export default function AIChatWidget() {
       action: () => {
         addMessage('user', 'I need a website built for my business');
         setTimeout(() => {
-          addMessage('bot', "Excellent! Desmond creates professional websites with modern design and full functionality. Let's schedule your consultation!", [
-            {
-              id: 'schedule-website-consultation',
-              label: 'Schedule Website Consultation 📅',
-              icon: <Calendar className="h-4 w-4" />,
-              action: () => {
-                addMessage('user', 'Schedule Website Consultation');
-                openCalendly('https://calendly.com/desmondjr88/web-design-development');
-                setTimeout(() => {
-                  addMessage('bot', "Perfect! I've opened your Calendly booking page in a new tab. Pick a time that works best for you!");
-                }, 500);
-              }
-            },
-            {
-              id: 'view-web-services',
-              label: 'View Pricing & Details 🌐',
-              icon: <Globe className="h-4 w-4" />,
-              action: () => {
-                scrollToServices();
-                addMessage('bot', "Great! I've taken you to the Services section where you can see pricing ($700-$3,000) and all the details.");
-              }
-            }
-          ]);
+          addMessage('bot', "Excellent! I'll take you to our Website Development service page with pricing and details.");
+          setTimeout(() => {
+            // Navigate to services page with website highlight
+            window.location.href = '/services?highlight=website';
+          }, 1000);
         }, 1000);
       }
     },
@@ -107,29 +77,11 @@ export default function AIChatWidget() {
       action: () => {
         addMessage('user', 'I need custom software developed');
         setTimeout(() => {
-          addMessage('bot', "Outstanding! Desmond develops custom business applications with full-stack expertise. Let's discuss your project!", [
-            {
-              id: 'schedule-software-consultation',
-              label: 'Schedule Project Discussion 📅',
-              icon: <Calendar className="h-4 w-4" />,
-              action: () => {
-                addMessage('user', 'Schedule Project Discussion');
-                openCalendly('https://calendly.com/desmondjr88/custom-software-solutions');
-                setTimeout(() => {
-                  addMessage('bot', "Excellent! I've opened your Calendly booking page in a new tab. Let's get your project started!");
-                }, 500);
-              }
-            },
-            {
-              id: 'view-software-services',
-              label: 'View Pricing & Details 💻',
-              icon: <Code className="h-4 w-4" />,
-              action: () => {
-                scrollToServices();
-                addMessage('bot', "Perfect! Check out the Software Development section for comprehensive solutions starting at $3,000.");
-              }
-            }
-          ]);
+          addMessage('bot', "Outstanding! I'll take you to our Custom Software Solutions service page.");
+          setTimeout(() => {
+            // Navigate to services page with software highlight
+            window.location.href = '/services?highlight=software';
+          }, 1000);
         }, 1000);
       }
     }

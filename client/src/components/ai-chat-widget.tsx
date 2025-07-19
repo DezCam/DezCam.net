@@ -53,7 +53,11 @@ export default function AIChatWidget() {
           addMessage('bot', "Perfect! Navigating to our contact page");
           setTimeout(() => {
             // Navigate to contact page with highlight
-            window.location.href = '/#contact?highlight=outcome';
+            if (window.location.pathname === '/') {
+              window.location.href = '#contact?highlight=outcome';
+            } else {
+              window.location.href = '/#contact?highlight=outcome';
+            }
           }, 1000);
         }, 1000);
       }

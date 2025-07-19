@@ -135,6 +135,44 @@ export default function ContactSection() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
+            {/* Outcome Alignment Session CTA - Moved to top */}
+            <motion.div 
+              className={`p-6 rounded-xl border transition-all duration-300 ${
+                highlightOutcome 
+                  ? 'bg-gradient-to-r from-blue-50 to-california-gold/20 border-california-gold shadow-lg shadow-california-gold/30 scale-105' 
+                  : 'bg-gradient-to-r from-california-gold/10 to-berkeley-blue/10 border-california-gold/20'
+              }`}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              animate={highlightOutcome ? {
+                scale: [1, 1.02, 1],
+                transition: { duration: 0.6, repeat: 2 }
+              } : {}}
+            >
+              <div className="text-center">
+                <Calendar className="h-8 w-8 text-berkeley-blue mx-auto mb-3" />
+                <h3 className="text-xl font-semibold text-berkeley-blue mb-2">
+                  {highlightOutcome && (
+                    <span className="inline-block bg-blue-100 text-berkeley-blue px-3 py-1 rounded-full text-sm font-medium mb-2">
+                      ✨ Perfect Choice! ✨
+                    </span>
+                  )}
+                  <div>Free Outcome Alignment Session</div>
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  This initial call is designed to understand the scope, nature, and goals of your project. Whether you're looking for trading mentorship, a website, or a custom software solution, this session helps align expectations and determine the best path forward. It's a chance for us to clarify your vision and ensure we're the right fit — no commitment required.
+                </p>
+                <Button 
+                  onClick={() => openCalendly('https://calendly.com/desmondjr88/outcome-alignment-session')}
+                  className="bg-california-gold text-berkeley-blue hover:bg-yellow-500 font-semibold px-6 py-3"
+                >
+                  <Calendar className="h-4 w-4 mr-2" />
+                  Book Free Session
+                </Button>
+              </div>
+            </motion.div>
             {contactInfo.map((info, index) => {
               const IconComponent = info.icon;
               const content = (
@@ -296,44 +334,7 @@ export default function ContactSection() {
               </Button>
             </form>
 
-            {/* Outcome Alignment Session CTA */}
-            <motion.div 
-              className={`mt-8 p-6 rounded-xl border transition-all duration-300 ${
-                highlightOutcome 
-                  ? 'bg-gradient-to-r from-blue-50 to-california-gold/20 border-california-gold shadow-lg shadow-california-gold/30 scale-105' 
-                  : 'bg-gradient-to-r from-california-gold/10 to-berkeley-blue/10 border-california-gold/20'
-              }`}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              animate={highlightOutcome ? {
-                scale: [1, 1.02, 1],
-                transition: { duration: 0.6, repeat: 2 }
-              } : {}}
-            >
-              <div className="text-center">
-                <Calendar className="h-8 w-8 text-berkeley-blue mx-auto mb-3" />
-                <h3 className="text-xl font-semibold text-berkeley-blue mb-2">
-                  {highlightOutcome && (
-                    <span className="inline-block bg-blue-100 text-berkeley-blue px-3 py-1 rounded-full text-sm font-medium mb-2">
-                      ✨ Perfect Choice! ✨
-                    </span>
-                  )}
-                  <div>Free Outcome Alignment Session</div>
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  This initial call is designed to understand the scope, nature, and goals of your project. Whether you're looking for trading mentorship, a website, or a custom software solution, this session helps align expectations and determine the best path forward. It's a chance for us to clarify your vision and ensure we're the right fit — no commitment required.
-                </p>
-                <Button 
-                  onClick={() => openCalendly('https://calendly.com/desmondjr88/outcome-alignment-session')}
-                  className="bg-california-gold text-berkeley-blue hover:bg-yellow-500 font-semibold px-6 py-3"
-                >
-                  <Calendar className="h-4 w-4 mr-2" />
-                  Book Free Session
-                </Button>
-              </div>
-            </motion.div>
+
           </motion.div>
         </div>
       </div>

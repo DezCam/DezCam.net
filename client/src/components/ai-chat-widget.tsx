@@ -159,7 +159,7 @@ export default function AIChatWidget() {
       <AnimatePresence>
         {showSpeechBubble && !isOpen && (
           <motion.div
-            className="fixed bottom-[88px] right-[24px] z-40"
+            className="fixed bottom-[104px] right-[24px] z-40"
             initial={{ opacity: 0, scale: 0.8, y: 10 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 10 }}
@@ -173,7 +173,7 @@ export default function AIChatWidget() {
                 </p>
               </div>
               {/* Speech bubble tail pointing to avatar */}
-              <div className="absolute -bottom-2 right-[32px] w-4 h-4 bg-white border-r-2 border-b-2 border-berkeley-blue/20 transform rotate-45"></div>
+              <div className="absolute -bottom-2 right-[40px] w-4 h-4 bg-white border-r-2 border-b-2 border-berkeley-blue/20 transform rotate-45"></div>
             </div>
           </motion.div>
         )}
@@ -188,11 +188,11 @@ export default function AIChatWidget() {
       >
         <Button
           onClick={handleOpen}
-          className="h-16 w-16 rounded-full bg-gradient-to-br from-berkeley-blue to-blue-800 hover:from-blue-800 hover:to-berkeley-blue shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-white/20 flex items-center justify-center"
+          className="h-20 w-20 rounded-full bg-gradient-to-br from-berkeley-blue to-blue-800 hover:from-blue-800 hover:to-berkeley-blue shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-white/20 flex items-center justify-center"
           size="lg"
         >
           <div className="relative flex items-center justify-center">
-            <div className="h-14 w-14 rounded-full overflow-hidden border-2 border-white/30 bg-white flex items-center justify-center">
+            <div className="h-16 w-16 rounded-full overflow-hidden border-2 border-white/30 bg-white flex items-center justify-center">
               <img 
                 src="/avatar-centered.jpg" 
                 alt="Chat with Desmond" 
@@ -229,7 +229,7 @@ export default function AIChatWidget() {
               {/* Header */}
               <div className="p-6 pb-4">
                 <div className="flex items-center space-x-3 mb-4">
-                  <div className="h-12 w-12 rounded-full overflow-hidden border-2 border-california-gold/30 bg-white flex items-center justify-center">
+                  <div className="h-14 w-14 rounded-full overflow-hidden border-2 border-california-gold/30 bg-white flex items-center justify-center">
                     <img 
                       src="/avatar-centered.jpg" 
                       alt="Desmond's AI Assistant" 

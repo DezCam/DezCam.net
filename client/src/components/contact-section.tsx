@@ -292,7 +292,7 @@ export default function ContactSection() {
                   Free Outcome Alignment Session
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Book a complimentary 30-minute consultation to discuss your project goals, timeline, and how we can work together to achieve your vision.
+                  This initial call is designed to understand the scope, nature, and goals of your project. Whether you're looking for trading mentorship, a website, or a custom software solution, this session helps align expectations and determine the best path forward. It's a chance for us to clarify your vision and ensure we're the right fit — no commitment required.
                 </p>
                 <Button 
                   onClick={() => openCalendly('https://calendly.com/desmondjr88/outcome-alignment-session')}

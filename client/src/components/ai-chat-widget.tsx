@@ -44,6 +44,21 @@ export default function AIChatWidget() {
 
   const initialOptions: ChatOption[] = [
     {
+      id: 'outcome-session',
+      label: 'Free Outcome Alignment Session',
+      icon: <Calendar className="h-4 w-4" />,
+      action: () => {
+        addMessage('user', 'I want to book a free consultation');
+        setTimeout(() => {
+          addMessage('bot', "Perfect! Navigating to our contact page to book your session");
+          setTimeout(() => {
+            // Navigate to contact page
+            window.location.href = '/#contact';
+          }, 1000);
+        }, 1000);
+      }
+    },
+    {
       id: 'trading',
       label: 'Book Trading Session',
       icon: <TrendingUp className="h-4 w-4" />,

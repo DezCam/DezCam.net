@@ -196,7 +196,7 @@ export default function AIChatWidget() {
               <img 
                 src="/avatar-centered.jpg" 
                 alt="Chat with Desmond" 
-                className="w-full h-full object-cover object-center"
+                className="w-20 h-20 object-cover object-center"
               />
             </div>
             <div className="absolute -top-1 -right-1 h-3 w-3 bg-california-gold rounded-full border-2 border-white"></div>
@@ -233,7 +233,7 @@ export default function AIChatWidget() {
                     <img 
                       src="/avatar-centered.jpg" 
                       alt="Desmond's AI Assistant" 
-                      className="w-full h-full object-cover object-center"
+                      className="w-16 h-16 object-cover object-center"
                     />
                   </div>
                   <div>

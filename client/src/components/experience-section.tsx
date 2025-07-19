@@ -18,7 +18,7 @@ const experiences = [
     color: "blue-500"
   },
   {
-    title: "District Leader",
+    title: "District Manager",
     company: "Primerica Life Insurance",
     period: "Jan 2017 - Dec 2018",
     description: "Ranked #7 in California and #13 nationally in life insurance sales during 2017. Consistently surpassed $10k monthly sales quota through data-driven client relationship building and empathetic approach to addressing financial concerns.",

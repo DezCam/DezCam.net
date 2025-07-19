@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -65,6 +65,10 @@ export default function ContactSection() {
       ...prev,
       [e.target.name]: e.target.value
     }));
+  };
+
+  const openCalendly = (url: string) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
   };
 
   const contactInfo = [
@@ -273,6 +277,32 @@ export default function ContactSection() {
                 {contactMutation.isPending ? "Sending..." : "Send Message"}
               </Button>
             </form>
+
+            {/* Outcome Alignment Session CTA */}
+            <motion.div 
+              className="mt-8 p-6 bg-gradient-to-r from-california-gold/10 to-berkeley-blue/10 rounded-xl border border-california-gold/20"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="text-center">
+                <Calendar className="h-8 w-8 text-berkeley-blue mx-auto mb-3" />
+                <h3 className="text-xl font-semibold text-berkeley-blue mb-2">
+                  Free Outcome Alignment Session
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Book a complimentary 30-minute consultation to discuss your project goals, timeline, and how we can work together to achieve your vision.
+                </p>
+                <Button 
+                  onClick={() => openCalendly('https://calendly.com/desmondjr88/outcome-alignment-session')}
+                  className="bg-california-gold text-berkeley-blue hover:bg-yellow-500 font-semibold px-6 py-3"
+                >
+                  <Calendar className="h-4 w-4 mr-2" />
+                  Book Free Session
+                </Button>
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       </div>

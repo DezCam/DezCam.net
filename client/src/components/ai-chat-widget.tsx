@@ -38,7 +38,7 @@ export default function AIChatWidget() {
   const initialOptions: ChatOption[] = [
     {
       id: 'trading',
-      label: 'Chat now with Desmond about Trading',
+      label: 'Book Trading Session',
       icon: <TrendingUp className="h-4 w-4" />,
       action: () => {
         addMessage('user', 'I want to learn how to trade');
@@ -65,7 +65,7 @@ export default function AIChatWidget() {
     },
     {
       id: 'website',
-      label: 'Schedule a meeting for Website Development',
+      label: 'Website Design & Development',
       icon: <Calendar className="h-4 w-4" />,
       action: () => {
         addMessage('user', 'I need a website built for my business');
@@ -86,7 +86,7 @@ export default function AIChatWidget() {
     },
     {
       id: 'software',
-      label: 'Get our Custom Software Solutions',
+      label: 'Custom Software for SMBs',
       icon: <BarChart3 className="h-4 w-4" />,
       action: () => {
         addMessage('user', 'I need custom software developed');

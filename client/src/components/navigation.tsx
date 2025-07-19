@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { Link } from "wouter";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,12 +37,12 @@ export default function Navigation() {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
-            <button 
-              onClick={() => scrollToSection('home')}
+            <Link 
+              href="/"
               className="text-gray-600 hover:text-berkeley-blue transition-colors"
             >
               Home
-            </button>
+            </Link>
             <button 
               onClick={() => scrollToSection('about')}
               className="text-gray-600 hover:text-berkeley-blue transition-colors"
@@ -66,12 +67,12 @@ export default function Navigation() {
             >
               Portfolio
             </button>
-            <button 
-              onClick={() => scrollToSection('services')}
+            <Link 
+              href="/services"
               className="text-gray-600 hover:text-berkeley-blue transition-colors"
             >
               Services
-            </button>
+            </Link>
             <button 
               onClick={() => scrollToSection('contact')}
               className="text-gray-600 hover:text-berkeley-blue transition-colors"
@@ -98,12 +99,13 @@ export default function Navigation() {
       {isOpen && (
         <div className="md:hidden bg-white border-t border-gray-100">
           <div className="px-2 pt-2 pb-3 space-y-1">
-            <button
-              onClick={() => scrollToSection('home')}
+            <Link
+              href="/"
               className="block w-full text-left px-3 py-2 text-gray-600 hover:text-berkeley-blue"
+              onClick={() => setIsOpen(false)}
             >
               Home
-            </button>
+            </Link>
             <button
               onClick={() => scrollToSection('about')}
               className="block w-full text-left px-3 py-2 text-gray-600 hover:text-berkeley-blue"
@@ -128,12 +130,13 @@ export default function Navigation() {
             >
               Portfolio
             </button>
-            <button
-              onClick={() => scrollToSection('services')}
+            <Link
+              href="/services"
               className="block w-full text-left px-3 py-2 text-gray-600 hover:text-berkeley-blue"
+              onClick={() => setIsOpen(false)}
             >
               Services
-            </button>
+            </Link>
             <button
               onClick={() => scrollToSection('contact')}
               className="block w-full text-left px-3 py-2 text-gray-600 hover:text-berkeley-blue"

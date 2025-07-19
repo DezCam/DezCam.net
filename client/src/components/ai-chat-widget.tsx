@@ -148,8 +148,12 @@ export default function AIChatWidget() {
           size="lg"
         >
           <div className="relative">
-            <div className="h-8 w-8 rounded-full bg-white/20 flex items-center justify-center">
-              <MessageCircle className="h-5 w-5 text-white" />
+            <div className="h-12 w-12 rounded-full overflow-hidden border-2 border-white/30">
+              <img 
+                src="/avatar-only.png" 
+                alt="Chat with Desmond" 
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="absolute -top-1 -right-1 h-3 w-3 bg-california-gold rounded-full border-2 border-white"></div>
           </div>

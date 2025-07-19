@@ -188,15 +188,15 @@ export default function AIChatWidget() {
       >
         <Button
           onClick={handleOpen}
-          className="h-16 w-16 rounded-full bg-gradient-to-br from-berkeley-blue to-blue-800 hover:from-blue-800 hover:to-berkeley-blue shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-white/20"
+          className="h-16 w-16 rounded-full bg-gradient-to-br from-berkeley-blue to-blue-800 hover:from-blue-800 hover:to-berkeley-blue shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-white/20 flex items-center justify-center"
           size="lg"
         >
-          <div className="relative">
-            <div className="h-14 w-14 rounded-full overflow-hidden border-2 border-white/30 bg-white">
+          <div className="relative flex items-center justify-center">
+            <div className="h-14 w-14 rounded-full overflow-hidden border-2 border-white/30 bg-white flex items-center justify-center">
               <img 
                 src="/avatar-clean.png" 
                 alt="Chat with Desmond" 
-                className="w-full h-full object-cover scale-110"
+                className="w-full h-full object-cover object-center"
               />
             </div>
             <div className="absolute -top-1 -right-1 h-3 w-3 bg-california-gold rounded-full border-2 border-white"></div>
@@ -229,11 +229,11 @@ export default function AIChatWidget() {
               {/* Header */}
               <div className="p-6 pb-4">
                 <div className="flex items-center space-x-3 mb-4">
-                  <div className="h-12 w-12 rounded-full overflow-hidden border-2 border-california-gold/30 bg-white">
+                  <div className="h-12 w-12 rounded-full overflow-hidden border-2 border-california-gold/30 bg-white flex items-center justify-center">
                     <img 
                       src="/avatar-clean.png" 
                       alt="Desmond's AI Assistant" 
-                      className="w-full h-full object-cover scale-110"
+                      className="w-full h-full object-cover object-center"
                     />
                   </div>
                   <div>

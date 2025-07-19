@@ -194,9 +194,9 @@ export default function AIChatWidget() {
           <div className="relative flex items-center justify-center">
             <div className="h-14 w-14 rounded-full overflow-hidden border-2 border-white/30 bg-white flex items-center justify-center">
               <img 
-                src="/avatar-clean.png" 
+                src="/avatar-centered.jpg" 
                 alt="Chat with Desmond" 
-                className="w-16 h-16 object-cover object-center -mt-1"
+                className="w-full h-full object-cover object-center"
               />
             </div>
             <div className="absolute -top-1 -right-1 h-3 w-3 bg-california-gold rounded-full border-2 border-white"></div>
@@ -231,9 +231,9 @@ export default function AIChatWidget() {
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="h-12 w-12 rounded-full overflow-hidden border-2 border-california-gold/30 bg-white flex items-center justify-center">
                     <img 
-                      src="/avatar-clean.png" 
+                      src="/avatar-centered.jpg" 
                       alt="Desmond's AI Assistant" 
-                      className="w-14 h-14 object-cover object-center -mt-1"
+                      className="w-full h-full object-cover object-center"
                     />
                   </div>
                   <div>

@@ -172,7 +172,7 @@ export default function Services() {
                         </WaitingListDialog>
                       ) : service.id === 'website' ? (
                         <Button 
-                          onClick={() => openCalendly('https://calendly.com/your-website-consultation')}
+                          onClick={() => openCalendly('https://calendly.com/desmondjr88/web-design-development')}
                           className="w-full bg-berkeley-blue hover:bg-blue-800 text-white"
                         >
                           <Calendar className="h-4 w-4 mr-2" />

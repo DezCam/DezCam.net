@@ -81,7 +81,7 @@ export default function AIChatWidget() {
               icon: <Calendar className="h-4 w-4" />,
               action: () => {
                 addMessage('user', 'Schedule Website Consultation');
-                openCalendly('https://calendly.com/your-website-consultation');
+                openCalendly('https://calendly.com/desmondjr88/web-design-development');
                 setTimeout(() => {
                   addMessage('bot', "Perfect! I've opened your Calendly booking page in a new tab. Pick a time that works best for you!");
                 }, 500);

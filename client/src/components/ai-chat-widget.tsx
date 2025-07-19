@@ -159,7 +159,7 @@ export default function AIChatWidget() {
       <AnimatePresence>
         {showSpeechBubble && !isOpen && (
           <motion.div
-            className="fixed bottom-24 right-20 z-40"
+            className="fixed bottom-[88px] right-[24px] z-40"
             initial={{ opacity: 0, scale: 0.8, y: 10 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 10 }}
@@ -172,8 +172,8 @@ export default function AIChatWidget() {
                   Welcome! How may I help you today?
                 </p>
               </div>
-              {/* Speech bubble tail */}
-              <div className="absolute -bottom-2 right-6 w-4 h-4 bg-white border-r-2 border-b-2 border-berkeley-blue/20 transform rotate-45"></div>
+              {/* Speech bubble tail pointing to avatar */}
+              <div className="absolute -bottom-2 right-[32px] w-4 h-4 bg-white border-r-2 border-b-2 border-berkeley-blue/20 transform rotate-45"></div>
             </div>
           </motion.div>
         )}

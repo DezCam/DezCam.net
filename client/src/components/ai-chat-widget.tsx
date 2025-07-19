@@ -144,14 +144,14 @@ export default function AIChatWidget() {
       >
         <Button
           onClick={handleOpen}
-          className="h-16 w-16 rounded-full bg-gradient-to-br from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-white/20"
+          className="h-16 w-16 rounded-full bg-gradient-to-br from-berkeley-blue to-blue-800 hover:from-blue-800 hover:to-berkeley-blue shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-white/20"
           size="lg"
         >
           <div className="relative">
             <div className="h-8 w-8 rounded-full bg-white/20 flex items-center justify-center">
               <MessageCircle className="h-5 w-5 text-white" />
             </div>
-            <div className="absolute -top-1 -right-1 h-3 w-3 bg-green-400 rounded-full border-2 border-white"></div>
+            <div className="absolute -top-1 -right-1 h-3 w-3 bg-california-gold rounded-full border-2 border-white"></div>
           </div>
         </Button>
       </motion.div>
@@ -167,7 +167,7 @@ export default function AIChatWidget() {
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
           >
             {/* Main Content with Gradient Background */}
-            <div className="bg-gradient-to-br from-purple-600 via-blue-600 to-indigo-700 text-white relative">
+            <div className="bg-gradient-to-br from-berkeley-blue via-blue-700 to-blue-900 text-white relative">
               {/* Close Button */}
               <Button
                 variant="ghost"
@@ -181,9 +181,9 @@ export default function AIChatWidget() {
               {/* Header */}
               <div className="p-6 pb-4">
                 <div className="flex items-center space-x-3 mb-4">
-                  <div className="h-10 w-10 rounded-full bg-white/20 flex items-center justify-center">
-                    <div className="h-6 w-6 rounded-full bg-white/30 flex items-center justify-center">
-                      <Sparkles className="h-3 w-3 text-white" />
+                  <div className="h-10 w-10 rounded-full bg-california-gold/20 flex items-center justify-center">
+                    <div className="h-6 w-6 rounded-full bg-california-gold/40 flex items-center justify-center">
+                      <Sparkles className="h-3 w-3 text-california-gold" />
                     </div>
                   </div>
                   <div>
@@ -201,7 +201,7 @@ export default function AIChatWidget() {
                     <Button
                       key={option.id}
                       onClick={option.action}
-                      className="w-full bg-white/90 hover:bg-white text-purple-700 font-medium py-3 px-4 rounded-lg transition-all duration-200 hover:shadow-md border-0 justify-start text-sm"
+                      className="w-full bg-white/90 hover:bg-california-gold text-berkeley-blue hover:text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 hover:shadow-md border-0 justify-start text-sm"
                       variant="secondary"
                     >
                       <span className="mr-2">{option.icon}</span>
@@ -227,7 +227,7 @@ export default function AIChatWidget() {
                                 <Button
                                   key={option.id}
                                   onClick={option.action}
-                                  className="w-full bg-white/90 hover:bg-white text-purple-700 font-medium py-2 px-3 rounded-lg transition-all duration-200 text-xs"
+                                  className="w-full bg-white/90 hover:bg-california-gold text-berkeley-blue hover:text-white font-medium py-2 px-3 rounded-lg transition-all duration-200 text-xs"
                                   variant="secondary"
                                 >
                                   <span className="mr-1">{option.icon}</span>

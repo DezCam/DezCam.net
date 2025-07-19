@@ -67,6 +67,12 @@ export default function Navigation() {
               Portfolio
             </button>
             <button 
+              onClick={() => scrollToSection('services')}
+              className="text-gray-600 hover:text-berkeley-blue transition-colors"
+            >
+              Services
+            </button>
+            <button 
               onClick={() => scrollToSection('contact')}
               className="text-gray-600 hover:text-berkeley-blue transition-colors"
             >
@@ -121,6 +127,12 @@ export default function Navigation() {
               className="block w-full text-left px-3 py-2 text-gray-600 hover:text-berkeley-blue"
             >
               Portfolio
+            </button>
+            <button
+              onClick={() => scrollToSection('services')}
+              className="block w-full text-left px-3 py-2 text-gray-600 hover:text-berkeley-blue"
+            >
+              Services
             </button>
             <button
               onClick={() => scrollToSection('contact')}

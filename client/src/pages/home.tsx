@@ -4,8 +4,10 @@ import AboutSection from "@/components/about-section";
 import ExperienceSection from "@/components/experience-section";
 import SkillsSection from "@/components/skills-section";
 import PortfolioSection from "@/components/portfolio-section";
+import ServicesSection from "@/components/services-section";
 import ContactSection from "@/components/contact-section";
 import Footer from "@/components/footer";
+import AIChatWidget from "@/components/ai-chat-widget";
 
 export default function Home() {
   return (
@@ -16,8 +18,10 @@ export default function Home() {
       <ExperienceSection />
       <SkillsSection />
       <PortfolioSection />
+      <ServicesSection />
       <ContactSection />
       <Footer />
+      <AIChatWidget />
     </div>
   );
 }

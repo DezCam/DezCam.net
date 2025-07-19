@@ -77,7 +77,10 @@ export default function WaitingListDialog({ trigger }: WaitingListDialogProps) {
   };
 
   const defaultTrigger = (
-    <Button className="bg-california-gold text-berkeley-blue font-semibold hover:bg-yellow-400 transition-colors flex items-center px-4 py-2">
+    <Button 
+      className="bg-california-gold text-berkeley-blue font-semibold hover:bg-yellow-400 transition-colors flex items-center px-4 py-2"
+      data-waiting-list-trigger
+    >
       Join Waiting List for Trading Classes
       <ArrowRight className="ml-1 h-4 w-4" />
     </Button>

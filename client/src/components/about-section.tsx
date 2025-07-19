@@ -14,7 +14,7 @@ export default function AboutSection() {
           <h2 className="text-4xl font-bold text-berkeley-blue mb-4">About Me</h2>
           <div className="text-lg text-gray-600 max-w-4xl mx-auto space-y-6">
             <p>
-              I'm a Trading Analyst and entrepreneur who carved an unconventional path from launching a mobile 
+              I'm a trading analyst and entrepreneur who carved an unconventional path from launching a mobile 
               martial arts business to working in production coordination for major events and commercials. 
               My career then took me into life insurance, where I ranked among the nation's top performers 
               in 2017, before diving into the world of trading.

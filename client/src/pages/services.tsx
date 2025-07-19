@@ -27,7 +27,7 @@ const services = [
   },
   {
     id: "website",
-    title: "Website Development",
+    title: "Web Design & Development",
     description: "Professional websites that convert visitors into customers with modern design and functionality",
     icon: <Globe className="h-8 w-8" />,
     price: "$700 - $3,000",

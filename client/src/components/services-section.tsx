@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 const services = [
   {
     icon: <Globe className="h-8 w-8" />,
-    title: "Professional Website Development",
+    title: "Web Design & Development",
     description: "Custom websites and web applications built with modern technologies for businesses and organizations.",
     features: [
       "One-page to multi-page websites",

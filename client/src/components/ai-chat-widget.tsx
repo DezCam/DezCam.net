@@ -58,11 +58,11 @@ export default function AIChatWidget() {
     {
       id: 'website',
       label: 'Website Design & Development',
-      icon: <Calendar className="h-4 w-4" />,
+      icon: <Globe className="h-4 w-4" />,
       action: () => {
         addMessage('user', 'I need a website built for my business');
         setTimeout(() => {
-          addMessage('bot', "Excellent! I'll take you to our Website Development service page with pricing and details.");
+          addMessage('bot', "Excellent! I'll take you to our Website Development service page where you can see pricing and schedule a consultation.");
           setTimeout(() => {
             // Navigate to services page with website highlight
             window.location.href = '/services?highlight=website';
@@ -73,11 +73,11 @@ export default function AIChatWidget() {
     {
       id: 'software',
       label: 'Custom Software for SMBs',
-      icon: <BarChart3 className="h-4 w-4" />,
+      icon: <Code className="h-4 w-4" />,
       action: () => {
         addMessage('user', 'I need custom software developed');
         setTimeout(() => {
-          addMessage('bot', "Outstanding! I'll take you to our Custom Software Solutions service page.");
+          addMessage('bot', "Outstanding! I'll take you to our Custom Software Solutions service page with detailed pricing and consultation options.");
           setTimeout(() => {
             // Navigate to services page with software highlight
             window.location.href = '/services?highlight=software';

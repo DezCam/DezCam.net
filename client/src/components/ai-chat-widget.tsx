@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MessageCircle, X, TrendingUp, Globe, Code, Sparkles, Calendar, BarChart3 } from "lucide-react";
+import { MessageCircle, X, TrendingUp, Globe, Code, Sparkles, Calendar, BarChart3, HelpCircle, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import WaitingListDialog from "./waiting-list-dialog";
 
 interface Message {
@@ -23,6 +24,8 @@ export default function AIChatWidget() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [showWaitingList, setShowWaitingList] = useState(false);
   const [showSpeechBubble, setShowSpeechBubble] = useState(false);
+  const [showOtherInput, setShowOtherInput] = useState(false);
+  const [userQuestion, setUserQuestion] = useState('');
 
   const scrollToServices = () => {
     const element = document.getElementById('services');
@@ -47,7 +50,7 @@ export default function AIChatWidget() {
       action: () => {
         addMessage('user', 'I want to learn how to trade');
         setTimeout(() => {
-          addMessage('bot', "Perfect! I'll take you to our Trading Education service page where you can learn more and join the waiting list.");
+          addMessage('bot', "Perfect! Navigating to our services page");
           setTimeout(() => {
             // Navigate to services page with trading highlight
             window.location.href = '/services?highlight=trading';
@@ -62,7 +65,7 @@ export default function AIChatWidget() {
       action: () => {
         addMessage('user', 'I need a website built for my business');
         setTimeout(() => {
-          addMessage('bot', "Excellent! I'll take you to our Website Development service page where you can see pricing and schedule a consultation.");
+          addMessage('bot', "Perfect! Navigating to our services page");
           setTimeout(() => {
             // Navigate to services page with website highlight
             window.location.href = '/services?highlight=website';
@@ -77,12 +80,21 @@ export default function AIChatWidget() {
       action: () => {
         addMessage('user', 'I need custom software developed');
         setTimeout(() => {
-          addMessage('bot', "Outstanding! I'll take you to our Custom Software Solutions service page with detailed pricing and consultation options.");
+          addMessage('bot', "Perfect! Navigating to our services page");
           setTimeout(() => {
             // Navigate to services page with software highlight
             window.location.href = '/services?highlight=software';
           }, 1000);
         }, 1000);
+      }
+    },
+    {
+      id: 'other',
+      label: 'Other Questions',
+      icon: <HelpCircle className="h-4 w-4" />,
+      action: () => {
+        setShowOtherInput(true);
+        addMessage('bot', "I'd be happy to help! What would you like to know about Desmond's background, experience, or services?");
       }
     }
   ];
@@ -104,9 +116,53 @@ export default function AIChatWidget() {
 
   const resetChat = () => {
     setMessages([]);
+    setShowOtherInput(false);
+    setUserQuestion('');
     setTimeout(() => {
       initializeChat();
     }, 500);
+  };
+
+  const handleQuestionSubmit = () => {
+    if (!userQuestion.trim()) return;
+    
+    addMessage('user', userQuestion);
+    setUserQuestion('');
+    setShowOtherInput(false);
+    
+    setTimeout(() => {
+      const question = userQuestion.toLowerCase();
+      let response = "";
+      
+      // Simple keyword-based responses
+      if (question.includes('trading') || question.includes('trade') || question.includes('returns')) {
+        response = "Desmond achieved 1,407% trading returns in just 4 months and offers personalized trading education. He teaches proven strategies, risk management, and market analysis.";
+      } else if (question.includes('website') || question.includes('web') || question.includes('development')) {
+        response = "Desmond creates professional, responsive websites using modern technologies like React and TypeScript. He's built 50+ websites with custom designs and full functionality.";
+      } else if (question.includes('software') || question.includes('app') || question.includes('custom')) {
+        response = "Desmond develops custom software solutions for businesses, including database design, API development, and full-stack applications using enterprise-grade technologies.";
+      } else if (question.includes('experience') || question.includes('background') || question.includes('education')) {
+        response = "Desmond is a UC Berkeley Haas graduate with experience in product management at Toshi Markets, entrepreneurship (LoyalPup startup), and extensive trading expertise.";
+      } else if (question.includes('price') || question.includes('cost') || question.includes('pricing')) {
+        response = "Trading Education: $200/month, Website Development: $2,500, Custom Software: $150/hour. All services include ongoing support and proven expertise.";
+      } else {
+        response = "That's a great question! I'd recommend reaching out directly so Desmond can provide you with detailed information tailored to your specific needs.";
+      }
+      
+      addMessage('bot', response, [
+        {
+          id: 'contact-form',
+          label: 'Fill Out Contact Form 📝',
+          icon: <Send className="h-4 w-4" />,
+          action: () => {
+            addMessage('user', 'Fill Out Contact Form');
+            setTimeout(() => {
+              window.location.href = '/#contact';
+            }, 500);
+          }
+        }
+      ]);
+    }, 1000);
   };
 
   const handleOpen = () => {
@@ -276,6 +332,32 @@ export default function AIChatWidget() {
                   </div>
                 )}
               </div>
+
+              {/* Other Questions Input */}
+              {showOtherInput && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="px-6 py-4 border-t border-white/20"
+                >
+                  <div className="flex gap-2">
+                    <Input
+                      value={userQuestion}
+                      onChange={(e) => setUserQuestion(e.target.value)}
+                      placeholder="Type your question here..."
+                      onKeyPress={(e) => e.key === 'Enter' && handleQuestionSubmit()}
+                      className="flex-1 bg-white/90 border-white/30 text-gray-800 placeholder:text-gray-500"
+                    />
+                    <Button
+                      onClick={handleQuestionSubmit}
+                      size="sm"
+                      className="bg-california-gold hover:bg-yellow-500 text-berkeley-blue font-medium"
+                    >
+                      <Send className="h-4 w-4" />
+                    </Button>
+                  </div>
+                </motion.div>
+              )}
 
               {/* Footer */}
               <div className="px-6 pb-4">

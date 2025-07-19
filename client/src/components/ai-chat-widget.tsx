@@ -183,9 +183,13 @@ export default function AIChatWidget() {
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="h-10 w-10 rounded-full overflow-hidden border-2 border-california-gold/30">
                     <img 
-                      src="/images/marathon-mindset-avatar.png" 
+                      src="./images/marathon-mindset-avatar.png" 
                       alt="Desmond's AI Assistant" 
                       className="w-full h-full object-cover"
+                      onError={(e) => {
+                        console.log('Avatar image failed to load');
+                        e.currentTarget.style.display = 'none';
+                      }}
                     />
                   </div>
                   <div>

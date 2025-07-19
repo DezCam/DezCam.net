@@ -180,7 +180,7 @@ export default function Services() {
                         </Button>
                       ) : service.id === 'software' ? (
                         <Button 
-                          onClick={() => openCalendly('https://calendly.com/your-software-consultation')}
+                          onClick={() => openCalendly('https://calendly.com/desmondjr88/custom-software-solutions')}
                           className="w-full bg-berkeley-blue hover:bg-blue-800 text-white"
                         >
                           <Calendar className="h-4 w-4 mr-2" />

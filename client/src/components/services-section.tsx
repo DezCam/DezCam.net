@@ -78,7 +78,7 @@ export default function ServicesSection() {
     if (serviceIndex === 0) { // Website Development
       openCalendly('https://calendly.com/desmondjr88/web-design-development');
     } else if (serviceIndex === 1) { // Custom Software
-      openCalendly('https://calendly.com/your-software-consultation');
+      openCalendly('https://calendly.com/desmondjr88/custom-software-solutions');
     } else { // Trading Education
       scrollToContact();
     }

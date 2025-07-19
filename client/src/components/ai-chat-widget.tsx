@@ -114,7 +114,7 @@ export default function AIChatWidget() {
               icon: <Calendar className="h-4 w-4" />,
               action: () => {
                 addMessage('user', 'Schedule Project Discussion');
-                openCalendly('https://calendly.com/your-software-consultation');
+                openCalendly('https://calendly.com/desmondjr88/custom-software-solutions');
                 setTimeout(() => {
                   addMessage('bot', "Excellent! I've opened your Calendly booking page in a new tab. Let's get your project started!");
                 }, 500);

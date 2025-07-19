@@ -193,7 +193,7 @@ export default function AIChatWidget() {
                     />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold">Welcome to Outreach!</h3>
+                    <h3 className="text-xl font-bold">Welcome to Desmond's Site!</h3>
                     <p className="text-white/80 text-sm">How can we help you today?</p>
                   </div>
                 </div>
@@ -207,11 +207,11 @@ export default function AIChatWidget() {
                     <Button
                       key={option.id}
                       onClick={option.action}
-                      className="w-full bg-white/90 hover:bg-california-gold text-berkeley-blue hover:text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 hover:shadow-md border-0 justify-start text-sm"
+                      className="w-full bg-white/90 hover:bg-california-gold text-berkeley-blue hover:text-white font-medium py-3 px-3 rounded-lg transition-all duration-200 hover:shadow-md border-0 justify-start text-xs leading-tight min-h-[48px] h-auto whitespace-normal"
                       variant="secondary"
                     >
-                      <span className="mr-2">{option.icon}</span>
-                      {option.label}
+                      <span className="mr-2 flex-shrink-0">{option.icon}</span>
+                      <span className="text-left">{option.label}</span>
                     </Button>
                   ))
                 ) : (

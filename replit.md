@@ -183,6 +183,14 @@ Changelog:
   * Added expandable image functionality for trading performance chart in portfolio
   * Updated navigation to include Services section
   * Enhanced user engagement with floating chat widget and professional service presentation
+- July 19, 2025. Enhanced AI Chat Widget with Comic Book Design:
+  * Added comic book style speech bubble saying "Welcome! How may I help you today?" that appears 4 seconds after page load
+  * Implemented new centered avatar image with perfect circular cropping and no background gaps
+  * Enlarged avatar in both chat button (20x20px) and chat header (14x14px) for better visibility
+  * Expanded chat window width to 420px to accommodate full text content without cutoff
+  * Aligned service option icons in uniform rows with consistent spacing and professional layout
+  * Applied Berkeley Blue and California Gold branding throughout chat interface
+  * Positioned speech bubble to point directly at avatar for authentic comic book effect
 ```
 
 ## User Preferences

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle, X, TrendingUp, Globe, Code, Sparkles, Calendar, BarChart3 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -22,6 +22,7 @@ export default function AIChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
   const [showWaitingList, setShowWaitingList] = useState(false);
+  const [showSpeechBubble, setShowSpeechBubble] = useState(false);
 
   const scrollToServices = () => {
     const element = document.getElementById('services');
@@ -130,11 +131,54 @@ export default function AIChatWidget() {
 
   const handleOpen = () => {
     setIsOpen(true);
+    setShowSpeechBubble(false);
     initializeChat();
   };
 
+  // Show speech bubble after delay, hide when chat opens
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (!isOpen) {
+        setShowSpeechBubble(true);
+      }
+    }, 4000);
+
+    return () => clearTimeout(timer);
+  }, [isOpen]);
+
+  // Hide speech bubble when chat opens
+  useEffect(() => {
+    if (isOpen) {
+      setShowSpeechBubble(false);
+    }
+  }, [isOpen]);
+
   return (
     <>
+      {/* Speech Bubble */}
+      <AnimatePresence>
+        {showSpeechBubble && !isOpen && (
+          <motion.div
+            className="fixed bottom-24 right-20 z-40"
+            initial={{ opacity: 0, scale: 0.8, y: 10 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.8, y: 10 }}
+            transition={{ type: "spring", stiffness: 400, damping: 25 }}
+          >
+            <div className="relative">
+              {/* Speech bubble */}
+              <div className="bg-white rounded-xl shadow-lg border-2 border-berkeley-blue/20 px-4 py-3 max-w-[200px]">
+                <p className="text-berkeley-blue font-medium text-sm leading-relaxed">
+                  Welcome! How may I help you today?
+                </p>
+              </div>
+              {/* Speech bubble tail */}
+              <div className="absolute -bottom-2 right-6 w-4 h-4 bg-white border-r-2 border-b-2 border-berkeley-blue/20 transform rotate-45"></div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Chat Widget Button */}
       <motion.div
         className="fixed bottom-6 right-6 z-50"

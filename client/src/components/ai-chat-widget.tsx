@@ -183,7 +183,7 @@ export default function AIChatWidget() {
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="h-10 w-10 rounded-full overflow-hidden border-2 border-california-gold/30">
                     <img 
-                      src="/marathon-mindset-avatar.png" 
+                      src="/avatar-only.png" 
                       alt="Desmond's AI Assistant" 
                       className="w-full h-full object-cover"
                     />

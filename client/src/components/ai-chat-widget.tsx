@@ -207,11 +207,11 @@ export default function AIChatWidget() {
                     <Button
                       key={option.id}
                       onClick={option.action}
-                      className="w-full bg-white/90 hover:bg-california-gold text-berkeley-blue hover:text-white font-medium py-3 px-3 rounded-lg transition-all duration-200 hover:shadow-md border-0 justify-start text-xs leading-tight min-h-[48px] h-auto whitespace-normal"
+                      className="w-full bg-white/90 hover:bg-california-gold text-berkeley-blue hover:text-white font-medium py-4 px-4 rounded-lg transition-all duration-200 hover:shadow-md border-0 justify-start text-sm leading-relaxed min-h-[60px] h-auto whitespace-normal flex items-start"
                       variant="secondary"
                     >
-                      <span className="mr-2 flex-shrink-0">{option.icon}</span>
-                      <span className="text-left">{option.label}</span>
+                      <span className="mr-3 flex-shrink-0 mt-0.5">{option.icon}</span>
+                      <span className="text-left break-words flex-1">{option.label}</span>
                     </Button>
                   ))
                 ) : (

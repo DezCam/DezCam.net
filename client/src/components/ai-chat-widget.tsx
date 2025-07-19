@@ -181,10 +181,12 @@ export default function AIChatWidget() {
               {/* Header */}
               <div className="p-6 pb-4">
                 <div className="flex items-center space-x-3 mb-4">
-                  <div className="h-10 w-10 rounded-full bg-california-gold/20 flex items-center justify-center">
-                    <div className="h-6 w-6 rounded-full bg-california-gold/40 flex items-center justify-center">
-                      <Sparkles className="h-3 w-3 text-california-gold" />
-                    </div>
+                  <div className="h-10 w-10 rounded-full overflow-hidden border-2 border-california-gold/30">
+                    <img 
+                      src="/images/marathon-mindset-avatar.png" 
+                      alt="Desmond's AI Assistant" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold">Welcome to Outreach!</h3>

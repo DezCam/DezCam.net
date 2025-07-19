@@ -23,8 +23,7 @@ const services = [
       "Only 4 slots left"
     ],
     highlight: "1,407% Returns Achieved",
-    cta: "Join Waiting List",
-    popular: true
+    cta: "Join Waiting List"
   },
   {
     id: "website",
@@ -42,7 +41,8 @@ const services = [
       "1 month free support"
     ],
     highlight: "Berkeley-Trained Developer",
-    cta: "Schedule Consultation"
+    cta: "Schedule Consultation",
+    popular: true
   },
   {
     id: "software",

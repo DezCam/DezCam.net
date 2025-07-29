@@ -14,7 +14,7 @@ const experiences = [
     company: "Freelance",
     period: "Jan 2014 - Dec 2021",
     description: "Executed creative visions for high-profile events including Grammys, E3, and Samsung. Managed stakeholder alignment and cross-functional collaboration between teams, vendors, and talent, resulting in ongoing client referrals and successful project delivery.",
-    image: "/images/production-coordinator.jpg",
+    image: "/images/event-production-new.jpg",
     color: "blue-500"
   },
   {

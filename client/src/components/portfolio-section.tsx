@@ -34,7 +34,7 @@ const projects = [
   {
     title: "High-Profile Event Production Management",
     description: "Managed stakeholder alignment and cross-functional collaboration for major events including Grammys, E3, and Samsung campaigns. Transformed creative ideas into tangible results under tight deadlines through effective coordination.",
-    image: "/images/grammy-awards.jpg",
+    image: "/images/event-production-new.jpg",
     tags: ["Project Management", "Creative Vision", "Stakeholder Management"]
   },
   {

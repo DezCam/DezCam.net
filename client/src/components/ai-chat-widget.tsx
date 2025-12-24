@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MessageCircle, X, TrendingUp, Globe, Code, Sparkles, Calendar, BarChart3, HelpCircle, Send } from "lucide-react";
+import { MessageCircle, X, TrendingUp, Globe, Code, Sparkles, Calendar, BarChart3, HelpCircle, Send, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import WaitingListDialog from "./waiting-list-dialog";
@@ -108,6 +108,21 @@ export default function AIChatWidget() {
       }
     },
     {
+      id: 'smb-consulting',
+      label: 'SMB Consulting',
+      icon: <Briefcase className="h-4 w-4" />,
+      action: () => {
+        addMessage('user', 'I need business consulting');
+        setTimeout(() => {
+          addMessage('bot', "Perfect! Navigating to our services page");
+          setTimeout(() => {
+            // Navigate to services page with SMB consulting highlight
+            window.location.href = '/services?highlight=smb-consulting';
+          }, 1000);
+        }, 1000);
+      }
+    },
+    {
       id: 'other',
       label: 'Other Questions',
       icon: <HelpCircle className="h-4 w-4" />,
@@ -156,6 +171,8 @@ export default function AIChatWidget() {
       // Simple keyword-based responses
       if (question.includes('trading') || question.includes('trade') || question.includes('returns')) {
         response = "Desmond achieved 1,407% trading returns in just 4 months and offers personalized trading education. He teaches proven strategies, risk management, and market analysis.";
+      } else if (question.includes('consult') || question.includes('smb') || question.includes('business strategy') || question.includes('small business')) {
+        response = "Desmond offers SMB Consulting with custom solutions tailored to your unique business challenges. Services include business process optimization, growth strategy, and operational efficiency audits.";
       } else if (question.includes('website') || question.includes('web') || question.includes('development')) {
         response = "Desmond creates professional, responsive websites using modern technologies like React and TypeScript. He's built 50+ websites with custom designs and full functionality.";
       } else if (question.includes('software') || question.includes('app') || question.includes('custom')) {
@@ -163,7 +180,7 @@ export default function AIChatWidget() {
       } else if (question.includes('experience') || question.includes('background') || question.includes('education')) {
         response = "Desmond is a UC Berkeley Haas graduate with experience in product management at Toshi Markets, entrepreneurship (LoyalPup startup), and extensive trading expertise.";
       } else if (question.includes('price') || question.includes('cost') || question.includes('pricing')) {
-        response = "Trading Education: $200/month, Website Development: $2,500, Custom Software: $150/hour. All services include ongoing support and proven expertise.";
+        response = "Trading Education: $500/month, Website Development: $700-$3,000, Custom Software: Starting at $3,000, SMB Consulting: Custom pricing. All services include ongoing support.";
       } else {
         response = "That's a great question! I'd recommend reaching out directly so Desmond can provide you with detailed information tailored to your specific needs.";
       }

@@ -1,6 +1,6 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
-import { TrendingUp, Globe, Code, Calendar, BarChart3, Users, Clock, DollarSign, Mail, Phone } from "lucide-react";
+import { TrendingUp, Globe, Code, Calendar, BarChart3, Users, Clock, DollarSign, Mail, Phone, Briefcase, Star, ChevronDown, ChevronUp, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -8,6 +8,25 @@ import WaitingListDialog from "@/components/waiting-list-dialog";
 import Navigation from "@/components/navigation";
 
 const services = [
+  {
+    id: "smb-consulting",
+    title: "SMB Consulting",
+    description: "Custom solutions tailored to your unique business challenges and growth objectives",
+    icon: <Briefcase className="h-8 w-8" />,
+    price: "Custom Pricing",
+    duration: "Flexible engagement",
+    features: [
+      "Business process optimization",
+      "Growth strategy development",
+      "Operational efficiency audits",
+      "Technology stack recommendations",
+      "Market analysis and positioning",
+      "Ongoing advisory support"
+    ],
+    highlight: "Custom Solutions",
+    cta: "Book Consultation",
+    popular: true
+  },
   {
     id: "trading",
     title: "Trading Education & Mentorship",
@@ -42,8 +61,7 @@ const services = [
       "1 month free support"
     ],
     highlight: "Berkeley-Trained Developer",
-    cta: "Schedule Consultation",
-    popular: true
+    cta: "Schedule Consultation"
   },
   {
     id: "software",
@@ -65,8 +83,33 @@ const services = [
   }
 ];
 
+const testimonials = [
+  {
+    id: 1,
+    name: "Sarah M.",
+    company: "Local Bakery Owner",
+    content: "Desmond helped us streamline our ordering process and build a beautiful website. Our online orders increased by 40% in the first month!",
+    rating: 5
+  },
+  {
+    id: 2,
+    name: "Marcus T.",
+    company: "E-commerce Entrepreneur",
+    content: "The trading mentorship completely changed my approach to the markets. Desmond's risk management techniques saved me from costly mistakes.",
+    rating: 5
+  },
+  {
+    id: 3,
+    name: "Jennifer L.",
+    company: "Fitness Studio Owner",
+    content: "Professional, responsive, and incredibly knowledgeable. The custom booking software Desmond built has been a game-changer for our business.",
+    rating: 5
+  }
+];
+
 export default function Services() {
   const [highlightedService, setHighlightedService] = useState<string | null>(null);
+  const [showTestimonials, setShowTestimonials] = useState(false);
 
   useEffect(() => {
     // Check for highlight parameter in URL
@@ -202,7 +245,15 @@ export default function Services() {
 
                     {/* CTA Button */}
                     <div className="pt-4">
-                      {service.id === 'trading' ? (
+                      {service.id === 'smb-consulting' ? (
+                        <Button 
+                          onClick={() => openCalendly('https://calendly.com/desmondjr88/smb-consulting')}
+                          className="w-full bg-berkeley-blue hover:bg-blue-800 text-white"
+                        >
+                          <Calendar className="h-4 w-4 mr-2" />
+                          {service.cta}
+                        </Button>
+                      ) : service.id === 'trading' ? (
                         <WaitingListDialog>
                           <Button className="w-full bg-berkeley-blue hover:bg-blue-800 text-white">
                             <TrendingUp className="h-4 w-4 mr-2" />
@@ -292,6 +343,83 @@ export default function Services() {
               <div className="text-blue-100">Client Satisfaction</div>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-8"
+          >
+            <h2 className="text-3xl font-bold text-berkeley-blue mb-4">
+              What Clients Say
+            </h2>
+            <p className="text-xl text-gray-600 mb-6">
+              Hear from businesses that have transformed with our services
+            </p>
+            <Button
+              onClick={() => setShowTestimonials(!showTestimonials)}
+              className="bg-california-gold hover:bg-yellow-500 text-berkeley-blue font-semibold"
+              data-testid="button-toggle-testimonials"
+            >
+              {showTestimonials ? (
+                <>
+                  <ChevronUp className="h-4 w-4 mr-2" />
+                  Hide Testimonials
+                </>
+              ) : (
+                <>
+                  <Star className="h-4 w-4 mr-2" />
+                  Read Testimonials
+                </>
+              )}
+            </Button>
+          </motion.div>
+
+          <AnimatePresence>
+            {showTestimonials && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 'auto' }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.5 }}
+                className="grid md:grid-cols-3 gap-8"
+              >
+                {testimonials.map((testimonial, index) => (
+                  <motion.div
+                    key={testimonial.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                  >
+                    <Card className="h-full bg-white shadow-lg border-0">
+                      <CardContent className="p-6">
+                        <div className="flex items-center mb-4">
+                          {[...Array(testimonial.rating)].map((_, i) => (
+                            <Star key={i} className="h-5 w-5 text-california-gold fill-california-gold" />
+                          ))}
+                        </div>
+                        <div className="relative mb-4">
+                          <Quote className="h-8 w-8 text-berkeley-blue/20 absolute -top-2 -left-2" />
+                          <p className="text-gray-700 italic pl-6">
+                            "{testimonial.content}"
+                          </p>
+                        </div>
+                        <div className="border-t pt-4">
+                          <p className="font-semibold text-berkeley-blue">{testimonial.name}</p>
+                          <p className="text-sm text-gray-500">{testimonial.company}</p>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                ))}
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </section>
 

@@ -66,7 +66,7 @@ export default function PortfolioSection() {
                 alt={project.title}
                 className={`w-full h-48 ${
                   project.image.includes('loyalpup-logo') 
-                    ? 'object-contain bg-gradient-to-br from-yellow-100 to-yellow-50 p-4' 
+                    ? 'object-contain bg-gradient-to-br from-light-green/15 to-ash-gray/10 p-4' 
                     : project.image.includes('kratos-combat-club')
                     ? 'object-cover object-center filter contrast-110 brightness-105 saturate-110 transform hover:scale-105 transition-all duration-300'
                     : 'object-cover hover:brightness-90 transition-all duration-300'
@@ -102,7 +102,7 @@ export default function PortfolioSection() {
         alt={project.title}
         className={`w-full h-48 ${
           project.image.includes('loyalpup-logo') 
-            ? 'object-contain bg-gradient-to-br from-yellow-100 to-yellow-50 p-4' 
+            ? 'object-contain bg-gradient-to-br from-light-green/15 to-ash-gray/10 p-4' 
             : project.image.includes('kratos-combat-club')
             ? 'object-cover object-center filter contrast-110 brightness-105 saturate-110 transform hover:scale-105 transition-all duration-300'
             : 'object-cover'
@@ -150,9 +150,9 @@ export default function PortfolioSection() {
                       key={tagIndex} 
                       variant="secondary"
                       className={`${
-                        tagIndex === 0 ? 'bg-berkeley-blue text-white hover:bg-berkeley-blue/90' :
-                        tagIndex === 1 ? 'bg-california-gold text-berkeley-blue hover:bg-california-gold/90' :
-                        'bg-gray-500 text-white hover:bg-gray-500/90'
+                        tagIndex === 0 ? 'bg-black-olive text-white hover:bg-dim-gray' :
+                        tagIndex === 1 ? 'bg-pigment-green text-white hover:bg-light-green hover:text-black-olive' :
+                        'bg-ash-gray text-white hover:bg-dim-gray'
                       }`}
                     >
                       {tag}

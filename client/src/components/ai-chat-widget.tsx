@@ -260,7 +260,7 @@ export default function AIChatWidget() {
       >
         <Button
           onClick={handleOpen}
-          className="h-20 w-20 rounded-full bg-gradient-to-br from-berkeley-blue to-blue-800 hover:from-blue-800 hover:to-berkeley-blue shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-white/20 flex items-center justify-center"
+          className="h-20 w-20 rounded-full bg-gradient-to-br from-black-olive to-dim-gray hover:from-pigment-green hover:to-black-olive shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-white/20 flex items-center justify-center"
           size="lg"
         >
           <div className="relative flex items-center justify-center">
@@ -287,7 +287,7 @@ export default function AIChatWidget() {
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
           >
             {/* Main Content with Gradient Background */}
-            <div className="bg-gradient-to-br from-berkeley-blue via-blue-700 to-blue-900 text-white relative">
+            <div className="bg-gradient-to-br from-black-olive via-dim-gray to-black-olive text-white relative">
               {/* Close Button */}
               <Button
                 variant="ghost"
@@ -323,7 +323,7 @@ export default function AIChatWidget() {
                     <Button
                       key={option.id}
                       onClick={option.action}
-                      className="w-full bg-white hover:bg-california-gold text-berkeley-blue hover:text-white font-medium py-5 px-5 rounded-lg transition-all duration-200 hover:shadow-md border-0 justify-start text-sm leading-normal min-h-[75px] h-auto whitespace-normal flex items-center"
+                      className="w-full bg-white hover:bg-pigment-green text-black-olive hover:text-white font-medium py-5 px-5 rounded-lg transition-all duration-200 hover:shadow-md border-0 justify-start text-sm leading-normal min-h-[75px] h-auto whitespace-normal flex items-center"
                       variant="secondary"
                     >
                       <span className="mr-4 flex-shrink-0">{option.icon}</span>
@@ -349,7 +349,7 @@ export default function AIChatWidget() {
                                 <Button
                                   key={option.id}
                                   onClick={option.action}
-                                  className="w-full bg-white/90 hover:bg-california-gold text-berkeley-blue hover:text-white font-medium py-2 px-3 rounded-lg transition-all duration-200 text-xs"
+                                  className="w-full bg-white/90 hover:bg-pigment-green text-black-olive hover:text-white font-medium py-2 px-3 rounded-lg transition-all duration-200 text-xs"
                                   variant="secondary"
                                 >
                                   <div className="flex items-center space-x-3 w-full">
@@ -387,7 +387,7 @@ export default function AIChatWidget() {
                     <Button
                       onClick={handleQuestionSubmit}
                       size="sm"
-                      className="bg-california-gold hover:bg-yellow-500 text-berkeley-blue font-medium"
+                      className="bg-pigment-green hover:bg-light-green text-white font-medium"
                     >
                       <Send className="h-4 w-4" />
                     </Button>

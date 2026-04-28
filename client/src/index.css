@@ -6,50 +6,59 @@
 
 :root {
   --background: hsl(0, 0%, 100%);
-  --foreground: hsl(222, 84%, 5%);
-  --muted: hsl(210, 40%, 98%);
-  --muted-foreground: hsl(215, 16%, 47%);
+  --foreground: hsl(156, 4%, 20%);
+  --muted: hsl(120, 5%, 93%);
+  --muted-foreground: hsl(135, 2%, 42%);
   --popover: hsl(0, 0%, 100%);
-  --popover-foreground: hsl(222, 84%, 5%);
+  --popover-foreground: hsl(156, 4%, 20%);
   --card: hsl(0, 0%, 100%);
-  --card-foreground: hsl(222, 84%, 5%);
-  --border: hsl(214, 32%, 91%);
-  --input: hsl(214, 32%, 91%);
-  --primary: hsl(217, 89%, 25%);
-  --primary-foreground: hsl(210, 40%, 98%);
-  --secondary: hsl(210, 40%, 96%);
-  --secondary-foreground: hsl(217, 89%, 25%);
-  --accent: hsl(45, 100%, 51%);
-  --accent-foreground: hsl(217, 89%, 25%);
+  --card-foreground: hsl(156, 4%, 20%);
+  --border: hsl(120, 3%, 68%);
+  --input: hsl(120, 3%, 80%);
+  --primary: hsl(132, 46%, 42%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(120, 5%, 93%);
+  --secondary-foreground: hsl(156, 4%, 20%);
+  --accent: hsl(114, 49%, 68%);
+  --accent-foreground: hsl(156, 4%, 20%);
   --destructive: hsl(0, 84%, 60%);
-  --destructive-foreground: hsl(210, 40%, 98%);
-  --ring: hsl(217, 89%, 25%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --ring: hsl(132, 46%, 42%);
   --radius: 0.5rem;
-  --berkeley-blue: hsl(217, 89%, 25%);
-  --california-gold: hsl(45, 100%, 51%);
-  --light-gray: hsl(210, 40%, 98%);
+
+  /* New palette */
+  --black-olive: hsl(156, 4%, 25%);
+  --dim-gray: hsl(135, 2%, 42%);
+  --ash-gray: hsl(120, 3%, 68%);
+  --light-green: hsl(114, 49%, 68%);
+  --pigment-green: hsl(132, 46%, 42%);
+
+  /* Legacy aliases mapped to new palette */
+  --berkeley-blue: hsl(156, 4%, 25%);
+  --california-gold: hsl(132, 46%, 42%);
+  --light-gray: hsl(120, 5%, 93%);
 }
 
 .dark {
-  --background: hsl(222, 84%, 5%);
-  --foreground: hsl(210, 40%, 98%);
-  --muted: hsl(217, 32%, 17%);
-  --muted-foreground: hsl(215, 20%, 65%);
-  --popover: hsl(222, 84%, 5%);
-  --popover-foreground: hsl(210, 40%, 98%);
-  --card: hsl(222, 84%, 5%);
-  --card-foreground: hsl(210, 40%, 98%);
-  --border: hsl(217, 32%, 17%);
-  --input: hsl(217, 32%, 17%);
-  --primary: hsl(221, 83%, 53%);
-  --primary-foreground: hsl(210, 40%, 98%);
-  --secondary: hsl(217, 32%, 17%);
-  --secondary-foreground: hsl(210, 40%, 98%);
-  --accent: hsl(217, 32%, 17%);
-  --accent-foreground: hsl(210, 40%, 98%);
-  --destructive: hsl(0, 63%, 31%);
-  --destructive-foreground: hsl(210, 40%, 98%);
-  --ring: hsl(221, 83%, 53%);
+  --background: hsl(156, 4%, 12%);
+  --foreground: hsl(0, 0%, 95%);
+  --muted: hsl(156, 4%, 18%);
+  --muted-foreground: hsl(120, 3%, 68%);
+  --popover: hsl(156, 4%, 12%);
+  --popover-foreground: hsl(0, 0%, 95%);
+  --card: hsl(156, 4%, 15%);
+  --card-foreground: hsl(0, 0%, 95%);
+  --border: hsl(156, 4%, 25%);
+  --input: hsl(156, 4%, 25%);
+  --primary: hsl(114, 49%, 68%);
+  --primary-foreground: hsl(156, 4%, 12%);
+  --secondary: hsl(156, 4%, 20%);
+  --secondary-foreground: hsl(0, 0%, 95%);
+  --accent: hsl(114, 49%, 68%);
+  --accent-foreground: hsl(156, 4%, 12%);
+  --destructive: hsl(0, 63%, 40%);
+  --destructive-foreground: hsl(0, 0%, 95%);
+  --ring: hsl(114, 49%, 68%);
 }
 
 @layer base {
@@ -68,48 +77,54 @@
 }
 
 @layer utilities {
+  /* Hero gradient: Black Olive → Dim Gray */
   .gradient-bg {
-    background: linear-gradient(135deg, hsl(217, 89%, 25%) 0%, hsl(217, 89%, 35%) 100%);
+    background: linear-gradient(135deg, #3D4240 0%, #6A6E6B 100%);
   }
-  
-  .text-berkeley-blue {
-    color: hsl(217, 89%, 25%);
-  }
-  
-  .bg-berkeley-blue {
-    background-color: hsl(217, 89%, 25%);
-  }
-  
-  .border-berkeley-blue {
-    border-color: hsl(217, 89%, 25%);
-  }
-  
-  .text-california-gold {
-    color: hsl(45, 100%, 51%);
-  }
-  
-  .bg-california-gold {
-    background-color: hsl(45, 100%, 51%);
-  }
-  
-  .border-california-gold {
-    border-color: hsl(45, 100%, 51%);
-  }
-  
-  /* Legacy navy classes for compatibility */
-  .text-navy {
-    color: hsl(217, 89%, 25%);
-  }
-  
-  .bg-navy {
-    background-color: hsl(217, 89%, 25%);
-  }
-  
-  .border-navy {
-    border-color: hsl(217, 89%, 25%);
-  }
-  
-  .bg-light-gray {
-    background-color: hsl(210, 40%, 98%);
-  }
+
+  /* Black Olive */
+  .text-black-olive { color: #3D4240; }
+  .bg-black-olive { background-color: #3D4240; }
+  .border-black-olive { border-color: #3D4240; }
+
+  /* Dim Gray */
+  .text-dim-gray { color: #6A6E6B; }
+  .bg-dim-gray { background-color: #6A6E6B; }
+  .border-dim-gray { border-color: #6A6E6B; }
+
+  /* Ash Gray */
+  .text-ash-gray { color: #AAB0AA; }
+  .bg-ash-gray { background-color: #AAB0AA; }
+  .border-ash-gray { border-color: #AAB0AA; }
+
+  /* Light Green */
+  .text-light-green { color: #8DD783; }
+  .bg-light-green { background-color: #8DD783; }
+  .border-light-green { border-color: #8DD783; }
+
+  /* Pigment Green */
+  .text-pigment-green { color: #399A4B; }
+  .bg-pigment-green { background-color: #399A4B; }
+  .border-pigment-green { border-color: #399A4B; }
+
+  /* Berkeley-blue alias → Black Olive */
+  .text-berkeley-blue { color: #3D4240; }
+  .bg-berkeley-blue { background-color: #3D4240; }
+  .border-berkeley-blue { border-color: #3D4240; }
+
+  /* California-gold alias → Pigment Green */
+  .text-california-gold { color: #399A4B; }
+  .bg-california-gold { background-color: #399A4B; }
+  .border-california-gold { border-color: #399A4B; }
+
+  /* Legacy navy classes */
+  .text-navy { color: #3D4240; }
+  .bg-navy { background-color: #3D4240; }
+  .border-navy { border-color: #3D4240; }
+
+  /* Light background utility */
+  .bg-light-gray { background-color: hsl(120, 5%, 93%); }
+
+  /* Hero text muted — replaces blue-100 */
+  .text-hero-muted { color: rgba(170, 176, 170, 0.9); }
 }

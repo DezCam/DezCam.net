@@ -134,7 +134,7 @@ export default function Services() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
+    <div className="min-h-screen bg-gradient-to-b from-light-gray to-white dark:from-gray-900 dark:to-gray-800">
       <Navigation />
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
@@ -171,12 +171,12 @@ export default function Services() {
                     y: 0,
                     scale: isHighlighted ? [1, 1.05, 1, 1.05, 1] : 1,
                     boxShadow: isHighlighted ? [
-                      "0 0 0 rgba(59, 130, 246, 0.5)",
-                      "0 0 30px rgba(59, 130, 246, 0.8)",
-                      "0 0 0 rgba(59, 130, 246, 0.5)",
-                      "0 0 30px rgba(59, 130, 246, 0.8)",
-                      "0 0 0 rgba(59, 130, 246, 0.5)"
-                    ] : "0 0 0 rgba(59, 130, 246, 0)"
+                      "0 0 0 rgba(57, 154, 75, 0.4)",
+                      "0 0 30px rgba(57, 154, 75, 0.7)",
+                      "0 0 0 rgba(57, 154, 75, 0.4)",
+                      "0 0 30px rgba(57, 154, 75, 0.7)",
+                      "0 0 0 rgba(57, 154, 75, 0.4)"
+                    ] : "0 0 0 rgba(57, 154, 75, 0)"
                   }}
                   transition={{ 
                     duration: isHighlighted ? 0.6 : 0.8, 
@@ -185,9 +185,9 @@ export default function Services() {
                     ease: "easeInOut"
                   }}
                 >
-                  <Card className={`h-full relative ${service.popular || isHighlighted ? 'ring-2 ring-berkeley-blue shadow-xl' : ''} ${isHighlighted ? 'bg-gradient-to-br from-blue-50 to-white border-berkeley-blue' : ''}`}>
+                  <Card className={`h-full relative ${service.popular || isHighlighted ? 'ring-2 ring-pigment-green shadow-xl' : ''} ${isHighlighted ? 'bg-gradient-to-br from-light-green/10 to-white border-pigment-green' : ''}`}>
                     {service.popular && !isHighlighted && (
-                      <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-california-gold text-berkeley-blue">
+                      <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-pigment-green text-white">
                         Most Popular
                       </Badge>
                     )}
@@ -248,14 +248,14 @@ export default function Services() {
                       {service.id === 'smb-consulting' ? (
                         <Button 
                           onClick={() => openCalendly('https://calendly.com/desmondjr88/smb-consulting')}
-                          className="w-full bg-berkeley-blue hover:bg-blue-800 text-white"
+                          className="w-full bg-pigment-green hover:bg-black-olive text-white"
                         >
                           <Calendar className="h-4 w-4 mr-2" />
                           {service.cta}
                         </Button>
                       ) : service.id === 'trading' ? (
                         <WaitingListDialog>
-                          <Button className="w-full bg-berkeley-blue hover:bg-blue-800 text-white">
+                          <Button className="w-full bg-pigment-green hover:bg-black-olive text-white">
                             <TrendingUp className="h-4 w-4 mr-2" />
                             {service.cta}
                           </Button>
@@ -263,7 +263,7 @@ export default function Services() {
                       ) : service.id === 'website' ? (
                         <Button 
                           onClick={() => openCalendly('https://calendly.com/desmondjr88/web-design-development')}
-                          className="w-full bg-berkeley-blue hover:bg-blue-800 text-white"
+                          className="w-full bg-pigment-green hover:bg-black-olive text-white"
                         >
                           <Calendar className="h-4 w-4 mr-2" />
                           {service.cta}
@@ -271,7 +271,7 @@ export default function Services() {
                       ) : service.id === 'software' ? (
                         <Button 
                           onClick={() => openCalendly('https://calendly.com/desmondjr88/custom-software-solutions')}
-                          className="w-full bg-berkeley-blue hover:bg-blue-800 text-white"
+                          className="w-full bg-pigment-green hover:bg-black-olive text-white"
                         >
                           <Calendar className="h-4 w-4 mr-2" />
                           {service.cta}
@@ -279,7 +279,7 @@ export default function Services() {
                       ) : (
                         <Button 
                           onClick={scrollToContact}
-                          className="w-full bg-berkeley-blue hover:bg-blue-800 text-white"
+                          className="w-full bg-pigment-green hover:bg-black-olive text-white"
                         >
                           <Calendar className="h-4 w-4 mr-2" />
                           {service.cta}
@@ -307,7 +307,7 @@ export default function Services() {
             <h2 className="text-3xl font-bold text-white mb-4">
               Proven Track Record
             </h2>
-            <p className="text-xl text-blue-100">
+            <p className="text-xl text-ash-gray">
               Results that speak for themselves
             </p>
           </motion.div>
@@ -320,7 +320,7 @@ export default function Services() {
               className="text-center"
             >
               <div className="text-4xl font-bold text-california-gold mb-2">1,407%</div>
-              <div className="text-blue-100">Trading Returns Achieved</div>
+              <div className="text-ash-gray">Trading Returns Achieved</div>
             </motion.div>
             
             <motion.div
@@ -330,7 +330,7 @@ export default function Services() {
               className="text-center"
             >
               <div className="text-4xl font-bold text-california-gold mb-2">50+</div>
-              <div className="text-blue-100">Websites Developed</div>
+              <div className="text-ash-gray">Websites Developed</div>
             </motion.div>
             
             <motion.div
@@ -340,14 +340,14 @@ export default function Services() {
               className="text-center"
             >
               <div className="text-4xl font-bold text-california-gold mb-2">100%</div>
-              <div className="text-blue-100">Client Satisfaction</div>
+              <div className="text-ash-gray">Client Satisfaction</div>
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-light-gray to-white">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -363,7 +363,7 @@ export default function Services() {
             </p>
             <Button
               onClick={() => setShowTestimonials(!showTestimonials)}
-              className="bg-california-gold hover:bg-yellow-500 text-berkeley-blue font-semibold"
+              className="bg-pigment-green hover:bg-black-olive text-white font-semibold"
               data-testid="button-toggle-testimonials"
             >
               {showTestimonials ? (
@@ -532,7 +532,7 @@ export default function Services() {
           >
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <WaitingListDialog>
-                <Button size="lg" className="bg-berkeley-blue hover:bg-blue-800 text-white">
+                <Button size="lg" className="bg-pigment-green hover:bg-black-olive text-white">
                   <TrendingUp className="h-5 w-5 mr-2" />
                   Join Trading Program
                 </Button>
@@ -541,7 +541,7 @@ export default function Services() {
                 size="lg" 
                 variant="outline"
                 onClick={() => window.location.href = '/#contact'}
-                className="border-berkeley-blue text-berkeley-blue hover:bg-berkeley-blue hover:text-white"
+                className="border-pigment-green text-pigment-green hover:bg-pigment-green hover:text-white"
               >
                 <Calendar className="h-5 w-5 mr-2" />
                 Full Contact Form

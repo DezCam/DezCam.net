@@ -54,7 +54,7 @@ export default function ExperienceSection() {
         
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gray-300 hidden md:block"></div>
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-ash-gray hidden md:block"></div>
           
           {/* Experience Items */}
           <div className="space-y-12">
@@ -71,9 +71,9 @@ export default function ExperienceSection() {
                   <div className={index % 2 === 0 ? "md:text-right" : "md:order-2"}>
                     <div className={`bg-white p-6 rounded-lg shadow-lg border-l-4 ${
                       exp.color === 'berkeley-blue' ? 'border-berkeley-blue' : 
-                      exp.color === 'blue-500' ? 'border-blue-500' : 
-                      exp.color === 'green-600' ? 'border-green-600' :
-                      'border-gray-500'
+                      exp.color === 'blue-500' ? 'border-pigment-green' : 
+                      exp.color === 'green-600' ? 'border-light-green' :
+                      'border-ash-gray'
                     }`}>
                       <h3 className="text-xl font-bold text-berkeley-blue mb-2">{exp.title}</h3>
                       <p className="text-gray-600 mb-2">{exp.company}</p>
@@ -87,7 +87,7 @@ export default function ExperienceSection() {
                       alt={`${exp.title} at ${exp.company}`}
                       className={`rounded-lg shadow-lg w-full h-auto ${
                         exp.image.includes('toshi-markets-logo') 
-                          ? 'object-contain bg-gradient-to-br from-blue-500/10 to-cyan-500/10 p-6' 
+                          ? 'object-contain bg-gradient-to-br from-pigment-green/10 to-light-green/10 p-6' 
                           : 'object-cover'
                       }`}
                     />
@@ -95,10 +95,10 @@ export default function ExperienceSection() {
                 </div>
                 {/* Timeline dot */}
                 <div className={`absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full hidden md:block ${
-                  exp.color === 'navy' ? 'bg-navy' : 
-                  exp.color === 'blue-500' ? 'bg-blue-500' : 
-                  exp.color === 'green-600' ? 'bg-green-600' :
-                  'bg-gray-500'
+                  exp.color === 'navy' ? 'bg-black-olive' : 
+                  exp.color === 'blue-500' ? 'bg-pigment-green' : 
+                  exp.color === 'green-600' ? 'bg-light-green' :
+                  'bg-ash-gray'
                 }`} style={{ top: '2rem' }}></div>
               </motion.div>
             ))}

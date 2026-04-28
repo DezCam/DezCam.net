@@ -78,7 +78,7 @@ export default function WaitingListDialog({ trigger }: WaitingListDialogProps) {
 
   const defaultTrigger = (
     <Button 
-      className="bg-california-gold text-berkeley-blue font-semibold hover:bg-yellow-400 transition-colors flex items-center px-4 py-2"
+      className="bg-pigment-green text-white font-semibold hover:bg-black-olive transition-colors flex items-center px-4 py-2"
       data-waiting-list-trigger
     >
       Join Waiting List for Trading Classes
@@ -164,7 +164,7 @@ export default function WaitingListDialog({ trigger }: WaitingListDialogProps) {
 
           <Button 
             type="submit" 
-            className="w-full bg-berkeley-blue hover:bg-berkeley-blue/90 text-white"
+            className="w-full bg-pigment-green hover:bg-black-olive text-white"
             disabled={waitingListMutation.isPending}
           >
             {waitingListMutation.isPending ? "Joining..." : "Join Waiting List"}

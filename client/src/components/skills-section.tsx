@@ -61,7 +61,7 @@ const SkillLevel = ({ level }: { level: number }) => (
       <div
         key={dot}
         className={`w-2 h-2 rounded-full ${
-          dot <= level ? 'bg-current' : 'bg-gray-300'
+          dot <= level ? 'bg-current' : 'bg-ash-gray'
         }`}
       />
     ))}
@@ -102,7 +102,7 @@ export default function SkillsSection() {
                   <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 ${
                     category.color === 'berkeley-blue' ? 'bg-berkeley-blue' :
                     category.color === 'california-gold' ? 'bg-california-gold' :
-                    'bg-gray-600'
+                    'bg-dim-gray'
                   }`}>
                     <IconComponent className="text-white h-8 w-8" />
                   </div>
@@ -166,7 +166,7 @@ export default function SkillsSection() {
                     <div className={`w-12 h-12 rounded-full flex items-center justify-center ${
                       cert.color === 'berkeley-blue' ? 'bg-berkeley-blue' :
                       cert.color === 'california-gold' ? 'bg-california-gold' :
-                      'bg-gray-600'
+                      'bg-dim-gray'
                     }`}>
                       <IconComponent className="text-white h-6 w-6" />
                     </div>

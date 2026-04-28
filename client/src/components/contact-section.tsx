@@ -139,8 +139,8 @@ export default function ContactSection() {
             <motion.div 
               className={`p-6 rounded-xl border transition-all duration-300 ${
                 highlightOutcome 
-                  ? 'bg-gradient-to-r from-blue-50 to-california-gold/20 border-california-gold shadow-lg shadow-california-gold/30 scale-105' 
-                  : 'bg-gradient-to-r from-california-gold/10 to-berkeley-blue/10 border-california-gold/20'
+                  ? 'bg-gradient-to-r from-light-green/20 to-pigment-green/20 border-pigment-green shadow-lg shadow-pigment-green/30 scale-105' 
+                  : 'bg-gradient-to-r from-light-green/10 to-black-olive/10 border-ash-gray/40'
               }`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -155,7 +155,7 @@ export default function ContactSection() {
                 <Calendar className="h-8 w-8 text-berkeley-blue mx-auto mb-3" />
                 <h3 className="text-xl font-semibold text-berkeley-blue mb-2">
                   {highlightOutcome && (
-                    <span className="inline-block bg-blue-100 text-berkeley-blue px-3 py-1 rounded-full text-sm font-medium mb-2">
+                    <span className="inline-block bg-light-green/30 text-black-olive px-3 py-1 rounded-full text-sm font-medium mb-2">
                       ✨ Perfect Choice! ✨
                     </span>
                   )}
@@ -166,7 +166,7 @@ export default function ContactSection() {
                 </p>
                 <Button 
                   onClick={() => openCalendly('https://calendly.com/desmondjr88/outcome-alignment-session')}
-                  className="bg-california-gold text-berkeley-blue hover:bg-yellow-500 font-semibold px-6 py-3"
+                  className="bg-pigment-green text-white hover:bg-light-green hover:text-black-olive font-semibold px-6 py-3"
                 >
                   <Calendar className="h-4 w-4 mr-2" />
                   Book Free Session
@@ -327,7 +327,7 @@ export default function ContactSection() {
 
               <Button 
                 type="submit" 
-                className="w-full bg-berkeley-blue hover:bg-berkeley-blue/90 text-white"
+                className="w-full bg-pigment-green hover:bg-black-olive text-white"
                 disabled={contactMutation.isPending}
               >
                 {contactMutation.isPending ? "Sending..." : "Send Message"}

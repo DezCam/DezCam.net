@@ -54,6 +54,11 @@ export default {
         "berkeley-blue": "var(--berkeley-blue)",
         "california-gold": "var(--california-gold)",
         "light-gray": "var(--light-gray)",
+        "black-olive": "var(--black-olive)",
+        "dim-gray": "var(--dim-gray)",
+        "ash-gray": "var(--ash-gray)",
+        "light-green": "var(--light-green)",
+        "pigment-green": "var(--pigment-green)",
         sidebar: {
           DEFAULT: "var(--sidebar-background)",
           foreground: "var(--sidebar-foreground)",

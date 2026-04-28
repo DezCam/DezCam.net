@@ -85,7 +85,7 @@ export default function ServicesSection() {
   };
 
   return (
-    <section id="services" className="py-20 bg-gray-50">
+    <section id="services" className="py-20 bg-light-gray">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           className="text-center mb-16"
@@ -115,7 +115,7 @@ export default function ServicesSection() {
                   <div className={`mx-auto mb-4 p-3 rounded-full ${
                     service.color === 'berkeley-blue' ? 'bg-berkeley-blue/10 text-berkeley-blue' :
                     service.color === 'california-gold' ? 'bg-california-gold/10 text-california-gold' :
-                    'bg-green-600/10 text-green-600'
+                    'bg-pigment-green/10 text-pigment-green'
                   }`}>
                     {service.icon}
                   </div>
@@ -172,8 +172,8 @@ export default function ServicesSection() {
                     onClick={() => handleServiceClick(index)}
                     className={`w-full ${
                       service.color === 'berkeley-blue' ? 'bg-berkeley-blue hover:bg-berkeley-blue/90' :
-                      service.color === 'california-gold' ? 'bg-california-gold text-berkeley-blue hover:bg-california-gold/90' :
-                      'bg-green-600 hover:bg-green-600/90'
+                      service.color === 'california-gold' ? 'bg-pigment-green text-white hover:bg-black-olive' :
+                      'bg-pigment-green text-white hover:bg-black-olive'
                     }`}
                   >
                     Get Started
@@ -201,7 +201,7 @@ export default function ServicesSection() {
             <Button 
               onClick={scrollToContact}
               size="lg"
-              className="bg-california-gold text-berkeley-blue hover:bg-california-gold/90 px-8"
+              className="bg-pigment-green text-white hover:bg-black-olive px-8"
             >
               Contact Me Today
               <ArrowRight className="ml-2 h-5 w-5" />

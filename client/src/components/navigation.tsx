@@ -51,49 +51,49 @@ export default function Navigation() {
     <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="font-bold text-xl text-berkeley-blue">Desmond Campbell</div>
+          <div className="font-bold text-xl text-black-olive">Desmond Campbell</div>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             <Link 
               href="/"
-              className="text-gray-600 hover:text-berkeley-blue transition-colors"
+              className="text-dim-gray hover:text-pigment-green transition-colors"
             >
               Home
             </Link>
             <button 
               onClick={() => scrollToSection('about')}
-              className="text-gray-600 hover:text-berkeley-blue transition-colors"
+              className="text-dim-gray hover:text-pigment-green transition-colors"
             >
               About
             </button>
             <button 
               onClick={() => scrollToSection('experience')}
-              className="text-gray-600 hover:text-berkeley-blue transition-colors"
+              className="text-dim-gray hover:text-pigment-green transition-colors"
             >
               Experience
             </button>
             <button 
               onClick={() => scrollToSection('skills')}
-              className="text-gray-600 hover:text-berkeley-blue transition-colors"
+              className="text-dim-gray hover:text-pigment-green transition-colors"
             >
               Skills
             </button>
             <button 
               onClick={() => scrollToSection('portfolio')}
-              className="text-gray-600 hover:text-berkeley-blue transition-colors"
+              className="text-dim-gray hover:text-pigment-green transition-colors"
             >
               Portfolio
             </button>
             <Link 
               href="/services"
-              className="text-gray-600 hover:text-berkeley-blue transition-colors"
+              className="text-dim-gray hover:text-pigment-green transition-colors"
             >
               Services
             </Link>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="text-gray-600 hover:text-berkeley-blue transition-colors"
+              className="text-dim-gray hover:text-pigment-green transition-colors"
             >
               Contact
             </button>
@@ -105,7 +105,7 @@ export default function Navigation() {
               variant="ghost"
               size="sm"
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-600 hover:text-berkeley-blue"
+              className="text-dim-gray hover:text-pigment-green"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
@@ -119,45 +119,45 @@ export default function Navigation() {
           <div className="px-2 pt-2 pb-3 space-y-1">
             <Link
               href="/"
-              className="block w-full text-left px-3 py-2 text-gray-600 hover:text-berkeley-blue"
+              className="block w-full text-left px-3 py-2 text-dim-gray hover:text-pigment-green"
               onClick={() => setIsOpen(false)}
             >
               Home
             </Link>
             <button
               onClick={() => scrollToSection('about')}
-              className="block w-full text-left px-3 py-2 text-gray-600 hover:text-berkeley-blue"
+              className="block w-full text-left px-3 py-2 text-dim-gray hover:text-pigment-green"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection('experience')}
-              className="block w-full text-left px-3 py-2 text-gray-600 hover:text-berkeley-blue"
+              className="block w-full text-left px-3 py-2 text-dim-gray hover:text-pigment-green"
             >
               Experience
             </button>
             <button
               onClick={() => scrollToSection('skills')}
-              className="block w-full text-left px-3 py-2 text-gray-600 hover:text-berkeley-blue"
+              className="block w-full text-left px-3 py-2 text-dim-gray hover:text-pigment-green"
             >
               Skills
             </button>
             <button
               onClick={() => scrollToSection('portfolio')}
-              className="block w-full text-left px-3 py-2 text-gray-600 hover:text-berkeley-blue"
+              className="block w-full text-left px-3 py-2 text-dim-gray hover:text-pigment-green"
             >
               Portfolio
             </button>
             <Link
               href="/services"
-              className="block w-full text-left px-3 py-2 text-gray-600 hover:text-berkeley-blue"
+              className="block w-full text-left px-3 py-2 text-dim-gray hover:text-pigment-green"
               onClick={() => setIsOpen(false)}
             >
               Services
             </Link>
             <button
               onClick={() => scrollToSection('contact')}
-              className="block w-full text-left px-3 py-2 text-gray-600 hover:text-berkeley-blue"
+              className="block w-full text-left px-3 py-2 text-dim-gray hover:text-pigment-green"
             >
               Contact
             </button>

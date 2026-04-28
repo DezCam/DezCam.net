@@ -20,7 +20,7 @@ export default function Footer() {
               href="https://linkedin.com/in/desmondcampbell" 
               target="_blank"
               rel="noopener noreferrer"
-              className="text-california-gold hover:text-white transition-colors"
+              className="text-light-green hover:text-white transition-colors"
               whileHover={{ scale: 1.2 }}
               transition={{ duration: 0.2 }}
             >
@@ -32,11 +32,11 @@ export default function Footer() {
               href="https://www.tradingview.com/u/CashFalcon/" 
               target="_blank"
               rel="noopener noreferrer"
-              className="text-california-gold hover:text-white transition-colors"
+              className="text-light-green hover:text-white transition-colors"
               whileHover={{ scale: 1.2 }}
               transition={{ duration: 0.2 }}
             >
-              <svg className="h-8 w-8 text-california-gold" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 48 48">
+              <svg className="h-8 w-8 text-light-green" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 48 48">
                 <polygon points="4.5 14.453 4.5 22.273 11.865 22.273 11.865 33.547 19.685 33.547 19.685 14.453 4.5 14.453"/>
                 <polygon points="26.202 33.547 34.326 14.453 43.5 14.453 35.376 33.547 26.202 33.547"/>
                 <circle cx="25.8407" cy="18.3627" r="3.9101"/>
@@ -46,7 +46,7 @@ export default function Footer() {
               href="https://github.com/DezCam" 
               target="_blank"
               rel="noopener noreferrer"
-              className="text-california-gold hover:text-white transition-colors"
+              className="text-light-green hover:text-white transition-colors"
               whileHover={{ scale: 1.2 }}
               transition={{ duration: 0.2 }}
             >

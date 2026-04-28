@@ -208,6 +208,14 @@ Changelog:
   * Routes users directly to contact section for immediate booking
   * Updated session description to clearly explain scope and no-commitment nature
   * Improved user experience with clear path from chat to consultation booking
+- April 28, 2026. Applied new 5-color palette site-wide:
+  * Black Olive (#3D4240) → primary dark backgrounds, header/footer, nav logo
+  * Dim Gray (#6A6E6B) → secondary text, nav links, muted UI elements
+  * Ash Gray (#AAB0AA) → section backgrounds, borders, skill dots, subtle elements
+  * Pigment Green (#399A4B) → primary brand accent, buttons, badges, active states
+  * Light Green (#8DD783) → hover states, secondary accents, footer social icons
+  * Updated CSS variables, tailwind config, gradient-bg, and all component files
+  * Replaced UC Berkeley blue/gold theme throughout hero, nav, footer, services, chat widget
 - April 28, 2026. Updated role titles and service names:
   * Changed "SMB Consultant" to "RevOps Specialist" in hero section and footer
   * Changed "IT Specialist" to "Software Developer" in hero section and footer

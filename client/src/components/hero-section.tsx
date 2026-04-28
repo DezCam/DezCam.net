@@ -28,7 +28,7 @@ export default function HeroSection() {
               Hi, I'm <span className="text-california-gold">Desmond</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100 leading-relaxed">
-              Founder | SMB Consultant | Trading Mentor & Analyst | IT Specialist | UC Berkeley Haas Alum
+              Founder | RevOps Specialist | Trading Mentor & Analyst | Software Developer | UC Berkeley Haas Alum
             </p>
             <p className="text-lg mb-8 text-blue-100 leading-relaxed">
               Thanks for stopping by! I'm a proud Golden Bear and Trading Analyst dedicated to helping SMBs build websites, optimize operations, and develop strategies that drive meaningful growth.

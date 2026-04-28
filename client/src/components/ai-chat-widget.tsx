@@ -109,7 +109,7 @@ export default function AIChatWidget() {
     },
     {
       id: 'smb-consulting',
-      label: 'SMB Consulting',
+      label: 'RevOps Consulting',
       icon: <Briefcase className="h-4 w-4" />,
       action: () => {
         addMessage('user', 'I need business consulting');

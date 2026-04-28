@@ -10,8 +10,8 @@ import Navigation from "@/components/navigation";
 const services = [
   {
     id: "smb-consulting",
-    title: "SMB Consulting",
-    description: "Custom solutions tailored to your unique business challenges and growth objectives",
+    title: "RevOps Consulting",
+    description: "Revenue operations solutions tailored to your unique business challenges and growth objectives",
     icon: <Briefcase className="h-8 w-8" />,
     price: "Custom Pricing",
     duration: "Flexible engagement",

@@ -208,6 +208,10 @@ Changelog:
   * Routes users directly to contact section for immediate booking
   * Updated session description to clearly explain scope and no-commitment nature
   * Improved user experience with clear path from chat to consultation booking
+- April 28, 2026. Updated role titles and service names:
+  * Changed "SMB Consultant" to "RevOps Specialist" in hero section and footer
+  * Changed "IT Specialist" to "Software Developer" in hero section and footer
+  * Renamed "SMB Consulting" service to "RevOps Consulting" in services page and AI chat widget
 ```
 
 ## User Preferences

@@ -28,10 +28,10 @@ export default function HeroSection() {
               Hi, I'm <span className="text-california-gold">Desmond</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-ash-gray leading-relaxed">
-              Founder | RevOps Specialist | Trading Mentor & Analyst | Software Developer | UC Berkeley Haas Alum
+              Founder | RevOps Specialist | Software Developer | Trading Mentor & Analyst | UC Berkeley Haas Alum
             </p>
             <p className="text-lg mb-8 text-ash-gray leading-relaxed">
-              Thanks for stopping by! I'm a proud Golden Bear and Trading Analyst dedicated to helping SMBs build websites, optimize operations, and develop strategies that drive meaningful growth.
+              Thanks for stopping by! I'm a proud Golden Bear and Software Developer dedicated to helping SMBs build websites, optimize operations, and develop strategies that drive meaningful growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button 

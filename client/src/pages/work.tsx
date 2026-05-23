@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { ArrowRight, ExternalLink, Calendar } from "lucide-react";
+import { ExternalLink, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/navigation";
@@ -56,16 +56,15 @@ const projects = [
   },
   {
     title: "Trading Performance: $100K → $1.51M",
-    description: "Achieved a 1,407.75% paper trading return in 5 months — a firm record for the trading company I contracted with. On live accounts, grew $15K to $23K (53%) in 4 months through disciplined quantitative analysis and risk management.",
+    description: "Achieved a 1,407.75% paper trading return in 5 months — a firm record. On live accounts, grew $15K to $23K (53%) in 4 months through disciplined quantitative analysis and risk management.",
     skills: ["Quantitative Analysis", "Risk Management", "Data-Driven Strategy"],
     status: "Verified",
     category: "Trading",
     image: "/images/trading-performance.png",
-    expandable: true,
   },
   {
     title: "Kratos Combat Club",
-    description: "Founded and operated a martial arts academy (2007–2014) serving diverse communities. Programs included youth training for at-risk kids through CARY, women's self-defense, and private coaching. Dual black belts in Tae Kwon Do and Ninjutsu.",
+    description: "Founded and operated a martial arts academy (2007–2014). Programs included youth training for at-risk kids through CARY, women's self-defense, and private coaching. Dual black belts in Tae Kwon Do and Ninjutsu.",
     skills: ["Entrepreneurship", "Leadership", "Community Impact"],
     status: "Completed",
     category: "Business",
@@ -73,38 +72,36 @@ const projects = [
   },
 ];
 
-const categoryColors: Record<string, string> = {
-  Software: "bg-pigment-green text-white",
-  Website: "bg-black-olive text-white",
-  Product: "bg-dim-gray text-white",
-  Startup: "bg-light-green text-black-olive",
-  Trading: "bg-ash-gray text-black-olive",
-  Business: "bg-black-olive/80 text-white",
+const categoryStyle: Record<string, string> = {
+  Software:  "bg-forest-green text-ivory",
+  Website:   "bg-graphite text-ivory",
+  Product:   "bg-near-black text-ivory",
+  Startup:   "bg-champagne-gold text-near-black",
+  Trading:   "border border-champagne-gold/50 text-champagne-gold",
+  Business:  "bg-graphite text-soft-gray",
 };
 
-const statusColors: Record<string, string> = {
-  "In Development": "text-pigment-green border-pigment-green",
-  Concept: "text-dim-gray border-dim-gray",
-  Completed: "text-black-olive border-black-olive",
-  Verified: "text-pigment-green border-pigment-green",
+const statusStyle: Record<string, string> = {
+  "In Development": "text-forest-green border-forest-green/50",
+  Concept:          "text-graphite border-graphite/50",
+  Completed:        "text-near-black border-near-black/30",
+  Verified:         "text-champagne-gold border-champagne-gold/50",
 };
 
 export default function Work() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen" style={{ backgroundColor: "#F7F3E8" }}>
       <Navigation />
 
       {/* Hero */}
-      <section className="pt-32 pb-16 gradient-bg">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-          >
-            <p className="text-light-green font-medium mb-3 uppercase tracking-widest text-sm">Selected Work</p>
-            <h1 className="text-5xl font-bold text-white mb-6">Projects & Capabilities</h1>
-            <p className="text-xl text-ash-gray max-w-2xl mx-auto">
+      <section className="pt-32 pb-20 gradient-bg relative">
+        <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, #D6B36A 1px, transparent 0)", backgroundSize: "32px 32px" }} />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
+            <p className="text-champagne-gold font-semibold mb-3 uppercase tracking-widest text-xs">Selected Work</p>
+            <h1 className="text-5xl font-bold text-ivory mb-4">Projects & Capabilities</h1>
+            <div className="w-16 h-px bg-champagne-gold/40 mx-auto mb-6" />
+            <p className="text-soft-gray max-w-2xl mx-auto text-lg">
               A look at what I've built, launched, and delivered — across startups, software, trading, and consulting.
             </p>
           </motion.div>
@@ -114,12 +111,14 @@ export default function Work() {
       {/* Projects Grid */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-7">
             {projects.map((project, i) => (
               <motion.div
                 key={i}
-                className={`bg-white rounded-2xl shadow-sm border overflow-hidden hover:shadow-md transition-shadow ${
-                  project.highlight ? "border-pigment-green/40 ring-1 ring-pigment-green/20" : "border-gray-100"
+                className={`bg-white rounded-2xl overflow-hidden border shadow-sm hover:shadow-md transition-all group ${
+                  project.highlight
+                    ? "border-champagne-gold/30 ring-1 ring-champagne-gold/10"
+                    : "border-soft-gray/30 hover:border-champagne-gold/20"
                 }`}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -127,47 +126,38 @@ export default function Work() {
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.01 }}
               >
-                {project.image && (
-                  <div className="h-44 overflow-hidden bg-gray-50">
+                {project.image ? (
+                  <div className="h-44 overflow-hidden bg-near-black/5">
                     <img
                       src={project.image}
                       alt={project.title}
-                      className={`w-full h-full ${
-                        project.image.includes("loyalpup")
-                          ? "object-contain p-4"
-                          : "object-cover"
-                      }`}
+                      className={`w-full h-full ${project.image.includes("loyalpup") ? "object-contain p-4" : "object-cover group-hover:scale-105 transition-transform duration-500"}`}
                     />
                   </div>
-                )}
-                {!project.image && (
-                  <div className="h-2 bg-gradient-to-r from-pigment-green to-light-green" />
+                ) : (
+                  <div className="h-1.5 bg-gradient-to-r from-forest-green via-champagne-gold/60 to-forest-green/30" />
                 )}
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-3">
-                    <Badge className={`text-xs font-medium ${categoryColors[project.category] || "bg-ash-gray text-white"}`}>
+                    <Badge className={`text-xs font-medium ${categoryStyle[project.category] || "bg-soft-gray text-near-black"}`}>
                       {project.category}
                     </Badge>
-                    <span className={`text-xs font-medium border rounded-full px-2 py-0.5 ${statusColors[project.status] || "text-dim-gray border-dim-gray"}`}>
+                    <span className={`text-xs font-medium border rounded-full px-2.5 py-0.5 ${statusStyle[project.status] || "text-graphite border-graphite/30"}`}>
                       {project.status}
                     </span>
                   </div>
-                  <h3 className="text-lg font-bold text-black-olive mb-2">{project.title}</h3>
-                  <p className="text-dim-gray text-sm leading-relaxed mb-4">{project.description}</p>
-                  <div className="flex flex-wrap gap-2 mb-4">
+                  <h3 className="text-base font-bold text-near-black mb-2 leading-snug">{project.title}</h3>
+                  <p className="text-graphite text-sm leading-relaxed mb-4">{project.description}</p>
+                  <div className="flex flex-wrap gap-1.5 mb-4">
                     {project.skills.map((skill, j) => (
-                      <span key={j} className="text-xs bg-gray-100 text-dim-gray px-2 py-1 rounded-full">
+                      <span key={j} className="text-xs bg-soft-gray/30 text-graphite px-2 py-0.5 rounded-full border border-soft-gray/20">
                         {skill}
                       </span>
                     ))}
                   </div>
                   {project.link && (
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-pigment-green font-semibold text-sm flex items-center hover:text-black-olive transition-colors"
-                    >
+                    <a href={project.link} target="_blank" rel="noopener noreferrer"
+                      className="text-champagne-gold font-semibold text-sm flex items-center hover:text-forest-green transition-colors">
                       View Project <ExternalLink className="ml-1 h-3 w-3" />
                     </a>
                   )}
@@ -179,20 +169,16 @@ export default function Work() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl font-bold text-black-olive mb-4">Let's add your project to this list</h2>
-            <p className="text-dim-gray mb-8 text-lg">
-              Tell me what you're building and I'll tell you how I can help.
-            </p>
+      <section className="py-20 gradient-bg relative">
+        <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, #D6B36A 1px, transparent 0)", backgroundSize: "32px 32px" }} />
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
+            <p className="text-champagne-gold text-xs font-semibold uppercase tracking-widest mb-4">Start a Project</p>
+            <h2 className="text-3xl font-bold text-ivory mb-3">Let's add your project to this list</h2>
+            <div className="w-12 h-px bg-champagne-gold/40 mx-auto mb-6" />
+            <p className="text-soft-gray mb-8 text-lg">Tell me what you're building and I'll tell you how I can help.</p>
             <Link href="/contact">
-              <Button className="bg-pigment-green hover:bg-black-olive text-white font-semibold px-10" size="lg">
+              <Button className="bg-forest-green hover:bg-forest-green/80 text-ivory font-semibold px-10 border border-transparent hover:border-champagne-gold/20 transition-all" size="lg">
                 <Calendar className="mr-2 h-4 w-4" /> Start a Project
               </Button>
             </Link>

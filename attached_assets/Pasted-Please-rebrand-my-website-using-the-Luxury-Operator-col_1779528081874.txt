@@ -1,0 +1,93 @@
+Please rebrand my website using the “Luxury Operator” color palette and overall visual direction.
+
+Context:
+This website is now a boutique consulting and software studio website, not a resume/interview site. The brand should feel premium, polished, strategic, and trustworthy. I want it to attract customers for RevOps consulting, software development, AI agents, websites, custom tools, and market analysis.
+
+Use this color palette across the site:
+
+Luxury Operator Palette:
+- Near Black: #111614
+- Graphite: #2C312E
+- Forest Green: #245C3B
+- Champagne Gold: #D6B36A
+- Ivory: #F7F3E8
+- Soft Gray: #D9DED8
+
+Design direction:
+- Make the site feel more premium and high-ticket.
+- Keep it professional and clean, but add more visual richness.
+- Use dark backgrounds for hero sections and major page headers.
+- Use Ivory instead of stark white for page backgrounds.
+- Use Champagne Gold as the premium accent color.
+- Use Forest Green for primary CTAs/buttons.
+- Use Graphite for cards, dark panels, and section contrast.
+- Use Soft Gray for borders, secondary text, dividers, and subtle UI details.
+
+Specific implementation requests:
+
+1. Global styling
+- Replace the current green/gray palette with the Luxury Operator palette.
+- Update CSS variables/theme tokens if the project uses them.
+- Make sure colors are used consistently across all pages, buttons, nav, cards, forms, links, hover states, and section backgrounds.
+- Keep strong contrast for readability.
+
+2. Navigation
+- Keep the nav clean and professional.
+- Use Near Black or Graphite for the nav background if appropriate.
+- Use Ivory or Soft Gray for nav text.
+- Use Champagne Gold for the active page indicator or hover state.
+- Keep the “Book a Call” button in Forest Green with Ivory text.
+
+3. Hero sections
+- Use Near Black or Graphite as the main hero background.
+- Use Ivory for the main headline.
+- Use Champagne Gold for important accent words, section labels, or emphasis text.
+- Use Forest Green for the primary CTA button.
+- Add subtle premium touches, such as thin Champagne Gold divider lines, soft borders, or tasteful gradients.
+
+4. Buttons
+- Primary buttons:
+  - Background: Forest Green #245C3B
+  - Text: Ivory #F7F3E8
+  - Hover: slightly lighter or richer green
+- Secondary buttons:
+  - Transparent or Graphite background
+  - Border: Champagne Gold #D6B36A
+  - Text: Champagne Gold or Ivory
+  - Hover: subtle gold-tinted background
+
+5. Cards and service sections
+- Use Ivory page backgrounds with Graphite or white-tinted cards depending on readability.
+- Add subtle Champagne Gold borders, icons, or top accents to service cards.
+- Service cards should feel premium, not loud.
+- Use consistent spacing, shadows, rounded corners, and hover states.
+
+6. Stats section
+- Use Champagne Gold for the stat numbers or key highlights.
+- Use Graphite/Near Black for text.
+- Keep supporting text in Soft Gray or muted Graphite.
+- Make the stats feel like credibility markers for consulting customers.
+
+7. Forms and contact page
+- Use Ivory or Graphite form backgrounds.
+- Use Champagne Gold focus states for inputs.
+- Use Forest Green for the submit button.
+- Keep the form clean and simple.
+
+8. Overall brand feel
+The finished site should feel like:
+- Premium consulting
+- Founder/operator led
+- Strategic
+- Technical
+- Trustworthy
+- High-end but not flashy
+
+Avoid:
+- Bright neon colors
+- Resume/job seeker language
+- Generic portfolio styling
+- Too much plain white
+- Overly playful colors
+
+Please apply this rebrand across the entire website, including Home, Services, Work, About, and Contact pages. Preserve mobile responsiveness and make sure the site still deploys correctly on Replit.

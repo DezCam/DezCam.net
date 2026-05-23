@@ -3,8 +3,7 @@ import { useState } from "react";
 import { Link } from "wouter";
 import {
   BarChart3, Code2, TrendingUp, Globe, Bot, Wrench, FileText,
-  Users, Target, PieChart, Calendar, Star, ChevronDown, ChevronUp,
-  Quote, ArrowRight,
+  Users, Target, PieChart, Calendar, Star, ChevronUp, Quote, ArrowRight,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -34,7 +33,6 @@ const mainServices = [
     cta: "Book Consultation",
     calendlyUrl: "https://calendly.com/desmondjr88/outcome-alignment-session",
     popular: true,
-    color: "pigment-green",
   },
   {
     id: "software",
@@ -55,7 +53,6 @@ const mainServices = [
     duration: "2–6 weeks",
     cta: "Discuss Your Project",
     calendlyUrl: "https://calendly.com/desmondjr88/custom-software-solutions",
-    color: "black-olive",
   },
   {
     id: "market-analysis",
@@ -75,7 +72,6 @@ const mainServices = [
     duration: "1–3 weeks",
     cta: "Start a Project",
     calendlyUrl: "https://calendly.com/desmondjr88/outcome-alignment-session",
-    color: "dim-gray",
   },
 ];
 
@@ -83,7 +79,7 @@ const additionalService = {
   id: "trading",
   icon: <TrendingUp className="h-8 w-8" />,
   title: "Trading Education & Mentorship",
-  description: "Learn proven trading strategies from someone who achieved 1,407% returns. Weekly live sessions, 1-on-1 mentorship, and access to risk management frameworks that actually work.",
+  description: "Learn proven trading strategies from someone who achieved 1,407% returns. Weekly live sessions, 1-on-1 mentorship, and risk management frameworks that actually work.",
   price: "$500/month",
   duration: "1 free week trial",
   features: [
@@ -126,34 +122,31 @@ const stats = [
 
 export default function Services() {
   const [showTestimonials, setShowTestimonials] = useState(false);
-
   const openCalendly = (url: string) => window.open(url, "_blank", "noopener,noreferrer");
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen" style={{ backgroundColor: "#F7F3E8" }}>
       <Navigation />
 
       {/* Hero */}
-      <section className="pt-32 pb-16 gradient-bg">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-          >
-            <p className="text-light-green font-medium mb-3 uppercase tracking-widest text-sm">What I Offer</p>
-            <h1 className="text-5xl font-bold text-white mb-6">Services</h1>
-            <p className="text-xl text-ash-gray max-w-2xl mx-auto">
-              Three core disciplines — Revenue Operations, Software Development, and Market Analysis — delivered by someone who combines strategic thinking with hands-on execution.
+      <section className="pt-32 pb-20 gradient-bg relative">
+        <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, #D6B36A 1px, transparent 0)", backgroundSize: "32px 32px" }} />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
+            <p className="text-champagne-gold font-semibold mb-3 uppercase tracking-widest text-xs">What I Offer</p>
+            <h1 className="text-5xl font-bold text-ivory mb-6">Services</h1>
+            <div className="w-16 h-px bg-champagne-gold/40 mx-auto mb-6" />
+            <p className="text-soft-gray max-w-2xl mx-auto text-lg leading-relaxed">
+              Three core disciplines delivered by someone who combines strategic thinking with hands-on execution.
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* Main Services */}
-      <section className="py-20">
+      <section className="py-24" style={{ backgroundColor: "#F7F3E8" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-24">
+          <div className="space-y-28">
             {mainServices.map((service, i) => (
               <motion.div
                 key={service.id}
@@ -166,31 +159,24 @@ export default function Services() {
                 {/* Info */}
                 <div className={i % 2 === 1 ? "md:col-start-2" : ""}>
                   {service.popular && (
-                    <Badge className="bg-pigment-green text-white mb-4">Most Requested</Badge>
+                    <Badge className="bg-champagne-gold text-near-black font-semibold mb-4 text-xs">Most Requested</Badge>
                   )}
-                  <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-5 ${
-                    service.color === "pigment-green" ? "bg-pigment-green/10 text-pigment-green" :
-                    service.color === "black-olive" ? "bg-black-olive/10 text-black-olive" :
-                    "bg-dim-gray/10 text-dim-gray"
-                  }`}>
+                  <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-5 bg-near-black/5 text-forest-green border border-soft-gray/30">
                     {service.icon}
                   </div>
-                  <h2 className="text-3xl font-bold text-black-olive mb-2">{service.title}</h2>
-                  <p className={`font-semibold mb-4 ${
-                    service.color === "pigment-green" ? "text-pigment-green" :
-                    service.color === "black-olive" ? "text-black-olive" :
-                    "text-dim-gray"
-                  }`}>{service.tagline}</p>
-                  <p className="text-dim-gray leading-relaxed mb-6">{service.description}</p>
-                  <div className="flex items-center gap-4 mb-6">
+                  <h2 className="text-3xl font-bold text-near-black mb-2">{service.title}</h2>
+                  <p className="text-champagne-gold font-semibold mb-4 text-sm uppercase tracking-wide">{service.tagline}</p>
+                  <div className="w-8 h-px bg-champagne-gold/40 mb-5" />
+                  <p className="text-graphite leading-relaxed mb-6">{service.description}</p>
+                  <div className="flex items-center gap-4 mb-6 p-4 bg-white rounded-xl border border-soft-gray/30">
                     <div>
-                      <div className="text-2xl font-bold text-black-olive">{service.price}</div>
-                      <div className="text-sm text-dim-gray">{service.duration}</div>
+                      <div className="text-2xl font-bold text-near-black">{service.price}</div>
+                      <div className="text-sm text-graphite">{service.duration}</div>
                     </div>
                   </div>
                   <Button
                     onClick={() => openCalendly(service.calendlyUrl)}
-                    className="bg-pigment-green hover:bg-black-olive text-white font-semibold"
+                    className="bg-forest-green hover:bg-forest-green/80 text-ivory font-semibold border border-transparent hover:border-champagne-gold/20 transition-all"
                   >
                     <Calendar className="mr-2 h-4 w-4" /> {service.cta}
                   </Button>
@@ -202,17 +188,17 @@ export default function Services() {
                     {service.subServices.map((sub, j) => (
                       <motion.div
                         key={j}
-                        className="bg-gray-50 rounded-xl p-4 border border-gray-100 hover:border-pigment-green/30 hover:bg-pigment-green/5 transition-all"
+                        className="bg-white rounded-xl p-4 border border-soft-gray/20 hover:border-champagne-gold/30 hover:shadow-sm transition-all"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.4, delay: j * 0.06 }}
                         viewport={{ once: true }}
                       >
                         <div className="flex items-start gap-3">
-                          <div className="text-pigment-green mt-0.5 flex-shrink-0">{sub.icon}</div>
+                          <div className="text-champagne-gold mt-0.5 flex-shrink-0">{sub.icon}</div>
                           <div>
-                            <div className="font-semibold text-black-olive text-sm mb-1">{sub.title}</div>
-                            <div className="text-dim-gray text-xs leading-relaxed">{sub.desc}</div>
+                            <div className="font-semibold text-near-black text-sm mb-1">{sub.title}</div>
+                            <div className="text-graphite text-xs leading-relaxed">{sub.desc}</div>
                           </div>
                         </div>
                       </motion.div>
@@ -226,44 +212,40 @@ export default function Services() {
       </section>
 
       {/* Trading Education */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-graphite">
+        <div className="h-px bg-gradient-to-r from-transparent via-champagne-gold/30 to-transparent -mt-px mb-16" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <Card className="border-pigment-green/30 shadow-lg">
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
+            <Card className="bg-near-black border border-champagne-gold/20 shadow-xl">
               <CardHeader>
-                <div className="flex items-start justify-between">
+                <div className="flex items-start justify-between flex-wrap gap-4">
                   <div className="flex items-start gap-4">
-                    <div className="p-3 bg-pigment-green/10 rounded-xl text-pigment-green">
+                    <div className="p-3 bg-champagne-gold/10 rounded-xl text-champagne-gold border border-champagne-gold/20">
                       {additionalService.icon}
                     </div>
                     <div>
-                      <Badge className="bg-pigment-green text-white mb-2 text-xs">{additionalService.highlight}</Badge>
-                      <CardTitle className="text-xl font-bold text-black-olive">{additionalService.title}</CardTitle>
-                      <CardDescription className="mt-1">{additionalService.description}</CardDescription>
+                      <Badge className="bg-champagne-gold text-near-black font-semibold mb-2 text-xs">{additionalService.highlight}</Badge>
+                      <CardTitle className="text-xl font-bold text-ivory">{additionalService.title}</CardTitle>
+                      <CardDescription className="mt-1 text-soft-gray">{additionalService.description}</CardDescription>
                     </div>
                   </div>
-                  <div className="text-right flex-shrink-0 ml-4">
-                    <div className="text-2xl font-bold text-pigment-green">{additionalService.price}</div>
-                    <div className="text-sm text-dim-gray">{additionalService.duration}</div>
+                  <div className="text-right flex-shrink-0">
+                    <div className="text-2xl font-bold text-champagne-gold">{additionalService.price}</div>
+                    <div className="text-sm text-soft-gray">{additionalService.duration}</div>
                   </div>
                 </div>
               </CardHeader>
               <CardContent>
                 <div className="grid sm:grid-cols-2 gap-2 mb-6">
                   {additionalService.features.map((f, i) => (
-                    <div key={i} className="flex items-center gap-2 text-sm text-dim-gray">
-                      <div className="w-1.5 h-1.5 bg-pigment-green rounded-full flex-shrink-0" />
+                    <div key={i} className="flex items-center gap-2 text-sm text-soft-gray">
+                      <div className="w-1.5 h-1.5 bg-champagne-gold rounded-full flex-shrink-0" />
                       {f}
                     </div>
                   ))}
                 </div>
                 <WaitingListDialog>
-                  <Button className="bg-pigment-green hover:bg-black-olive text-white font-semibold">
+                  <Button className="bg-forest-green hover:bg-forest-green/80 text-ivory font-semibold border border-transparent hover:border-champagne-gold/20 transition-all">
                     <TrendingUp className="mr-2 h-4 w-4" /> Join Waiting List
                   </Button>
                 </WaitingListDialog>
@@ -271,22 +253,17 @@ export default function Services() {
             </Card>
           </motion.div>
         </div>
+        <div className="h-px bg-gradient-to-r from-transparent via-champagne-gold/30 to-transparent mt-16" />
       </section>
 
       {/* Stats */}
-      <section className="py-14 bg-black-olive">
+      <section className="py-14 bg-near-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {stats.map((stat, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="text-3xl font-bold text-light-green mb-1">{stat.value}</div>
-                <div className="text-ash-gray text-sm">{stat.label}</div>
+              <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: i * 0.1 }} viewport={{ once: true }}>
+                <div className="text-3xl font-bold text-champagne-gold mb-1">{stat.value}</div>
+                <div className="text-soft-gray text-sm">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -294,14 +271,15 @@ export default function Services() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-16 bg-white">
+      <section className="py-16" style={{ backgroundColor: "#F7F3E8" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-black-olive mb-4">What Clients Say</h2>
+            <p className="text-champagne-gold text-xs font-semibold uppercase tracking-widest mb-3">Client Feedback</p>
+            <h2 className="text-3xl font-bold text-near-black mb-4">What Clients Say</h2>
             <Button
               onClick={() => setShowTestimonials(!showTestimonials)}
               variant="outline"
-              className="border-pigment-green text-pigment-green hover:bg-pigment-green hover:text-white"
+              className="border-champagne-gold/50 text-champagne-gold hover:bg-champagne-gold/10 hover:border-champagne-gold transition-all mt-2"
             >
               {showTestimonials ? (
                 <><ChevronUp className="h-4 w-4 mr-2" /> Hide Testimonials</>
@@ -320,26 +298,21 @@ export default function Services() {
                 className="grid md:grid-cols-3 gap-6 mt-8"
               >
                 {testimonials.map((t, i) => (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4, delay: i * 0.1 }}
-                  >
-                    <Card className="h-full shadow-sm border border-gray-100">
+                  <motion.div key={i} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: i * 0.1 }}>
+                    <Card className="h-full bg-white border border-soft-gray/30 shadow-sm hover:border-champagne-gold/30 transition-all">
                       <CardContent className="p-6">
                         <div className="flex mb-3">
                           {[...Array(t.rating)].map((_, j) => (
-                            <Star key={j} className="h-4 w-4 text-pigment-green fill-pigment-green" />
+                            <Star key={j} className="h-4 w-4 text-champagne-gold fill-champagne-gold" />
                           ))}
                         </div>
                         <div className="relative mb-4">
-                          <Quote className="h-6 w-6 text-ash-gray/40 absolute -top-1 -left-1" />
-                          <p className="text-dim-gray italic text-sm pl-5">"{t.content}"</p>
+                          <Quote className="h-6 w-6 text-champagne-gold/20 absolute -top-1 -left-1" />
+                          <p className="text-graphite italic text-sm pl-5">"{t.content}"</p>
                         </div>
-                        <div className="border-t pt-3">
-                          <p className="font-semibold text-black-olive text-sm">{t.name}</p>
-                          <p className="text-xs text-dim-gray">{t.company}</p>
+                        <div className="border-t border-soft-gray/30 pt-3">
+                          <p className="font-semibold text-near-black text-sm">{t.name}</p>
+                          <p className="text-xs text-graphite">{t.company}</p>
                         </div>
                       </CardContent>
                     </Card>
@@ -352,32 +325,21 @@ export default function Services() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 gradient-bg">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl font-bold text-white mb-4">Not sure which service fits?</h2>
-            <p className="text-ash-gray mb-8 text-lg">
-              Book a free 30-minute call. We'll figure it out together.
-            </p>
+      <section className="py-20 gradient-bg relative">
+        <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, #D6B36A 1px, transparent 0)", backgroundSize: "32px 32px" }} />
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
+            <p className="text-champagne-gold text-xs font-semibold uppercase tracking-widest mb-4">Get Started</p>
+            <h2 className="text-3xl font-bold text-ivory mb-3">Not sure which service fits?</h2>
+            <div className="w-12 h-px bg-champagne-gold/40 mx-auto mb-6" />
+            <p className="text-soft-gray mb-8 text-lg">Book a free 30-minute call. We'll figure it out together.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                onClick={() => window.open("https://calendly.com/desmondjr88/outcome-alignment-session", "_blank", "noopener,noreferrer")}
-                className="bg-pigment-green hover:bg-light-green hover:text-black-olive text-white font-semibold px-8"
-                size="lg"
-              >
+              <Button onClick={() => window.open("https://calendly.com/desmondjr88/outcome-alignment-session", "_blank", "noopener,noreferrer")}
+                className="bg-forest-green hover:bg-forest-green/80 text-ivory font-semibold px-8 border border-transparent hover:border-champagne-gold/20 transition-all" size="lg">
                 <Calendar className="mr-2 h-4 w-4" /> Book Free Consultation
               </Button>
               <Link href="/contact">
-                <Button
-                  variant="outline"
-                  className="border-2 border-ash-gray text-ash-gray hover:bg-ash-gray hover:text-black-olive font-semibold px-8 bg-transparent"
-                  size="lg"
-                >
+                <Button variant="outline" className="border border-champagne-gold/40 text-champagne-gold hover:bg-champagne-gold/10 hover:border-champagne-gold font-semibold px-8 bg-transparent transition-all" size="lg">
                   Send an Inquiry <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>

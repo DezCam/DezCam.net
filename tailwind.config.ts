@@ -51,14 +51,22 @@ export default {
           "4": "var(--chart-4)",
           "5": "var(--chart-5)",
         },
-        "berkeley-blue": "var(--berkeley-blue)",
+        /* ── Luxury Operator palette ── */
+        "near-black":      "var(--near-black)",
+        "graphite":        "var(--graphite)",
+        "forest-green":    "var(--forest-green)",
+        "champagne-gold":  "var(--champagne-gold)",
+        "ivory":           "var(--ivory)",
+        "soft-gray":       "var(--soft-gray)",
+        /* ── Legacy aliases (remapped) ── */
+        "berkeley-blue":   "var(--berkeley-blue)",
         "california-gold": "var(--california-gold)",
-        "light-gray": "var(--light-gray)",
-        "black-olive": "var(--black-olive)",
-        "dim-gray": "var(--dim-gray)",
-        "ash-gray": "var(--ash-gray)",
-        "light-green": "var(--light-green)",
-        "pigment-green": "var(--pigment-green)",
+        "light-gray":      "var(--light-gray)",
+        "black-olive":     "var(--black-olive)",
+        "dim-gray":        "var(--dim-gray)",
+        "ash-gray":        "var(--ash-gray)",
+        "light-green":     "var(--light-green)",
+        "pigment-green":   "var(--pigment-green)",
         sidebar: {
           DEFAULT: "var(--sidebar-background)",
           foreground: "var(--sidebar-foreground)",
@@ -72,20 +80,12 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
         },
       },
       animation: {

@@ -1,417 +1,345 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { useEffect, useState } from "react";
-import { TrendingUp, Globe, Code, Calendar, BarChart3, Users, Clock, DollarSign, Mail, Phone, Briefcase, Star, ChevronDown, ChevronUp, Quote } from "lucide-react";
+import { useState } from "react";
+import { Link } from "wouter";
+import {
+  BarChart3, Code2, TrendingUp, Globe, Bot, Wrench, FileText,
+  Users, Target, PieChart, Calendar, Star, ChevronDown, ChevronUp,
+  Quote, ArrowRight,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import WaitingListDialog from "@/components/waiting-list-dialog";
 import Navigation from "@/components/navigation";
+import Footer from "@/components/footer";
+import AIChatWidget from "@/components/ai-chat-widget";
 
-const services = [
+const mainServices = [
   {
-    id: "smb-consulting",
+    id: "revops",
+    icon: <BarChart3 className="h-10 w-10" />,
     title: "RevOps Consulting",
-    description: "Revenue operations solutions tailored to your unique business challenges and growth objectives",
-    icon: <Briefcase className="h-8 w-8" />,
+    tagline: "Fix the systems slowing your revenue",
+    description:
+      "I help businesses identify bottlenecks, organize workflows, improve customer journeys, and build better systems for sales, marketing, and operations — so your team can focus on growing.",
+    subServices: [
+      { icon: <Users className="h-5 w-5" />, title: "Sales Process Improvement", desc: "Streamline how your team sells — from first touch to close." },
+      { icon: <Wrench className="h-5 w-5" />, title: "CRM & Workflow Strategy", desc: "Set up and optimize your CRM so it actually gets used." },
+      { icon: <Target className="h-5 w-5" />, title: "Customer Journey Optimization", desc: "Map and fix the gaps customers fall through." },
+      { icon: <FileText className="h-5 w-5" />, title: "Business Systems Planning", desc: "Build the operational infrastructure your business needs to scale." },
+      { icon: <TrendingUp className="h-5 w-5" />, title: "GTM & Revenue Workflow", desc: "Align your go-to-market motion with revenue goals." },
+    ],
     price: "Custom Pricing",
     duration: "Flexible engagement",
-    features: [
-      "Business process optimization",
-      "Growth strategy development",
-      "Operational efficiency audits",
-      "Technology stack recommendations",
-      "Market analysis and positioning",
-      "Ongoing advisory support"
-    ],
-    highlight: "Custom Solutions",
     cta: "Book Consultation",
-    popular: true
-  },
-  {
-    id: "trading",
-    title: "Trading Education & Mentorship",
-    description: "Learn proven trading strategies from someone who achieved 1,407% returns in 4 months",
-    icon: <TrendingUp className="h-8 w-8" />,
-    price: "$500/month",
-    duration: "1 free week trial",
-    features: [
-      "1-on-1 mentorship from beginner to advanced",
-      "Weekly live sessions and chat support",
-      "Access to proven trading strategies",
-      "Risk management techniques",
-      "Trading tools and resources",
-      "Only 4 slots left"
-    ],
-    highlight: "1,407% Returns Achieved",
-    cta: "Join Waiting List"
-  },
-  {
-    id: "website",
-    title: "Web Design & Development",
-    description: "Professional websites that convert visitors into customers with modern design and functionality",
-    icon: <Globe className="h-8 w-8" />,
-    price: "$700 - $3,000",
-    duration: "2-3 weeks delivery",
-    features: [
-      "One-page to multi-page websites",
-      "Custom responsive design",
-      "Modern React/TypeScript development",
-      "SEO optimization",
-      "Contact forms and integrations",
-      "1 month free support"
-    ],
-    highlight: "Berkeley-Trained Developer",
-    cta: "Schedule Consultation"
+    calendlyUrl: "https://calendly.com/desmondjr88/outcome-alignment-session",
+    popular: true,
+    color: "pigment-green",
   },
   {
     id: "software",
-    title: "Custom Software Solutions",
-    description: "Tailored software applications to streamline your business operations and boost productivity",
-    icon: <Code className="h-8 w-8" />,
-    price: "Starting at $3,000",
-    duration: "Project-based",
-    features: [
-      "Custom application development",
-      "Database design and integration",
-      "API development and integration",
-      "User authentication systems",
-      "Real-time features",
-      "Ongoing maintenance"
+    icon: <Code2 className="h-10 w-10" />,
+    title: "Software Development",
+    tagline: "Build practical tools that actually work",
+    description:
+      "I build custom digital solutions for businesses, founders, and operators who need something built right — not a template that kind of fits.",
+    subServices: [
+      { icon: <Bot className="h-5 w-5" />, title: "AI Agents", desc: "Custom AI agents that automate workflows and handle repetitive tasks." },
+      { icon: <Wrench className="h-5 w-5" />, title: "Custom Internal Tools", desc: "Replace clunky spreadsheets with purpose-built software." },
+      { icon: <Globe className="h-5 w-5" />, title: "Business Websites", desc: "Fast, modern sites that convert visitors to customers." },
+      { icon: <FileText className="h-5 w-5" />, title: "Landing Pages", desc: "High-converting pages built for campaigns and launches." },
+      { icon: <TrendingUp className="h-5 w-5" />, title: "Automation Workflows", desc: "Connect your tools and automate manual processes." },
+      { icon: <Target className="h-5 w-5" />, title: "MVP / Prototype Dev", desc: "Launch a working product fast to test and validate." },
     ],
-    highlight: "Enterprise-Grade Solutions",
-    cta: "Discuss Your Project"
-  }
+    price: "$700 – $5,000+",
+    duration: "2–6 weeks",
+    cta: "Discuss Your Project",
+    calendlyUrl: "https://calendly.com/desmondjr88/custom-software-solutions",
+    color: "black-olive",
+  },
+  {
+    id: "market-analysis",
+    icon: <PieChart className="h-10 w-10" />,
+    title: "Market Analysis",
+    tagline: "Understand your market before you move",
+    description:
+      "I help businesses understand their market landscape, customers, competitors, and opportunities using research, data, and strategic analysis — so you move with confidence.",
+    subServices: [
+      { icon: <BarChart3 className="h-5 w-5" />, title: "Market Research", desc: "Deep dives into market size, trends, and dynamics." },
+      { icon: <Target className="h-5 w-5" />, title: "Competitor Analysis", desc: "Know exactly who you're up against and where you have an edge." },
+      { icon: <Users className="h-5 w-5" />, title: "Customer Discovery", desc: "Understand who your customers are and what they actually want." },
+      { icon: <FileText className="h-5 w-5" />, title: "Product Positioning", desc: "Define where your product fits and why customers should choose you." },
+      { icon: <TrendingUp className="h-5 w-5" />, title: "Financial Market Analysis", desc: "Trading and financial market insights for data-driven decisions." },
+    ],
+    price: "Starting at $500",
+    duration: "1–3 weeks",
+    cta: "Start a Project",
+    calendlyUrl: "https://calendly.com/desmondjr88/outcome-alignment-session",
+    color: "dim-gray",
+  },
 ];
+
+const additionalService = {
+  id: "trading",
+  icon: <TrendingUp className="h-8 w-8" />,
+  title: "Trading Education & Mentorship",
+  description: "Learn proven trading strategies from someone who achieved 1,407% returns. Weekly live sessions, 1-on-1 mentorship, and access to risk management frameworks that actually work.",
+  price: "$500/month",
+  duration: "1 free week trial",
+  features: [
+    "1-on-1 mentorship from beginner to advanced",
+    "Weekly live sessions + chat support",
+    "Proven trading strategy access",
+    "Risk management techniques",
+    "Only 4 slots available",
+  ],
+  highlight: "1,407% Return Record",
+};
 
 const testimonials = [
   {
-    id: 1,
     name: "Sarah M.",
     company: "Local Bakery Owner",
     content: "Desmond helped us streamline our ordering process and build a beautiful website. Our online orders increased by 40% in the first month!",
-    rating: 5
+    rating: 5,
   },
   {
-    id: 2,
     name: "Marcus T.",
     company: "E-commerce Entrepreneur",
     content: "The trading mentorship completely changed my approach to the markets. Desmond's risk management techniques saved me from costly mistakes.",
-    rating: 5
+    rating: 5,
   },
   {
-    id: 3,
     name: "Jennifer L.",
     company: "Fitness Studio Owner",
     content: "Professional, responsive, and incredibly knowledgeable. The custom booking software Desmond built has been a game-changer for our business.",
-    rating: 5
-  }
+    rating: 5,
+  },
+];
+
+const stats = [
+  { value: "1,407%", label: "Trading Return Record" },
+  { value: "10+", label: "Projects Delivered" },
+  { value: "3", label: "Core Service Areas" },
+  { value: "100%", label: "Client Focus" },
 ];
 
 export default function Services() {
-  const [highlightedService, setHighlightedService] = useState<string | null>(null);
   const [showTestimonials, setShowTestimonials] = useState(false);
 
-  useEffect(() => {
-    // Check for highlight parameter in URL
-    const urlParams = new URLSearchParams(window.location.search);
-    const highlight = urlParams.get('highlight');
-    if (highlight) {
-      setHighlightedService(highlight);
-      // Remove the parameter from URL after reading it
-      window.history.replaceState({}, '', window.location.pathname);
-      // Auto-remove highlight after animation
-      setTimeout(() => setHighlightedService(null), 3000);
-    }
-  }, []);
-
-  const scrollToContact = () => {
-    // Navigate to home page contact section
-    window.location.href = '/#contact';
-  };
-
-  const openCalendly = (url: string) => {
-    window.open(url, '_blank', 'noopener,noreferrer');
-  };
+  const openCalendly = (url: string) => window.open(url, "_blank", "noopener,noreferrer");
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-light-gray to-white dark:from-gray-900 dark:to-gray-800">
+    <div className="min-h-screen bg-white">
       <Navigation />
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
+
+      {/* Hero */}
+      <section className="pt-32 pb-16 gradient-bg">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.7 }}
           >
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              Professional
-              <span className="text-berkeley-blue"> Services</span>
-            </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-              Leverage proven expertise in trading, technology, and business strategy. 
-              From achieving 1,407% trading returns to developing enterprise solutions.
+            <p className="text-light-green font-medium mb-3 uppercase tracking-widest text-sm">What I Offer</p>
+            <h1 className="text-5xl font-bold text-white mb-6">Services</h1>
+            <p className="text-xl text-ash-gray max-w-2xl mx-auto">
+              Three core disciplines — Revenue Operations, Software Development, and Market Analysis — delivered by someone who combines strategic thinking with hands-on execution.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => {
-              const isHighlighted = highlightedService === service.id;
-              return (
-                <motion.div
-                  key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ 
-                    opacity: 1, 
-                    y: 0,
-                    scale: isHighlighted ? [1, 1.05, 1, 1.05, 1] : 1,
-                    boxShadow: isHighlighted ? [
-                      "0 0 0 rgba(57, 154, 75, 0.4)",
-                      "0 0 30px rgba(57, 154, 75, 0.7)",
-                      "0 0 0 rgba(57, 154, 75, 0.4)",
-                      "0 0 30px rgba(57, 154, 75, 0.7)",
-                      "0 0 0 rgba(57, 154, 75, 0.4)"
-                    ] : "0 0 0 rgba(57, 154, 75, 0)"
-                  }}
-                  transition={{ 
-                    duration: isHighlighted ? 0.6 : 0.8, 
-                    delay: index * 0.2,
-                    repeat: isHighlighted ? 2 : 0,
-                    ease: "easeInOut"
-                  }}
-                >
-                  <Card className={`h-full relative ${service.popular || isHighlighted ? 'ring-2 ring-pigment-green shadow-xl' : ''} ${isHighlighted ? 'bg-gradient-to-br from-light-green/10 to-white border-pigment-green' : ''}`}>
-                    {service.popular && !isHighlighted && (
-                      <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-pigment-green text-white">
-                        Most Popular
-                      </Badge>
-                    )}
-                    {isHighlighted && (
-                      <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-berkeley-blue text-white animate-pulse">
-                        ✨ Recommended for You ✨
-                      </Badge>
-                    )}
-                  
-                  <CardHeader className="text-center pb-4">
-                    <div className="flex justify-center mb-4">
-                      <div className="p-3 bg-berkeley-blue/10 rounded-full text-berkeley-blue">
-                        {service.icon}
-                      </div>
+      {/* Main Services */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="space-y-24">
+            {mainServices.map((service, i) => (
+              <motion.div
+                key={service.id}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className={`grid md:grid-cols-2 gap-16 items-start ${i % 2 === 1 ? "md:grid-flow-dense" : ""}`}
+              >
+                {/* Info */}
+                <div className={i % 2 === 1 ? "md:col-start-2" : ""}>
+                  {service.popular && (
+                    <Badge className="bg-pigment-green text-white mb-4">Most Requested</Badge>
+                  )}
+                  <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-5 ${
+                    service.color === "pigment-green" ? "bg-pigment-green/10 text-pigment-green" :
+                    service.color === "black-olive" ? "bg-black-olive/10 text-black-olive" :
+                    "bg-dim-gray/10 text-dim-gray"
+                  }`}>
+                    {service.icon}
+                  </div>
+                  <h2 className="text-3xl font-bold text-black-olive mb-2">{service.title}</h2>
+                  <p className={`font-semibold mb-4 ${
+                    service.color === "pigment-green" ? "text-pigment-green" :
+                    service.color === "black-olive" ? "text-black-olive" :
+                    "text-dim-gray"
+                  }`}>{service.tagline}</p>
+                  <p className="text-dim-gray leading-relaxed mb-6">{service.description}</p>
+                  <div className="flex items-center gap-4 mb-6">
+                    <div>
+                      <div className="text-2xl font-bold text-black-olive">{service.price}</div>
+                      <div className="text-sm text-dim-gray">{service.duration}</div>
                     </div>
-                    <CardTitle className="text-xl font-bold text-gray-900 dark:text-white">
-                      {service.title}
-                    </CardTitle>
-                    <CardDescription className="text-gray-600 dark:text-gray-300">
-                      {service.description}
-                    </CardDescription>
-                  </CardHeader>
+                  </div>
+                  <Button
+                    onClick={() => openCalendly(service.calendlyUrl)}
+                    className="bg-pigment-green hover:bg-black-olive text-white font-semibold"
+                  >
+                    <Calendar className="mr-2 h-4 w-4" /> {service.cta}
+                  </Button>
+                </div>
 
-                  <CardContent className="space-y-6">
-                    {/* Highlight */}
-                    <div className="text-center">
-                      <Badge variant="outline" className="text-berkeley-blue border-berkeley-blue">
-                        {service.highlight}
-                      </Badge>
-                    </div>
-
-                    {/* Pricing */}
-                    <div className="text-center space-y-2">
-                      <div className="text-3xl font-bold text-berkeley-blue">
-                        {service.price}
-                      </div>
-                      <div className="text-sm text-gray-600 dark:text-gray-400 flex items-center justify-center">
-                        <Clock className="h-4 w-4 mr-1" />
-                        {service.duration}
-                      </div>
-                    </div>
-
-                    {/* Features */}
-                    <div className="space-y-3">
-                      <h4 className="font-semibold text-gray-900 dark:text-white">What's Included:</h4>
-                      <ul className="space-y-2">
-                        {service.features.map((feature, idx) => (
-                          <li key={idx} className="text-sm text-gray-600 dark:text-gray-400 flex items-start">
-                            <div className="h-1.5 w-1.5 bg-berkeley-blue rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    {/* CTA Button */}
-                    <div className="pt-4">
-                      {service.id === 'smb-consulting' ? (
-                        <Button 
-                          onClick={() => openCalendly('https://calendly.com/desmondjr88/smb-consulting')}
-                          className="w-full bg-pigment-green hover:bg-black-olive text-white"
-                        >
-                          <Calendar className="h-4 w-4 mr-2" />
-                          {service.cta}
-                        </Button>
-                      ) : service.id === 'trading' ? (
-                        <WaitingListDialog>
-                          <Button className="w-full bg-pigment-green hover:bg-black-olive text-white">
-                            <TrendingUp className="h-4 w-4 mr-2" />
-                            {service.cta}
-                          </Button>
-                        </WaitingListDialog>
-                      ) : service.id === 'website' ? (
-                        <Button 
-                          onClick={() => openCalendly('https://calendly.com/desmondjr88/web-design-development')}
-                          className="w-full bg-pigment-green hover:bg-black-olive text-white"
-                        >
-                          <Calendar className="h-4 w-4 mr-2" />
-                          {service.cta}
-                        </Button>
-                      ) : service.id === 'software' ? (
-                        <Button 
-                          onClick={() => openCalendly('https://calendly.com/desmondjr88/custom-software-solutions')}
-                          className="w-full bg-pigment-green hover:bg-black-olive text-white"
-                        >
-                          <Calendar className="h-4 w-4 mr-2" />
-                          {service.cta}
-                        </Button>
-                      ) : (
-                        <Button 
-                          onClick={scrollToContact}
-                          className="w-full bg-pigment-green hover:bg-black-olive text-white"
-                        >
-                          <Calendar className="h-4 w-4 mr-2" />
-                          {service.cta}
-                        </Button>
-                      )}
-                    </div>
-                  </CardContent>
-                </Card>
+                {/* Sub-services */}
+                <div className={i % 2 === 1 ? "md:col-start-1 md:row-start-1" : ""}>
+                  <div className="grid sm:grid-cols-2 gap-3">
+                    {service.subServices.map((sub, j) => (
+                      <motion.div
+                        key={j}
+                        className="bg-gray-50 rounded-xl p-4 border border-gray-100 hover:border-pigment-green/30 hover:bg-pigment-green/5 transition-all"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.4, delay: j * 0.06 }}
+                        viewport={{ once: true }}
+                      >
+                        <div className="flex items-start gap-3">
+                          <div className="text-pigment-green mt-0.5 flex-shrink-0">{sub.icon}</div>
+                          <div>
+                            <div className="font-semibold text-black-olive text-sm mb-1">{sub.title}</div>
+                            <div className="text-dim-gray text-xs leading-relaxed">{sub.desc}</div>
+                          </div>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
               </motion.div>
-            );
-            })}
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-berkeley-blue">
-        <div className="max-w-7xl mx-auto">
+      {/* Trading Education */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
           >
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Proven Track Record
-            </h2>
-            <p className="text-xl text-ash-gray">
-              Results that speak for themselves
-            </p>
+            <Card className="border-pigment-green/30 shadow-lg">
+              <CardHeader>
+                <div className="flex items-start justify-between">
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 bg-pigment-green/10 rounded-xl text-pigment-green">
+                      {additionalService.icon}
+                    </div>
+                    <div>
+                      <Badge className="bg-pigment-green text-white mb-2 text-xs">{additionalService.highlight}</Badge>
+                      <CardTitle className="text-xl font-bold text-black-olive">{additionalService.title}</CardTitle>
+                      <CardDescription className="mt-1">{additionalService.description}</CardDescription>
+                    </div>
+                  </div>
+                  <div className="text-right flex-shrink-0 ml-4">
+                    <div className="text-2xl font-bold text-pigment-green">{additionalService.price}</div>
+                    <div className="text-sm text-dim-gray">{additionalService.duration}</div>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <div className="grid sm:grid-cols-2 gap-2 mb-6">
+                  {additionalService.features.map((f, i) => (
+                    <div key={i} className="flex items-center gap-2 text-sm text-dim-gray">
+                      <div className="w-1.5 h-1.5 bg-pigment-green rounded-full flex-shrink-0" />
+                      {f}
+                    </div>
+                  ))}
+                </div>
+                <WaitingListDialog>
+                  <Button className="bg-pigment-green hover:bg-black-olive text-white font-semibold">
+                    <TrendingUp className="mr-2 h-4 w-4" /> Join Waiting List
+                  </Button>
+                </WaitingListDialog>
+              </CardContent>
+            </Card>
           </motion.div>
+        </div>
+      </section>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-center"
-            >
-              <div className="text-4xl font-bold text-california-gold mb-2">1,407%</div>
-              <div className="text-ash-gray">Trading Returns Achieved</div>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-center"
-            >
-              <div className="text-4xl font-bold text-california-gold mb-2">50+</div>
-              <div className="text-ash-gray">Websites Developed</div>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-center"
-            >
-              <div className="text-4xl font-bold text-california-gold mb-2">100%</div>
-              <div className="text-ash-gray">Client Satisfaction</div>
-            </motion.div>
+      {/* Stats */}
+      <section className="py-14 bg-black-olive">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            {stats.map((stat, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="text-3xl font-bold text-light-green mb-1">{stat.value}</div>
+                <div className="text-ash-gray text-sm">{stat.label}</div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-light-gray to-white">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-8"
-          >
-            <h2 className="text-3xl font-bold text-berkeley-blue mb-4">
-              What Clients Say
-            </h2>
-            <p className="text-xl text-gray-600 mb-6">
-              Hear from businesses that have transformed with our services
-            </p>
+      {/* Testimonials */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-black-olive mb-4">What Clients Say</h2>
             <Button
               onClick={() => setShowTestimonials(!showTestimonials)}
-              className="bg-pigment-green hover:bg-black-olive text-white font-semibold"
-              data-testid="button-toggle-testimonials"
+              variant="outline"
+              className="border-pigment-green text-pigment-green hover:bg-pigment-green hover:text-white"
             >
               {showTestimonials ? (
-                <>
-                  <ChevronUp className="h-4 w-4 mr-2" />
-                  Hide Testimonials
-                </>
+                <><ChevronUp className="h-4 w-4 mr-2" /> Hide Testimonials</>
               ) : (
-                <>
-                  <Star className="h-4 w-4 mr-2" />
-                  Read Testimonials
-                </>
+                <><Star className="h-4 w-4 mr-2" /> Read Testimonials</>
               )}
             </Button>
-          </motion.div>
-
+          </div>
           <AnimatePresence>
             {showTestimonials && (
               <motion.div
                 initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
+                animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.5 }}
-                className="grid md:grid-cols-3 gap-8"
+                transition={{ duration: 0.4 }}
+                className="grid md:grid-cols-3 gap-6 mt-8"
               >
-                {testimonials.map((testimonial, index) => (
+                {testimonials.map((t, i) => (
                   <motion.div
-                    key={testimonial.id}
+                    key={i}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    transition={{ duration: 0.4, delay: i * 0.1 }}
                   >
-                    <Card className="h-full bg-white shadow-lg border-0">
+                    <Card className="h-full shadow-sm border border-gray-100">
                       <CardContent className="p-6">
-                        <div className="flex items-center mb-4">
-                          {[...Array(testimonial.rating)].map((_, i) => (
-                            <Star key={i} className="h-5 w-5 text-california-gold fill-california-gold" />
+                        <div className="flex mb-3">
+                          {[...Array(t.rating)].map((_, j) => (
+                            <Star key={j} className="h-4 w-4 text-pigment-green fill-pigment-green" />
                           ))}
                         </div>
                         <div className="relative mb-4">
-                          <Quote className="h-8 w-8 text-berkeley-blue/20 absolute -top-2 -left-2" />
-                          <p className="text-gray-700 italic pl-6">
-                            "{testimonial.content}"
-                          </p>
+                          <Quote className="h-6 w-6 text-ash-gray/40 absolute -top-1 -left-1" />
+                          <p className="text-dim-gray italic text-sm pl-5">"{t.content}"</p>
                         </div>
-                        <div className="border-t pt-4">
-                          <p className="font-semibold text-berkeley-blue">{testimonial.name}</p>
-                          <p className="text-sm text-gray-500">{testimonial.company}</p>
+                        <div className="border-t pt-3">
+                          <p className="font-semibold text-black-olive text-sm">{t.name}</p>
+                          <p className="text-xs text-dim-gray">{t.company}</p>
                         </div>
                       </CardContent>
                     </Card>
@@ -423,133 +351,43 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Contact Information Section */}
-      <section id="contact" className="py-16 px-4 sm:px-6 lg:px-8 bg-light-gray">
-        <div className="max-w-7xl mx-auto">
+      {/* CTA */}
+      <section className="py-16 gradient-bg">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
           >
-            <h2 className="text-3xl font-bold text-berkeley-blue mb-4">
-              Get In Touch
-            </h2>
-            <p className="text-xl text-gray-600">
-              Ready to discuss your project? Let's connect and create something amazing together.
+            <h2 className="text-3xl font-bold text-white mb-4">Not sure which service fits?</h2>
+            <p className="text-ash-gray mb-8 text-lg">
+              Book a free 30-minute call. We'll figure it out together.
             </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-center"
-            >
-              <div className="w-16 h-16 bg-berkeley-blue rounded-full flex items-center justify-center mx-auto mb-4">
-                <Mail className="text-white h-8 w-8" />
-              </div>
-              <h3 className="font-semibold text-berkeley-blue mb-2">Email</h3>
-              <a 
-                href="mailto:Desmondjr88@gmail.com"
-                className="text-gray-600 hover:text-berkeley-blue transition-colors"
-              >
-                Desmondjr88@gmail.com
-              </a>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-center"
-            >
-              <div className="w-16 h-16 bg-berkeley-blue rounded-full flex items-center justify-center mx-auto mb-4">
-                <Phone className="text-white h-8 w-8" />
-              </div>
-              <h3 className="font-semibold text-berkeley-blue mb-2">Phone</h3>
-              <a 
-                href="tel:+13109952476"
-                className="text-gray-600 hover:text-berkeley-blue transition-colors"
-              >
-                (310) 995-2476
-              </a>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-center"
-            >
-              <div className="w-16 h-16 bg-berkeley-blue rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="text-white h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                </svg>
-              </div>
-              <h3 className="font-semibold text-berkeley-blue mb-2">LinkedIn</h3>
-              <a 
-                href="https://linkedin.com/in/desmondcampbell"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-600 hover:text-berkeley-blue transition-colors"
-              >
-                desmondcampbell
-              </a>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-              className="text-center"
-            >
-              <div className="w-16 h-16 bg-berkeley-blue rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="h-8 w-8 text-white" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 48 48">
-                  <polygon points="4.5 14.453 4.5 22.273 11.865 22.273 11.865 33.547 19.685 33.547 19.685 14.453 4.5 14.453"/>
-                  <polygon points="26.202 33.547 34.326 14.453 43.5 14.453 35.376 33.547 26.202 33.547"/>
-                  <circle cx="25.8407" cy="18.3627" r="3.9101"/>
-                </svg>
-              </div>
-              <h3 className="font-semibold text-berkeley-blue mb-2">TradingView</h3>
-              <a 
-                href="https://www.tradingview.com/u/CashFalcon/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-600 hover:text-berkeley-blue transition-colors"
-              >
-                @CashFalcon
-              </a>
-            </motion.div>
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.0 }}
-            className="text-center mt-12"
-          >
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <WaitingListDialog>
-                <Button size="lg" className="bg-pigment-green hover:bg-black-olive text-white">
-                  <TrendingUp className="h-5 w-5 mr-2" />
-                  Join Trading Program
-                </Button>
-              </WaitingListDialog>
-              <Button 
-                size="lg" 
-                variant="outline"
-                onClick={() => window.location.href = '/#contact'}
-                className="border-pigment-green text-pigment-green hover:bg-pigment-green hover:text-white"
+              <Button
+                onClick={() => window.open("https://calendly.com/desmondjr88/outcome-alignment-session", "_blank", "noopener,noreferrer")}
+                className="bg-pigment-green hover:bg-light-green hover:text-black-olive text-white font-semibold px-8"
+                size="lg"
               >
-                <Calendar className="h-5 w-5 mr-2" />
-                Full Contact Form
+                <Calendar className="mr-2 h-4 w-4" /> Book Free Consultation
               </Button>
+              <Link href="/contact">
+                <Button
+                  variant="outline"
+                  className="border-2 border-ash-gray text-ash-gray hover:bg-ash-gray hover:text-black-olive font-semibold px-8 bg-transparent"
+                  size="lg"
+                >
+                  Send an Inquiry <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
             </div>
           </motion.div>
         </div>
       </section>
+
+      <Footer />
+      <AIChatWidget />
     </div>
   );
 }

@@ -1,0 +1,162 @@
+I want to rebuild my personal website from an employer-focused resume/interview site into a customer-focused consulting website.
+
+Current goal:
+The website should attract and book customers for my consulting services, not ask employers to interview me.
+
+My consulting positioning:
+I specialize in:
+1. RevOps consulting
+2. Software Development
+   - AI agents
+   - Custom software
+   - Business websites
+3. Market Analysis
+
+Please make the following changes:
+
+1. Remove the “Download Resume” button/section entirely.
+   - This site is no longer primarily for job applications.
+   - Replace resume-focused language with customer-focused service language.
+
+2. Change the website from a one-page layout into a multi-page website.
+
+Suggested pages:
+- Home
+- Services
+- Work / Projects
+- About
+- Contact
+
+3. Put Services near the top of the site navigation.
+   - The main navigation should make it easy for potential customers to understand what I offer quickly.
+   - Suggested nav order:
+     Home | Services | Work | About | Contact
+
+4. Rework the homepage around this new purpose:
+   - Hero section should clearly say I help businesses improve operations, build software, and analyze markets.
+   - The call-to-action should be customer-focused, such as:
+     “Book a Consultation”
+     “Start a Project”
+     “Tell Me What You’re Building”
+   - Avoid language that sounds like I am looking for a job or interview.
+
+5. Create a Services page with three main service categories:
+
+A. RevOps Consulting
+Description:
+I help businesses improve their revenue operations by identifying bottlenecks, organizing workflows, improving customer journeys, and building better systems for sales, marketing, and operations.
+
+Possible service cards:
+- Sales process improvement
+- CRM/workflow strategy
+- Customer journey optimization
+- Business systems planning
+- GTM and revenue workflow support
+
+B. Software Development
+Description:
+I build practical digital tools for businesses, founders, and operators who need custom solutions.
+
+Possible service cards:
+- AI agents
+- Custom internal tools
+- Business websites
+- Landing pages
+- Automation workflows
+- MVP/prototype development
+
+C. Market Analysis
+Description:
+I help businesses understand markets, customers, competitors, and opportunities using research, data, and strategic analysis.
+
+Possible service cards:
+- Market research
+- Competitor analysis
+- Customer discovery
+- Product positioning
+- Trading/financial market analysis where appropriate
+
+6. Create a Work / Projects page.
+This should showcase selected projects and capabilities, not employment history.
+
+Include project-style cards for:
+- Market Volume Clock — trading session timing and market context app
+- Gratuitous — premium tip-tracking web app
+- Mina on the Map — travel website / digital product business
+- HomeBase — home-buying tracker concept
+- Insta-Plumber — service marketplace concept
+- Custom websites, AI agents, and automation projects
+
+Each project card should include:
+- Project name
+- Short description
+- Skills demonstrated
+- Optional CTA: “View Project” or “Learn More”
+
+7. Create an About page.
+The About page should still explain who I am, but through the lens of why customers should trust me.
+
+Tone:
+- Confident
+- Professional
+- Founder/operator energy
+- Customer-focused
+- Not too corporate
+- Not too casual
+
+Suggested About direction:
+I am a UC Berkeley Haas graduate with a background in sales, marketing, finance, trading analysis, and software development. I combine business strategy with technical execution to help businesses build better systems, improve operations, and turn ideas into usable digital products.
+
+8. Create a Contact page focused on booking customers.
+The contact page should include:
+- Name
+- Email
+- Company / Project name
+- Service interest dropdown:
+  - RevOps Consulting
+  - Software Development
+  - AI Agent
+  - Website
+  - Market Analysis
+  - Not sure yet
+- Message field
+- CTA button: “Send Inquiry” or “Start the Conversation”
+
+After submission, show a simple thank-you message:
+“Thank you for reaching out. I’ll review your inquiry and follow up soon.”
+
+9. Update site copy throughout.
+Remove or reduce employer-focused phrases like:
+- “Hire me”
+- “Download resume”
+- “Invite me to interview”
+- “Seeking opportunities”
+- “Open to work”
+
+Replace with customer-focused phrases like:
+- “Build better systems”
+- “Launch smarter tools”
+- “Turn ideas into working products”
+- “Improve your revenue workflow”
+- “Book a consultation”
+- “Start a project”
+
+10. Keep the design polished and premium.
+Preferred feel:
+- Professional
+- Modern
+- Clean
+- Trustworthy
+- Luxury service provider
+- Strong but approachable
+
+Use the current design as a base if possible, but restructure the content and pages around consulting services.
+
+Primary goal:
+A visitor should immediately understand:
+- What I offer
+- Who I help
+- Why I am credible
+- How to contact me for a paid service
+
+Please implement these changes cleanly, preserve responsive/mobile-friendly design, and make sure the site can deploy correctly on Replit.

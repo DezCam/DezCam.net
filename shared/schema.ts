@@ -6,7 +6,9 @@ export const contacts = pgTable("contacts", {
   id: serial("id").primaryKey(),
   name: text("name").notNull(),
   email: text("email").notNull(),
-  subject: text("subject").notNull(),
+  company: text("company"),
+  service: text("service"),
+  subject: text("subject"),
   message: text("message").notNull(),
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
@@ -14,6 +16,8 @@ export const contacts = pgTable("contacts", {
 export const insertContactSchema = createInsertSchema(contacts).pick({
   name: true,
   email: true,
+  company: true,
+  service: true,
   subject: true,
   message: true,
 });
@@ -21,7 +25,6 @@ export const insertContactSchema = createInsertSchema(contacts).pick({
 export type InsertContact = z.infer<typeof insertContactSchema>;
 export type Contact = typeof contacts.$inferSelect;
 
-// Keep existing user schema for compatibility
 export const users = pgTable("users", {
   id: serial("id").primaryKey(),
   username: text("username").notNull().unique(),
@@ -36,7 +39,6 @@ export const insertUserSchema = createInsertSchema(users).pick({
 export type InsertUser = z.infer<typeof insertUserSchema>;
 export type User = typeof users.$inferSelect;
 
-// Waiting list for trading classes
 export const waitingList = pgTable("waiting_list", {
   id: serial("id").primaryKey(),
   name: text("name").notNull(),

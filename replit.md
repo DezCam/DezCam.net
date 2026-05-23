@@ -216,6 +216,18 @@ Changelog:
   * Light Green (#8DD783) → hover states, secondary accents, footer social icons
   * Updated CSS variables, tailwind config, gradient-bg, and all component files
   * Replaced UC Berkeley blue/gold theme throughout hero, nav, footer, services, chat widget
+- May 23, 2026. Rebuilt site as multi-page consulting website:
+  * Converted from single-page resume layout to 5-page consulting site: Home, Services, Work, About, Contact
+  * New nav order: Home | Services | Work | About | Contact + "Book a Call" CTA button
+  * Hero rewritten with consulting focus — "Build better systems. Launch smarter tools." — no Download Resume
+  * Home page: What I Do (3 service cards), stats bar, Why Work With Me, CTA banner
+  * Services page restructured: RevOps, Software Dev, Market Analysis as main sections with sub-service cards; Trading Education as bonus card
+  * New Work page: project cards for Market Volume Clock, Gratuitous, Mina on the Map, HomeBase, Insta-Plumber, LoyalPup, Trading Performance, Kratos Combat Club
+  * New About page: customer trust angle, full story, values/approach, education & credentials
+  * New Contact page: enhanced form with Company/Project + Service Interest dropdown, "thank you" success state, Free Outcome Alignment Session booking banner
+  * Footer redesigned with 3-column layout (bio, quick links, connect)
+  * Schema updated with optional company + service fields on contacts table
+  * All resume/job-seeking language removed throughout
 - April 28, 2026. Updated role titles and service names:
   * Changed "SMB Consultant" to "RevOps Specialist" in hero section and footer
   * Changed "IT Specialist" to "Software Developer" in hero section and footer

@@ -6,6 +6,19 @@
 
 ---
 
+**Desmond Campbell**
+*Revenue Operations · Software Development · AI Automation*
+
+I build systems that help businesses operate smarter. Whether that's cleaning up a broken sales process, shipping a custom web app, or deploying an AI agent that handles intake and research — I work at the intersection of business strategy and practical technology.
+
+Background in sales, finance, and market analysis. Trained at UC Berkeley Haas. Currently running DezCam, a consulting practice focused on helping founders and operators modernize how they work and grow.
+
+If your business could run cleaner, move faster, or look sharper — that's the problem I solve.
+
+🌐 [dezcam.net](https://dezcam.net)
+
+---
+
 ## What We Do
 
 DezCam Consulting helps businesses improve their revenue operations, build practical software tools, and make smarter growth decisions. We combine strategic thinking with hands-on technical execution — so you get a partner who understands your business *and* can actually build the solution.

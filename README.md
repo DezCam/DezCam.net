@@ -116,4 +116,4 @@ Ready to build something? Start here:
 
 ---
 
-© 2025 Desmond Campbell · DezCam Consulting
+© 2026 Desmond Campbell. All rights reserved.

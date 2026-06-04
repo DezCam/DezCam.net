@@ -26,7 +26,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         : `New Inquiry from ${validatedData.name}`;
 
       const { data: emailData, error: emailError } = await resend.emails.send({
-        from: "DezCam Contact Form <onboarding@resend.dev>",
+        from: "DezCam Contact Form <noreply@dezcam.net>",
         to: "desmondjr88@gmail.com",
         subject,
         html: `

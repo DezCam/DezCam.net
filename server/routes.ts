@@ -66,9 +66,43 @@ export async function registerRoutes(app: Express): Promise<Server> {
       });
 
       if (emailError) {
-        console.error("[Resend] Email send FAILED:", JSON.stringify(emailError));
+        console.error("[Resend] Notification email FAILED:", JSON.stringify(emailError));
       } else {
-        console.log("[Resend] Email sent successfully. ID:", emailData?.id);
+        console.log("[Resend] Notification email sent. ID:", emailData?.id);
+      }
+
+      // Send confirmation email to visitor
+      const firstName = validatedData.name.trim().split(/\s+/)[0];
+      try {
+        const { data: confirmData, error: confirmError } = await resend.emails.send({
+          from: "Desmond at DezCam <noreply@dezcam.net>",
+          to: validatedData.email,
+          subject: "Got your message — Desmond from DezCam",
+          html: `
+            <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 32px 24px; background: #f7f3e8;">
+              <p style="color: #3d4240; font-size: 16px; margin: 0 0 20px;">Hi ${firstName},</p>
+              <p style="color: #3d4240; font-size: 16px; line-height: 1.7; margin: 0 0 16px;">
+                Thanks for reaching out. I've received your message and will follow up within 2 business days to learn more about your project.
+              </p>
+              <p style="color: #3d4240; font-size: 16px; line-height: 1.7; margin: 0 0 32px;">
+                In the meantime, feel free to browse <a href="https://dezcam.net" style="color: #399a4b; text-decoration: none;">dezcam.net</a> to get a better sense of how I work.
+              </p>
+              <p style="color: #3d4240; font-size: 16px; margin: 0 0 4px;">Talk soon,</p>
+              <p style="color: #3d4240; font-size: 16px; font-weight: 600; margin: 0 0 4px;">Desmond</p>
+              <p style="color: #6a6e6b; font-size: 14px; margin: 0;">DezCam · <a href="https://dezcam.net" style="color: #399a4b; text-decoration: none;">dezcam.net</a></p>
+              <div style="margin-top: 32px; border-top: 1px solid #aab0aa; padding-top: 16px;">
+                <p style="color: #aab0aa; font-size: 12px; margin: 0;">You're receiving this because you submitted a contact form at dezcam.net.</p>
+              </div>
+            </div>
+          `,
+        });
+        if (confirmError) {
+          console.error("[Resend] Confirmation email FAILED:", JSON.stringify(confirmError));
+        } else {
+          console.log("[Resend] Confirmation email sent. ID:", confirmData?.id);
+        }
+      } catch (confirmErr) {
+        console.error("[Resend] Confirmation email threw:", confirmErr);
       }
 
       console.log("New contact form submission:", contact);

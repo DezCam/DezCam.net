@@ -14,7 +14,8 @@ import Footer from "@/components/footer";
 import AIChatWidget from "@/components/ai-chat-widget";
 
 interface ContactFormData {
-  name: string;
+  firstName: string;
+  lastName: string;
   email: string;
   company: string;
   service: string;
@@ -38,13 +39,21 @@ const contactInfo = [
 ];
 
 export default function Contact() {
-  const [formData, setFormData] = useState<ContactFormData>({ name: "", email: "", company: "", service: "", message: "" });
+  const [formData, setFormData] = useState<ContactFormData>({ firstName: "", lastName: "", email: "", company: "", service: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
   const { toast } = useToast();
 
   const contactMutation = useMutation({
     mutationFn: async (data: ContactFormData) => {
-      const response = await apiRequest("POST", "/api/contact", { ...data, subject: data.service || "General Inquiry" });
+      const payload = {
+        name: `${data.firstName.trim()} ${data.lastName.trim()}`,
+        email: data.email,
+        company: data.company,
+        service: data.service,
+        subject: data.service || "General Inquiry",
+        message: data.message,
+      };
+      const response = await apiRequest("POST", "/api/contact", payload);
       return response.json();
     },
     onSuccess: () => setSubmitted(true),
@@ -55,8 +64,8 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name || !formData.email || !formData.message) {
-      toast({ title: "Missing fields", description: "Please fill in name, email, and message.", variant: "destructive" });
+    if (!formData.firstName || !formData.lastName || !formData.email || !formData.message) {
+      toast({ title: "Missing fields", description: "Please fill in first name, last name, email, and message.", variant: "destructive" });
       return;
     }
     contactMutation.mutate(formData);
@@ -186,17 +195,24 @@ export default function Contact() {
 
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
-                      <Label htmlFor="name" className="text-near-black font-medium text-sm">Name *</Label>
-                      <Input id="name" value={formData.name}
-                        onChange={(e) => setFormData(p => ({ ...p, name: e.target.value }))}
-                        placeholder="Your name" className="mt-1 border-soft-gray/50 focus:border-champagne-gold focus:ring-champagne-gold/20" required />
+                      <Label htmlFor="firstName" className="text-near-black font-medium text-sm">First Name *</Label>
+                      <Input id="firstName" value={formData.firstName}
+                        onChange={(e) => setFormData(p => ({ ...p, firstName: e.target.value }))}
+                        placeholder="First name" className="mt-1 border-soft-gray/50 focus:border-champagne-gold focus:ring-champagne-gold/20" required />
                     </div>
                     <div>
-                      <Label htmlFor="email" className="text-near-black font-medium text-sm">Email *</Label>
-                      <Input id="email" type="email" value={formData.email}
-                        onChange={(e) => setFormData(p => ({ ...p, email: e.target.value }))}
-                        placeholder="you@company.com" className="mt-1 border-soft-gray/50 focus:border-champagne-gold focus:ring-champagne-gold/20" required />
+                      <Label htmlFor="lastName" className="text-near-black font-medium text-sm">Last Name *</Label>
+                      <Input id="lastName" value={formData.lastName}
+                        onChange={(e) => setFormData(p => ({ ...p, lastName: e.target.value }))}
+                        placeholder="Last name" className="mt-1 border-soft-gray/50 focus:border-champagne-gold focus:ring-champagne-gold/20" required />
                     </div>
+                  </div>
+
+                  <div>
+                    <Label htmlFor="email" className="text-near-black font-medium text-sm">Email *</Label>
+                    <Input id="email" type="email" value={formData.email}
+                      onChange={(e) => setFormData(p => ({ ...p, email: e.target.value }))}
+                      placeholder="you@company.com" className="mt-1 border-soft-gray/50 focus:border-champagne-gold focus:ring-champagne-gold/20" required />
                   </div>
 
                   <div>

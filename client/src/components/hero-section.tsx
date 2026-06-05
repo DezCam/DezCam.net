@@ -34,7 +34,7 @@ export default function HeroSection() {
             <p className="text-lg md:text-xl mb-4 text-soft-gray leading-relaxed">
               Boutique consulting and software studio helping businesses improve revenue operations, build custom software, and understand their markets.
             </p>
-            <p className="text-sm mb-10 text-soft-gray/60 tracking-wide uppercase">
+            <p className="text-sm mb-10 text-champagne-gold tracking-wide uppercase">
               UC Berkeley Haas · Founder · Operator · Developer
             </p>
 

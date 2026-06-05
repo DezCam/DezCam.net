@@ -73,6 +73,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       // Send confirmation email to visitor
       const firstName = validatedData.name.trim().split(/\s+/)[0];
+      console.log("[Resend] Confirmation TO:", validatedData.email, "| firstName:", firstName);
       try {
         const { data: confirmData, error: confirmError } = await resend.emails.send({
           from: "Desmond at DezCam <noreply@dezcam.net>",
@@ -96,6 +97,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
             </div>
           `,
         });
+        console.log("[Resend] Confirmation full response — data:", JSON.stringify(confirmData), "error:", JSON.stringify(confirmError));
         if (confirmError) {
           console.error("[Resend] Confirmation email FAILED:", JSON.stringify(confirmError));
         } else {

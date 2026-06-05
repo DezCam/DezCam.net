@@ -165,19 +165,16 @@ export default function Contact() {
             {/* Form */}
             <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.1 }} viewport={{ once: true }}>
               {submitted ? (
-                <motion.div className="h-full flex flex-col items-center justify-center text-center py-16"
-                  initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }}>
-                  <div className="w-16 h-16 bg-near-black rounded-full flex items-center justify-center mb-6">
-                    <CheckCircle2 className="h-8 w-8 text-champagne-gold" />
+                <motion.div
+                  className="h-full flex flex-col items-center justify-center text-center py-20 px-8 rounded-2xl border"
+                  style={{ backgroundColor: "#3D4240", borderColor: "#399A4B" }}
+                  initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5 }}>
+                  <div className="w-16 h-16 rounded-full flex items-center justify-center mb-6" style={{ backgroundColor: "#399A4B" }}>
+                    <CheckCircle2 className="h-8 w-8" style={{ color: "#F7F3E8" }} />
                   </div>
-                  <h3 className="text-2xl font-bold text-near-black mb-3">Message received!</h3>
-                  <p className="text-graphite leading-relaxed max-w-sm">
-                    Thank you for reaching out. I'll review your inquiry and follow up soon.
+                  <p className="text-lg font-medium leading-relaxed" style={{ color: "#AAB0AA" }}>
+                    Great to hear from you. I'll be in touch within 2 business days.
                   </p>
-                  <Button onClick={() => setSubmitted(false)} variant="outline"
-                    className="mt-6 border-champagne-gold/50 text-champagne-gold hover:bg-champagne-gold/10 hover:border-champagne-gold transition-all">
-                    Send another message
-                  </Button>
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5 bg-white border border-soft-gray/30 rounded-2xl p-8 shadow-sm">

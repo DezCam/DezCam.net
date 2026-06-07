@@ -16,6 +16,7 @@ const projects = [
     category: "Product",
     highlight: true,
     link: "https://market-volume-clock.vercel.app/",
+    image: "/images/market-volume-clock-logo.png",
   },
   {
     title: "Gratuity Pro",
@@ -139,7 +140,7 @@ export default function Work() {
                     <img
                       src={project.image}
                       alt={project.title}
-                      className={`w-full h-full ${project.image.includes("loyalpup") || project.image.includes("gratuity") || project.image.includes("homebase") ? "object-contain p-4" : "object-cover group-hover:scale-105 transition-transform duration-500"}`}
+                      className={`w-full h-full ${project.image.includes("loyalpup") || project.image.includes("gratuity") || project.image.includes("homebase") || project.image.includes("market-volume-clock") ? "object-contain p-4" : "object-cover group-hover:scale-105 transition-transform duration-500"}`}
                     />
                   </div>
                 ) : (

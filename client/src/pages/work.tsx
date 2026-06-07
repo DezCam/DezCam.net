@@ -15,6 +15,7 @@ const projects = [
     status: "In Development",
     category: "Software",
     highlight: true,
+    link: "https://market-volume-clock.vercel.app/",
   },
   {
     title: "Gratuity Pro",
@@ -31,6 +32,7 @@ const projects = [
     skills: ["Web Design", "Content Strategy", "Digital Products"],
     status: "In Development",
     category: "Website",
+    link: "https://mina-on-the-map.vercel.app/",
   },
   {
     title: "HomeBase",
@@ -38,13 +40,15 @@ const projects = [
     skills: ["Product Design", "UX Research", "MVP Development"],
     status: "Concept",
     category: "Product",
+    link: "https://home-base-4spc.vercel.app/",
   },
   {
-    title: "Insta-Plumber",
-    description: "A service marketplace concept connecting homeowners with verified local plumbers for same-day emergency and scheduled service — Uber for plumbing.",
-    skills: ["Marketplace Design", "GTM Strategy", "Business Model"],
-    status: "Concept",
-    category: "Product",
+    title: "Del Amo Card Gallery",
+    description: "An online marketplace for buying, selling, and trading sports and collectible cards. Built for the local Del Amo community with a clean interface for browsing inventory and connecting buyers with sellers.",
+    skills: ["Full-Stack Dev", "Marketplace Design", "React"],
+    status: "In Development",
+    category: "Software",
+    link: "https://card-trading-marketplace.vercel.app/",
   },
   {
     title: "LoyalPup — Organic Dog Treats",

@@ -1,14 +1,11 @@
-import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { motion } from "framer-motion";
 import { Link } from "wouter";
 import {
   BarChart3, Code2, TrendingUp, Globe, Bot, Wrench, FileText,
-  Users, Target, PieChart, Calendar, Star, ChevronUp, Quote, ArrowRight,
+  Users, Target, PieChart, Calendar, ArrowRight,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import WaitingListDialog from "@/components/waiting-list-dialog";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import AIChatWidget from "@/components/ai-chat-widget";
@@ -72,43 +69,6 @@ const mainServices = [
   },
 ];
 
-const additionalService = {
-  id: "trading",
-  icon: <TrendingUp className="h-8 w-8" />,
-  title: "Trading Education & Mentorship",
-  description: "Learn proven trading strategies from someone who achieved 1,407% returns. Weekly live sessions, 1-on-1 mentorship, and risk management frameworks that actually work.",
-  price: "$500/month",
-  duration: "1 free week trial",
-  features: [
-    "1-on-1 mentorship from beginner to advanced",
-    "Weekly live sessions + chat support",
-    "Proven trading strategy access",
-    "Risk management techniques",
-    "Only 4 slots available",
-  ],
-  highlight: "1,407% Return Record",
-};
-
-const testimonials = [
-  {
-    name: "Sarah M.",
-    company: "Local Bakery Owner",
-    content: "Desmond helped us streamline our ordering process and build a beautiful website. Our online orders increased by 40% in the first month!",
-    rating: 5,
-  },
-  {
-    name: "Marcus T.",
-    company: "E-commerce Entrepreneur",
-    content: "The trading mentorship completely changed my approach to the markets. Desmond's risk management techniques saved me from costly mistakes.",
-    rating: 5,
-  },
-  {
-    name: "Jennifer L.",
-    company: "Fitness Studio Owner",
-    content: "Professional, responsive, and incredibly knowledgeable. The custom booking software Desmond built has been a game-changer for our business.",
-    rating: 5,
-  },
-];
 
 const stats = [
   { value: "1,407%", label: "Trading Return Record" },
@@ -118,8 +78,6 @@ const stats = [
 ];
 
 export default function Services() {
-  const [showTestimonials, setShowTestimonials] = useState(false);
-
   return (
     <div className="min-h-screen" style={{ backgroundColor: "#F7F3E8" }}>
       <Navigation />
@@ -206,50 +164,6 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Trading Education */}
-      <section className="py-16 bg-graphite">
-        <div className="h-px bg-gradient-to-r from-transparent via-champagne-gold/30 to-transparent -mt-px mb-16" />
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
-            <Card className="bg-near-black border border-champagne-gold/20 shadow-xl">
-              <CardHeader>
-                <div className="flex items-start justify-between flex-wrap gap-4">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 bg-champagne-gold/10 rounded-xl text-champagne-gold border border-champagne-gold/20">
-                      {additionalService.icon}
-                    </div>
-                    <div>
-                      <Badge className="bg-champagne-gold text-near-black font-semibold mb-2 text-xs">{additionalService.highlight}</Badge>
-                      <CardTitle className="text-xl font-bold text-ivory">{additionalService.title}</CardTitle>
-                      <CardDescription className="mt-1 text-soft-gray">{additionalService.description}</CardDescription>
-                    </div>
-                  </div>
-                  <div className="text-right flex-shrink-0">
-                    <div className="text-2xl font-bold text-champagne-gold">{additionalService.price}</div>
-                    <div className="text-sm text-soft-gray">{additionalService.duration}</div>
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <div className="grid sm:grid-cols-2 gap-2 mb-6">
-                  {additionalService.features.map((f, i) => (
-                    <div key={i} className="flex items-center gap-2 text-sm text-soft-gray">
-                      <div className="w-1.5 h-1.5 bg-champagne-gold rounded-full flex-shrink-0" />
-                      {f}
-                    </div>
-                  ))}
-                </div>
-                <WaitingListDialog>
-                  <Button className="bg-forest-green hover:bg-forest-green/80 text-ivory font-semibold border border-transparent hover:border-champagne-gold/20 transition-all">
-                    <TrendingUp className="mr-2 h-4 w-4" /> Join Waiting List
-                  </Button>
-                </WaitingListDialog>
-              </CardContent>
-            </Card>
-          </motion.div>
-        </div>
-        <div className="h-px bg-gradient-to-r from-transparent via-champagne-gold/30 to-transparent mt-16" />
-      </section>
 
       {/* Stats */}
       <section className="py-14 bg-near-black">
@@ -265,59 +179,6 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-16" style={{ backgroundColor: "#F7F3E8" }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <p className="text-champagne-gold text-xs font-semibold uppercase tracking-widest mb-3">Client Feedback</p>
-            <h2 className="text-3xl font-bold text-near-black mb-4">What Clients Say</h2>
-            <Button
-              onClick={() => setShowTestimonials(!showTestimonials)}
-              variant="outline"
-              className="border-champagne-gold/50 text-champagne-gold hover:bg-champagne-gold/10 hover:border-champagne-gold transition-all mt-2"
-            >
-              {showTestimonials ? (
-                <><ChevronUp className="h-4 w-4 mr-2" /> Hide Testimonials</>
-              ) : (
-                <><Star className="h-4 w-4 mr-2" /> Read Testimonials</>
-              )}
-            </Button>
-          </div>
-          <AnimatePresence>
-            {showTestimonials && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.4 }}
-                className="grid md:grid-cols-3 gap-6 mt-8"
-              >
-                {testimonials.map((t, i) => (
-                  <motion.div key={i} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: i * 0.1 }}>
-                    <Card className="h-full bg-white border border-soft-gray/30 shadow-sm hover:border-champagne-gold/30 transition-all">
-                      <CardContent className="p-6">
-                        <div className="flex mb-3">
-                          {[...Array(t.rating)].map((_, j) => (
-                            <Star key={j} className="h-4 w-4 text-champagne-gold fill-champagne-gold" />
-                          ))}
-                        </div>
-                        <div className="relative mb-4">
-                          <Quote className="h-6 w-6 text-champagne-gold/20 absolute -top-1 -left-1" />
-                          <p className="text-graphite italic text-sm pl-5">"{t.content}"</p>
-                        </div>
-                        <div className="border-t border-soft-gray/30 pt-3">
-                          <p className="font-semibold text-near-black text-sm">{t.name}</p>
-                          <p className="text-xs text-graphite">{t.company}</p>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </motion.div>
-                ))}
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
-      </section>
 
       {/* CTA */}
       <section className="py-20 gradient-bg relative">

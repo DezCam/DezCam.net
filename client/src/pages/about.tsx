@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { CheckCircle, GraduationCap, Award, Calendar } from "lucide-react";
+import { CheckCircle, GraduationCap, BookOpen, TrendingUp, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
@@ -15,8 +15,8 @@ const stats = [
 
 const credentials = [
   { icon: GraduationCap, title: "BS Business Administration", sub: "UC Berkeley, Haas School of Business" },
-  { icon: Award, title: "Product Management First Steps", sub: "LinkedIn Learning" },
-  { icon: Award, title: "Professional Forex Trader", sub: "Online Trading Academy" },
+  { icon: BookOpen, title: "Product Management First Steps", sub: "LinkedIn Learning" },
+  { icon: TrendingUp, title: "Professional Forex Trader", sub: "Online Trading Academy" },
 ];
 
 const values = [
@@ -136,7 +136,7 @@ export default function About() {
                     <motion.div key={i} className="flex items-center gap-4 p-4 bg-white rounded-xl border border-soft-gray/30 hover:border-champagne-gold/30 transition-all"
                       initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.4, delay: i * 0.1 }} viewport={{ once: true }}>
                       <div className="w-12 h-12 rounded-full flex items-center justify-center bg-near-black flex-shrink-0">
-                        <Icon className="text-champagne-gold h-5 w-5" />
+                        <Icon className="h-5 w-5" style={{ color: "#399A4B" }} />
                       </div>
                       <div>
                         <div className="font-semibold text-near-black">{c.title}</div>

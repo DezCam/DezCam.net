@@ -189,13 +189,8 @@ export default function Services() {
             <p className="text-champagne-gold text-xs font-semibold uppercase tracking-widest mb-4">Get Started</p>
             <h2 className="text-3xl font-bold text-ivory mb-3">Not sure which service fits?</h2>
             <div className="w-12 h-px bg-champagne-gold/40 mx-auto mb-6" />
-            <p className="text-soft-gray mb-8 text-lg">Book a free 30-minute call. We'll figure it out together.</p>
+            <p className="text-soft-gray mb-8 text-lg">Send an inquiry and we'll figure out the best path together.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact">
-                <Button className="bg-forest-green hover:bg-forest-green/80 text-ivory font-semibold px-8 border border-transparent hover:border-champagne-gold/20 transition-all" size="lg">
-                  <ArrowRight className="mr-2 h-4 w-4" /> Book Free Consultation
-                </Button>
-              </Link>
               <Link href="/contact">
                 <Button variant="outline" className="border border-champagne-gold/40 text-champagne-gold hover:bg-champagne-gold/10 hover:border-champagne-gold font-semibold px-8 bg-transparent transition-all" size="lg">
                   Send an Inquiry <ArrowRight className="ml-2 h-4 w-4" />

@@ -163,7 +163,7 @@ export default function Contact() {
                 <ul className="space-y-3">
                   {[
                     "Response within 1 business day",
-                    "Free 30-min alignment call available",
+                    "Free 30-min alignment call scheduled after inquiry",
                     "No sales pressure — just a real conversation",
                     "Transparent pricing and timelines upfront",
                   ].map((item, i) => (

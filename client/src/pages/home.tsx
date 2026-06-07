@@ -43,7 +43,7 @@ const stats = [
   { value: "3", label: "Core Service Areas" },
   { value: "53%", label: "Live Trading Return", sub: "$15K → $23K in 4 months" },
   { value: "10+", label: "Years Experience" },
-  { value: "100%", label: "Client Focus" },
+  { value: "8", label: "Projects Delivered" },
 ];
 
 export default function Home() {

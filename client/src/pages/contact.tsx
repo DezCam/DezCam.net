@@ -107,7 +107,7 @@ export default function Contact() {
               onClick={scrollToForm}
               className="bg-forest-green hover:bg-forest-green/80 text-ivory font-semibold px-6 flex-shrink-0 border border-transparent hover:border-champagne-gold/20 transition-all"
             >
-              <Calendar className="mr-2 h-4 w-4" /> Book Free Session
+              <Calendar className="mr-2 h-4 w-4" /> Send an Inquiry
             </Button>
           </div>
         </div>
@@ -125,7 +125,7 @@ export default function Contact() {
                 <h2 className="text-3xl font-bold text-near-black mb-3">Get in touch</h2>
                 <div className="w-10 h-px bg-champagne-gold/40 mb-5" />
                 <p className="text-graphite leading-relaxed">
-                  Fill out the form and I'll respond within one business day. Or book a call directly using the link above.
+                  Fill out the form and I'll respond within one business day.
                 </p>
               </div>
 
@@ -217,7 +217,7 @@ export default function Contact() {
                     <Label htmlFor="email" className="text-near-black font-medium text-sm">Email *</Label>
                     <Input id="email" type="email" value={formData.email}
                       onChange={(e) => setFormData(p => ({ ...p, email: e.target.value }))}
-                      placeholder="you@company.com" className="mt-1 border-soft-gray/50 focus:border-champagne-gold focus:ring-champagne-gold/20" required />
+                      placeholder="your@email.com" className="mt-1 border-soft-gray/50 focus:border-champagne-gold focus:ring-champagne-gold/20" required />
                   </div>
 
                   <div>

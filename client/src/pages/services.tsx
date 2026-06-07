@@ -72,9 +72,8 @@ const mainServices = [
 
 const stats = [
   { value: "53%", label: "Live Trading Return", sub: "$15K → $23K in 4 months" },
-  { value: "10+", label: "Projects Delivered" },
+  { value: "8", label: "Projects Delivered" },
   { value: "3", label: "Core Service Areas" },
-  { value: "100%", label: "Client Focus" },
 ];
 
 export default function Services() {

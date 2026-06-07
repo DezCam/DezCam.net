@@ -35,7 +35,7 @@ const serviceOptions = [
 const contactInfo = [
   { icon: Mail, label: "Email", value: "Desmondjr88@gmail.com", href: "mailto:Desmondjr88@gmail.com" },
   { icon: Phone, label: "Phone", value: "(310) 995-2476", href: "tel:+13109952476" },
-  { icon: MapPin, label: "Location", value: "San Francisco, CA", href: null },
+  { icon: MapPin, label: "Location", value: "Folsom, CA", href: null },
 ];
 
 export default function Contact() {

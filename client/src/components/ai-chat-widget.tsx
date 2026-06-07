@@ -38,10 +38,6 @@ export default function AIChatWidget() {
     }
   };
 
-  const openCalendly = (url: string) => {
-    window.open(url, '_blank', 'noopener,noreferrer');
-  };
-
   const initialOptions: ChatOption[] = [
     {
       id: 'outcome-session',

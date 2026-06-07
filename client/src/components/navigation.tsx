@@ -60,7 +60,7 @@ export default function Navigation() {
               <Button
                 className="bg-forest-green hover:bg-forest-green/80 text-ivory font-semibold px-5 text-sm border border-forest-green/0 hover:border-champagne-gold/30 transition-all"
               >
-                Book a Call
+                Get In Touch
               </Button>
             </Link>
           </div>
@@ -98,7 +98,7 @@ export default function Navigation() {
             <div className="px-3 py-2">
               <Link href="/contact" onClick={() => setIsOpen(false)}>
                 <Button className="w-full bg-forest-green hover:bg-forest-green/80 text-ivory font-semibold text-sm">
-                  Book a Call
+                  Get In Touch
                 </Button>
               </Link>
             </div>

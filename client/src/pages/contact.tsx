@@ -43,6 +43,11 @@ export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
   const { toast } = useToast();
 
+  const scrollToForm = () => {
+    const el = document.getElementById("inquiry-form");
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   const contactMutation = useMutation({
     mutationFn: async (data: ContactFormData) => {
       const payload = {
@@ -99,7 +104,7 @@ export default function Contact() {
               <p className="text-soft-gray text-sm">30 minutes · no commitment · understand your project and map a path forward</p>
             </div>
             <Button
-              onClick={() => window.open("https://calendly.com/desmondjr88/outcome-alignment-session", "_blank", "noopener,noreferrer")}
+              onClick={scrollToForm}
               className="bg-forest-green hover:bg-forest-green/80 text-ivory font-semibold px-6 flex-shrink-0 border border-transparent hover:border-champagne-gold/20 transition-all"
             >
               <Calendar className="mr-2 h-4 w-4" /> Book Free Session
@@ -186,7 +191,7 @@ export default function Contact() {
                   </p>
                 </motion.div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-5 bg-white border border-soft-gray/30 rounded-2xl p-8 shadow-sm">
+                <form id="inquiry-form" onSubmit={handleSubmit} className="space-y-5 bg-white border border-soft-gray/30 rounded-2xl p-8 shadow-sm">
                   <div>
                     <p className="text-champagne-gold text-xs font-semibold uppercase tracking-widest mb-1">Inquiry Form</p>
                     <h2 className="text-2xl font-bold text-near-black">Send an Inquiry</h2>

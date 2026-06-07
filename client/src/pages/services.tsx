@@ -31,7 +31,6 @@ const mainServices = [
     price: "Custom Pricing",
     duration: "Flexible engagement",
     cta: "Book Consultation",
-    calendlyUrl: "https://calendly.com/desmondjr88/outcome-alignment-session",
     popular: true,
   },
   {
@@ -52,7 +51,6 @@ const mainServices = [
     price: "$700 – $5,000+",
     duration: "2–6 weeks",
     cta: "Discuss Your Project",
-    calendlyUrl: "https://calendly.com/desmondjr88/custom-software-solutions",
   },
   {
     id: "market-analysis",
@@ -71,7 +69,6 @@ const mainServices = [
     price: "Starting at $500",
     duration: "1–3 weeks",
     cta: "Start a Project",
-    calendlyUrl: "https://calendly.com/desmondjr88/outcome-alignment-session",
   },
 ];
 
@@ -122,7 +119,6 @@ const stats = [
 
 export default function Services() {
   const [showTestimonials, setShowTestimonials] = useState(false);
-  const openCalendly = (url: string) => window.open(url, "_blank", "noopener,noreferrer");
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: "#F7F3E8" }}>
@@ -174,12 +170,11 @@ export default function Services() {
                       <div className="text-sm text-graphite">{service.duration}</div>
                     </div>
                   </div>
-                  <Button
-                    onClick={() => openCalendly(service.calendlyUrl)}
-                    className="bg-forest-green hover:bg-forest-green/80 text-ivory font-semibold border border-transparent hover:border-champagne-gold/20 transition-all"
-                  >
-                    <Calendar className="mr-2 h-4 w-4" /> {service.cta}
-                  </Button>
+                  <Link href="/contact">
+                    <Button className="bg-forest-green hover:bg-forest-green/80 text-ivory font-semibold border border-transparent hover:border-champagne-gold/20 transition-all">
+                      <ArrowRight className="mr-2 h-4 w-4" /> {service.cta}
+                    </Button>
+                  </Link>
                 </div>
 
                 {/* Sub-services */}
@@ -334,10 +329,11 @@ export default function Services() {
             <div className="w-12 h-px bg-champagne-gold/40 mx-auto mb-6" />
             <p className="text-soft-gray mb-8 text-lg">Book a free 30-minute call. We'll figure it out together.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button onClick={() => window.open("https://calendly.com/desmondjr88/outcome-alignment-session", "_blank", "noopener,noreferrer")}
-                className="bg-forest-green hover:bg-forest-green/80 text-ivory font-semibold px-8 border border-transparent hover:border-champagne-gold/20 transition-all" size="lg">
-                <Calendar className="mr-2 h-4 w-4" /> Book Free Consultation
-              </Button>
+              <Link href="/contact">
+                <Button className="bg-forest-green hover:bg-forest-green/80 text-ivory font-semibold px-8 border border-transparent hover:border-champagne-gold/20 transition-all" size="lg">
+                  <ArrowRight className="mr-2 h-4 w-4" /> Book Free Consultation
+                </Button>
+              </Link>
               <Link href="/contact">
                 <Button variant="outline" className="border border-champagne-gold/40 text-champagne-gold hover:bg-champagne-gold/10 hover:border-champagne-gold font-semibold px-8 bg-transparent transition-all" size="lg">
                   Send an Inquiry <ArrowRight className="ml-2 h-4 w-4" />

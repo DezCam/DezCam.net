@@ -85,10 +85,6 @@ export default function ContactSection() {
     }));
   };
 
-  const openCalendly = (url: string) => {
-    window.open(url, '_blank', 'noopener,noreferrer');
-  };
-
   const contactInfo = [
     {
       icon: Mail,
@@ -165,7 +161,7 @@ export default function ContactSection() {
                   This initial call is designed to understand the scope, nature, and goals of your project. Whether you're looking for trading mentorship, a website, or a custom software solution, this session helps align expectations and determine the best path forward. It's a chance for us to clarify your vision and ensure we're the right fit — no commitment required.
                 </p>
                 <Button 
-                  onClick={() => openCalendly('https://calendly.com/desmondjr88/outcome-alignment-session')}
+                  onClick={() => { window.location.href = '/contact'; }}
                   className="bg-pigment-green text-white hover:bg-light-green hover:text-black-olive font-semibold px-6 py-3"
                 >
                   <Calendar className="h-4 w-4 mr-2" />

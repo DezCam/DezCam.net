@@ -70,18 +70,8 @@ export default function ServicesSection() {
     }
   };
 
-  const openCalendly = (url: string) => {
-    window.open(url, '_blank', 'noopener,noreferrer');
-  };
-
-  const handleServiceClick = (serviceIndex: number) => {
-    if (serviceIndex === 0) { // Website Development
-      openCalendly('https://calendly.com/desmondjr88/web-design-development');
-    } else if (serviceIndex === 1) { // Custom Software
-      openCalendly('https://calendly.com/desmondjr88/custom-software-solutions');
-    } else { // Trading Education
-      scrollToContact();
-    }
+  const handleServiceClick = (_serviceIndex: number) => {
+    window.location.href = '/contact';
   };
 
   return (

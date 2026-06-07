@@ -25,6 +25,7 @@ const projects = [
     category: "Product",
     highlight: true,
     link: "https://gratuitypro.io",
+    image: "/images/gratuity-pro-logo.png",
   },
   {
     title: "Mina on the Map",
@@ -137,7 +138,7 @@ export default function Work() {
                     <img
                       src={project.image}
                       alt={project.title}
-                      className={`w-full h-full ${project.image.includes("loyalpup") ? "object-contain p-4" : "object-cover group-hover:scale-105 transition-transform duration-500"}`}
+                      className={`w-full h-full ${project.image.includes("loyalpup") || project.image.includes("gratuity") ? "object-contain p-4 bg-near-black" : "object-cover group-hover:scale-105 transition-transform duration-500"}`}
                     />
                   </div>
                 ) : (

@@ -71,7 +71,7 @@ const mainServices = [
 
 
 const stats = [
-  { value: "1,407%", label: "Trading Return Record" },
+  { value: "53%", label: "Live Trading Return", sub: "$15K → $23K in 4 months" },
   { value: "10+", label: "Projects Delivered" },
   { value: "3", label: "Core Service Areas" },
   { value: "100%", label: "Client Focus" },
@@ -173,6 +173,7 @@ export default function Services() {
               <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: i * 0.1 }} viewport={{ once: true }}>
                 <div className="text-3xl font-bold text-champagne-gold mb-1">{stat.value}</div>
                 <div className="text-soft-gray text-sm">{stat.label}</div>
+                {stat.sub && <div className="text-soft-gray/60 text-xs mt-0.5">{stat.sub}</div>}
               </motion.div>
             ))}
           </div>

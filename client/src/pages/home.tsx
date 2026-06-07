@@ -34,14 +34,14 @@ const services = [
 const credibilityPoints = [
   "UC Berkeley Haas School of Business graduate",
   "Founder — built and operated two businesses from scratch",
-  "1,407% trading return record demonstrating analytical precision",
+  "Grew a live trading account 53% in 4 months through quantitative analysis and disciplined risk management",
   "Full-stack developer with real deployed products",
   "GTM, RevOps, and sales experience across multiple industries",
 ];
 
 const stats = [
   { value: "3", label: "Core Service Areas" },
-  { value: "1,407%", label: "Trading Record" },
+  { value: "53%", label: "Live Trading Return", sub: "$15K → $23K in 4 months" },
   { value: "10+", label: "Years Experience" },
   { value: "100%", label: "Client Focus" },
 ];
@@ -127,6 +127,7 @@ export default function Home() {
               >
                 <div className="text-3xl md:text-4xl font-bold text-champagne-gold mb-1">{stat.value}</div>
                 <div className="text-soft-gray text-sm">{stat.label}</div>
+                {stat.sub && <div className="text-soft-gray/60 text-xs mt-0.5">{stat.sub}</div>}
               </motion.div>
             ))}
           </div>

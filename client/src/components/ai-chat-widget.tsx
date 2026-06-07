@@ -48,8 +48,8 @@ const RESPONSES: Record<string, ResponseData> = {
   },
   trading: {
     message:
-      "Desmond's trading education program is currently in development. Drop your info and you'll be first to know when spots open up.",
-    buttonLabel: "Join the Waitlist",
+      "Interested in learning to trade? Send an inquiry and I'll set you up with a free beginner's lesson to get you started.",
+    buttonLabel: "Send an Inquiry",
     buttonHref: "/contact",
   },
   browsing: {
@@ -99,7 +99,7 @@ export default function AIChatWidget() {
       <AnimatePresence>
         {showSpeechBubble && !isOpen && (
           <motion.div
-            className="fixed bottom-[104px] right-[24px] z-40"
+            className="fixed bottom-[170px] right-[24px] z-40"
             initial={{ opacity: 0, scale: 0.8, y: 10 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 10 }}
@@ -119,7 +119,7 @@ export default function AIChatWidget() {
 
       {/* Chat Button */}
       <motion.div
-        className="fixed bottom-6 right-6 z-50"
+        className="fixed bottom-[90px] right-6 z-50"
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ delay: 2, type: "spring", stiffness: 260, damping: 20 }}
@@ -146,7 +146,7 @@ export default function AIChatWidget() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed bottom-24 right-6 z-50 w-[380px] max-w-[calc(100vw-3rem)] rounded-xl shadow-2xl overflow-hidden"
+            className="fixed bottom-[178px] right-6 z-50 w-[380px] max-w-[calc(100vw-3rem)] max-h-[calc(100vh-220px)] rounded-xl shadow-2xl overflow-y-auto"
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}

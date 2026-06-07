@@ -42,6 +42,7 @@ const projects = [
     status: "Concept",
     category: "Product",
     link: "https://home-base-4spc.vercel.app/",
+    image: "/images/homebase-logo.png",
   },
   {
     title: "Del Amo Card Gallery",
@@ -138,7 +139,7 @@ export default function Work() {
                     <img
                       src={project.image}
                       alt={project.title}
-                      className={`w-full h-full ${project.image.includes("loyalpup") || project.image.includes("gratuity") ? "object-contain p-4 bg-near-black" : "object-cover group-hover:scale-105 transition-transform duration-500"}`}
+                      className={`w-full h-full ${project.image.includes("loyalpup") || project.image.includes("gratuity") || project.image.includes("homebase") ? "object-contain p-4" : "object-cover group-hover:scale-105 transition-transform duration-500"}`}
                     />
                   </div>
                 ) : (

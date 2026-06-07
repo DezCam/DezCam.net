@@ -47,7 +47,7 @@ const projects = [
   },
   {
     title: "Del Amo Card Gallery",
-    description: "An online marketplace for buying, selling, and trading sports and collectible cards. Built for the local Del Amo community with a clean interface for browsing inventory and connecting buyers with sellers.",
+    description: "A personal trading card marketplace rooted in Carson, CA — where my collector's journey began. Features Basketball, Pokémon, and One Piece cards. Currently in active development — more features shipping soon.",
     skills: ["Full-Stack Dev", "Marketplace Design", "React"],
     status: "Live",
     category: "Website",

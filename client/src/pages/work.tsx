@@ -17,12 +17,13 @@ const projects = [
     highlight: true,
   },
   {
-    title: "Gratuitous",
+    title: "Gratuity Pro",
     description: "A premium tip-tracking web app for service industry professionals. Built to replace paper tip logs and spreadsheets with a clean, fast interface for logging and analyzing income.",
     skills: ["Full-Stack Dev", "UX Design", "React"],
     status: "In Development",
     category: "Software",
     highlight: true,
+    link: "https://gratuitypro.io",
   },
   {
     title: "Mina on the Map",

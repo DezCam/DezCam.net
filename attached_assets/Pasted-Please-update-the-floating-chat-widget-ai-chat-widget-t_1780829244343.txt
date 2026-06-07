@@ -1,0 +1,66 @@
+Please update the floating chat widget (ai-chat-widget.tsx or 
+similar component) to function as an intake pre-qualifier. 
+Remove all previous menu options and replace with the following 
+focused conversation flow:
+
+OPENING MESSAGE:
+"Hey! Looking for help with something specific? 
+Let me point you in the right direction."
+
+STEP 1 — Show these quick-tap button options:
+- RevOps / Workflow cleanup
+- Custom software or website
+- AI automation
+- Market research
+- Trading education
+- Just browsing
+
+STEP 2 — Based on their selection, respond as follows:
+
+If "RevOps / Workflow cleanup":
+Message: "Sounds like a great fit. Desmond specializes in 
+cleaning up workflows and building better revenue systems. 
+Fill out a quick inquiry and he'll follow up within 
+1 business day."
+Button: "Send an Inquiry" → links to /contact
+
+If "Custom software or website":
+Message: "Perfect. Desmond builds custom web apps, internal 
+tools, and business websites from scratch. Fill out a quick 
+inquiry and he'll follow up within 1 business day."
+Button: "Send an Inquiry" → links to /contact
+
+If "AI automation":
+Message: "Great choice. Desmond builds custom AI agents that 
+handle intake, research, and workflow automation. Fill out 
+a quick inquiry and he'll follow up within 1 business day."
+Button: "Send an Inquiry" → links to /contact
+
+If "Market research":
+Message: "Got it. Desmond delivers competitor analysis, 
+customer discovery, and market strategy. Fill out a quick 
+inquiry and he'll follow up within 1 business day."
+Button: "Send an Inquiry" → links to /contact
+
+If "Trading education":
+Message: "Desmond's trading education program is currently 
+in development. Drop your info and you'll be first to know 
+when spots open up."
+Button: "Join the Waitlist" → links to /contact
+
+If "Just browsing":
+Message: "No problem — take your time. The Work page shows 
+recent projects if you want to see what's been built."
+Button: "View Work" → links to /work
+
+GENERAL REQUIREMENTS:
+1. Remove the Calendly reference and any previous menu options 
+   entirely
+2. The widget should reset back to Step 1 if the visitor 
+   wants to start over — add a subtle "Start over" text link 
+   after Step 2
+3. Keep the existing widget position and styling — 
+   just update the content and flow
+4. The widget avatar/icon should remain as-is
+
+Show me the updated component file when done, then redeploy.

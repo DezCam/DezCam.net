@@ -38,8 +38,8 @@ export default function Navigation() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link href="/" className="font-bold text-xl text-ivory hover:text-champagne-gold transition-colors tracking-tight">
-            DezCam<span className="text-champagne-gold">.</span>
+          <Link href="/" className="font-bold text-xl transition-colors tracking-tight" style={{ color: "#399A4B" }}>
+            DezCam<span style={{ color: "#8DD783" }}>.</span>
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">

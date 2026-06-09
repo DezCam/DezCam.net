@@ -151,9 +151,20 @@ export default function Work() {
                     <Badge className={`text-xs font-medium ${categoryStyle[project.category] || "bg-soft-gray text-near-black"}`}>
                       {project.category}
                     </Badge>
-                    <span className={`text-xs font-medium border rounded-full px-2.5 py-0.5 ${statusStyle[project.status] || "text-graphite border-graphite/30"}`}>
-                      {project.status}
-                    </span>
+                    {project.status === "Live" && project.link ? (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`text-xs font-medium border rounded-full px-2.5 py-0.5 cursor-pointer transition-colors duration-150 ${statusStyle[project.status]} hover:border-[#399A4B] hover:text-[#399A4B]`}
+                      >
+                        {project.status}
+                      </a>
+                    ) : (
+                      <span className={`text-xs font-medium border rounded-full px-2.5 py-0.5 ${statusStyle[project.status] || "text-graphite border-graphite/30"}`}>
+                        {project.status}
+                      </span>
+                    )}
                   </div>
                   <h3 className="text-base font-bold text-near-black mb-2 leading-snug">{project.title}</h3>
                   <p className="text-graphite text-sm leading-relaxed mb-4">{project.description}</p>

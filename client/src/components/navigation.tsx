@@ -70,9 +70,12 @@ export default function Navigation() {
               variant="ghost"
               size="sm"
               onClick={() => setIsOpen(!isOpen)}
-              className="text-soft-gray hover:text-ivory hover:bg-graphite"
+              className="hover:bg-transparent group"
+              style={{ backgroundColor: "rgba(61,66,64,0.08)" }}
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen
+                ? <X className="h-6 w-6 transition-colors duration-200 group-hover:text-[#8DD783]" style={{ color: "#399A4B" }} />
+                : <Menu className="h-6 w-6 transition-colors duration-200 group-hover:text-[#8DD783]" style={{ color: "#399A4B" }} />}
             </Button>
           </div>
         </div>

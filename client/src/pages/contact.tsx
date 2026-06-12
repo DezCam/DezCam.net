@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Calendar, Linkedin, CheckCircle2 } from "lucide-react";
+import { MapPin, Calendar, Linkedin, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -33,8 +33,6 @@ const serviceOptions = [
 ];
 
 const contactInfo = [
-  { icon: Mail, label: "Email", value: "Desmondjr88@gmail.com", href: "mailto:Desmondjr88@gmail.com" },
-  { icon: Phone, label: "Phone", value: "(310) 995-2476", href: "tel:+13109952476" },
   { icon: MapPin, label: "Location", value: "Folsom, CA", href: null },
 ];
 

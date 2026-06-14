@@ -72,7 +72,7 @@ export default function HeroSection() {
           >
             <div className="relative">
               {/* Gold ring frame */}
-              <div className="w-80 h-80 rounded-full overflow-hidden shadow-2xl ring-2 ring-champagne-gold/30 ring-offset-4 ring-offset-near-black">
+              <div className="w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden shadow-2xl ring-2 ring-champagne-gold/30 ring-offset-4 ring-offset-near-black">
                 <img
                   src="/images/profile-haas.jpg"
                   alt="Desmond Campbell at UC Berkeley Haas School of Business"

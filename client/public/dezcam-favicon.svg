@@ -1,6 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
-  <title>DezCam Split D favicon</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <circle cx="256" cy="256" r="230" fill="#0B1110"/>
-  <rect x="126" y="88" width="78" height="336" rx="18" fill="#399A4B"/>
-  <path fill="#F5F5F5" fill-rule="evenodd" d="M204 88h90c94 0 158 70 158 168S388 424 294 424h-90v-78h88c50 0 84-36 84-90s-34-90-84-90h-88V88z"/>
+  <path fill="#F5F5F5" fill-rule="evenodd" d="M 202,81 A 175,175 0 0,1 202,431 Z M 202,156 A 100,100 0 0,1 202,356 Z"/>
+  <rect x="134" y="81" width="68" height="350" rx="8" fill="#399A4B"/>
 </svg>

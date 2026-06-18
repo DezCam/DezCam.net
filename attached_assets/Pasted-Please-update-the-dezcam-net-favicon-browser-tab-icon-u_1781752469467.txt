@@ -1,0 +1,65 @@
+Please update the dezcam.net favicon/browser tab icon using a premium simplified version of the DezCam “DC” monogram.
+
+Goal:
+I want the favicon to feel premium, clean, and professional — similar in clarity to Gmail, Google Docs, Google Slides, and Google Search tabs — but still native to the DezCam brand.
+
+Use Option B:
+A dark circular app-style icon with the simplified DC monogram centered inside.
+
+Design direction:
+
+* Use the DezCam DC monogram only.
+* White “D”
+* Green “C”
+* Deep charcoal / near-black circular background.
+* The circle should feel premium and polished, but not overly detailed.
+* The DC should be large, centered, and readable at small favicon sizes.
+* Keep the icon high contrast.
+* Match the DezCam brand palette:
+    * Dark charcoal / black olive background: #0B1110, #101815, or close to #3D4240
+    * Green accent: close to #399A4B
+    * White/off-white for the D
+
+Avoid:
+
+* No “DezCam” wordmark.
+* No tagline.
+* No tiny text.
+* No service icons.
+* No heavy glow.
+* No complex shadows.
+* No detailed background texture.
+* No full logo/banner image.
+* No avatar/sunglasses icon.
+
+Important sizing rules:
+
+* The DC monogram should fill about 75–85% of the favicon canvas.
+* Keep enough padding so the letters do not touch the edge.
+* The 16x16 and 32x32 versions must be readable.
+* If the monogram becomes too detailed at 16x16, simplify the shapes further while preserving the white D and green C relationship.
+
+Please create/replace these favicon files:
+
+* favicon.ico
+* favicon-16x16.png
+* favicon-32x32.png
+* apple-touch-icon.png
+* android-chrome-192x192.png
+* android-chrome-512x512.png
+
+Please update the correct project files:
+
+* If this is Vite/React, update index.html favicon links.
+* If this is Next.js, update app metadata, app/icon files, or public favicon references.
+* If there is a site.webmanifest, update it to reference the new favicon assets.
+
+Expected result:
+When someone visits dezcam.net, the browser tab should show a crisp premium circular DezCam DC icon: white D, green C, dark circular background. It should look clean and professional next to Gmail, Google Docs, Google Slides, and Google Search tabs.
+
+Please confirm:
+
+1. Which favicon files were created or replaced.
+2. Where the files were placed.
+3. Which metadata/index/manifest files were updated.
+4. Whether the old avatar/detailed favicon references were fully removed.

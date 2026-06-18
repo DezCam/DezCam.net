@@ -1,5 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <circle cx="256" cy="256" r="236" fill="#0B1110"/>
-  <path fill="#F5F5F5" fill-rule="evenodd" d="M 211,74 A 182,182 0 0,1 211,438 Z M 211,176 A 80,80 0 0,1 211,336 Z"/>
-  <rect x="119" y="74" width="92" height="364" rx="8" fill="#399A4B"/>
+  <defs>
+    <radialGradient id="bg" cx="42%" cy="36%" r="78%">
+      <stop offset="0%" stop-color="#1b2723"/>
+      <stop offset="100%" stop-color="#0B1110"/>
+    </radialGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8DD783"/>
+      <stop offset="55%" stop-color="#4FB05E"/>
+      <stop offset="100%" stop-color="#399A4B"/>
+    </linearGradient>
+    <linearGradient id="white" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#E9ECEA"/>
+    </linearGradient>
+    <clipPath id="dclip">
+      <path d="M132,108 L232,108 A148,148 0 0 1 232,404 L132,404 Z"/>
+    </clipPath>
+  </defs>
+  <circle cx="256" cy="256" r="236" fill="url(#bg)"/>
+  <path fill="url(#white)" fill-rule="evenodd"
+        d="M132,108 L232,108 A148,148 0 0 1 232,404 L132,404 Z
+           M206,182 L232,182 A74,74 0 0 1 232,330 L206,330 Z"/>
+  <g clip-path="url(#dclip)">
+    <rect x="132" y="100" width="74" height="320" fill="url(#green)"/>
+  </g>
 </svg>

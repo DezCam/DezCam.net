@@ -1,0 +1,105 @@
+Please revise the DezCam favicon. The current favicon is technically a split-D, but it does not visually line up with the intended Option 8A concept.
+
+Current issue:
+- The favicon appears too small in the browser tab.
+- The green vertical bar dominates, while the white D curve is too subtle.
+- The dark circle has too much empty space.
+- The mark looks like a small green/white sliver instead of a clear bold “D.”
+- At tab size, it does not feel as clean or readable as Gmail/Google-style favicons.
+
+Goal:
+Create a stronger, bolder, more readable Option 8A split-D favicon.
+
+Reference concept:
+Option 8A should look like:
+- Dark circular background
+- Large split-D mark centered inside
+- Thick green vertical bar on the left
+- Large bold white curved D-shape on the right
+- The overall mark should clearly read as a capital “D” even at 16x16 and 32x32
+
+Important design corrections:
+1. Make the split-D mark much larger.
+   - The mark should fill about 85–90% of the dark circle’s usable space.
+   - Reduce empty padding inside the circle.
+
+2. Make the white D curve bolder and more visible.
+   - The white curved shape should be at least as visually dominant as the green bar.
+   - It should not look like a thin crescent.
+
+3. Make the green bar wider and simpler.
+   - Use a solid vertical rectangle or slightly rounded rectangle.
+   - It should feel like the left stem of a capital D.
+
+4. The final symbol should read as one simple “D.”
+   - Green vertical stem + white curved right bowl.
+   - Avoid making it look like two disconnected shapes.
+
+5. Keep the design flat and crisp.
+   - No gradients.
+   - No shadows.
+   - No glow.
+   - No texture.
+   - No thin outlines.
+   - No small details.
+
+Brand colors:
+- Background circle: #0B1110
+- Green bar: #399A4B
+- White D curve: #F5F5F5 or #FFFFFF
+
+Suggested SVG geometry:
+- Canvas/viewBox: 0 0 512 512
+- Dark circle:
+  - cx: 256
+  - cy: 256
+  - r: 236
+  - fill: #0B1110
+
+- Green vertical stem:
+  - x: 142
+  - y: 128
+  - width: 78
+  - height: 256
+  - fill: #399A4B
+  - rx: 6 or 8
+
+- White D bowl:
+  Create a bold right-side D shape that starts near x=215 and curves to the right.
+  It should occupy roughly:
+  - left x: 205
+  - right x: 380
+  - top y: 128
+  - bottom y: 384
+
+  The white shape should be a thick curved vertical bowl, not a thin crescent.
+  It should look like the right half of a bold capital D.
+
+Simple approach:
+Use an SVG path for the white D bowl, similar to a thick curved “)” shape with squared/clean ends, or use a compound path that creates the outer D curve and inner counter.
+
+Visual target:
+At 32x32, the favicon should look like a clear dark circle containing a green-left/white-right capital D.
+At 16x16, it should still read as a bold green-and-white D mark, not as a tiny slash.
+
+Please replace/regenerate the entire favicon set from this revised SVG:
+- client/public/dezcam-favicon.svg
+- client/public/favicon.ico
+- client/public/favicon-16x16.png
+- client/public/favicon-32x32.png
+- client/public/apple-touch-icon.png
+- client/public/android-chrome-192x192.png
+- client/public/android-chrome-512x512.png
+
+Update references with a new cache-busting version:
+- Use ?v=4 or ?v=5 on favicon links in client/index.html
+- Update site.webmanifest if needed
+
+Before committing:
+1. Show me the revised SVG.
+2. Confirm the icon is visibly larger than the current one.
+3. Confirm favicon-16x16.png and favicon-32x32.png are readable.
+4. Confirm favicon-32x32.png and apple-touch-icon.png are not old assets.
+5. Confirm only favicon-related files changed.
+
+Do not change website content, navigation, layout, styling, copy, routes, or any non-favicon files.

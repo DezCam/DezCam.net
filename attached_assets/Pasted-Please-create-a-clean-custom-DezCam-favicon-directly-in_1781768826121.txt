@@ -1,0 +1,120 @@
+Please create a clean custom DezCam favicon directly inside this Replit project.
+
+Goal:
+Create and implement the DezCam “Option 8A” favicon.
+
+This should be a favicon-native design, not a full logo. It needs to look clean, sharp, and readable in a browser tab like Gmail, Google Docs, Vercel, GitHub, and other professional web apps.
+
+Design concept: Option 8A “Classic Split D”
+
+* Dark circular background
+* Minimal split-D symbol centered inside
+* Left side of the D is a bold vertical green bar
+* Right side of the D is a bold white/off-white curved D shape
+* Together, the green bar and white curve should clearly read as a capital “D”
+* It should be flat, clean, high-contrast, and not watered down
+
+Brand colors:
+
+* Background near-black: #0B1110
+* Optional charcoal: #3D4240
+* Primary DezCam green: #399A4B
+* White/off-white: #F5F5F5 or #FFFFFF
+
+Design requirements:
+
+* Use a 512x512 SVG as the source/master file.
+* The dark circle should fill most of the square canvas.
+* The split-D mark should fill about 75–85% of the circle.
+* The green vertical bar should be thick enough to remain visible at 16x16.
+* The white D curve should be bold enough to remain readable at 16x16.
+* Use simple geometric vector shapes.
+* No text.
+* No “DezCam” wordmark.
+* No tagline.
+* No “DC” monogram.
+* No avatar icon.
+* No gradients.
+* No shadows.
+* No glow.
+* No texture.
+* No thin strokes.
+* No old favicon assets.
+
+Suggested SVG geometry:
+
+* Canvas/viewBox: 0 0 512 512
+* Background circle:
+    * cx: 256
+    * cy: 256
+    * r: about 230
+    * fill: #0B1110
+* Green vertical bar:
+    * x: around 160
+    * y: around 150
+    * width: around 58–70
+    * height: around 212–230
+    * fill: #399A4B
+    * slight corner radius is okay, but keep it simple
+* White D curve:
+    * Should sit to the right of the green bar
+    * Should form the curved/right portion of a capital D
+    * Use a bold, simple path or shape
+    * Fill: #F5F5F5
+    * The inside counter/open space must remain visible at small sizes
+    * Avoid thin outlines or complicated curves
+
+Important visual note:
+The final icon should look close to the Option 8A concept: dark circle, green vertical split on the left, white D curve on the right. It should look bolder and cleaner than the current /dezcam-favicon.svg, which appears too watered down.
+
+Please create/replace the complete favicon set:
+
+* client/public/dezcam-favicon.svg
+* client/public/favicon.ico
+* client/public/favicon-16x16.png
+* client/public/favicon-32x32.png
+* client/public/apple-touch-icon.png
+* client/public/android-chrome-192x192.png
+* client/public/android-chrome-512x512.png
+* client/public/site.webmanifest
+
+Please make sure these files all use the same new Option 8A favicon design:
+
+* /dezcam-favicon.svg
+* /favicon.ico
+* /favicon-16x16.png
+* /favicon-32x32.png
+* /apple-touch-icon.png
+* /android-chrome-192x192.png
+* /android-chrome-512x512.png
+
+Update client/index.html favicon references:
+Use cache-busting query strings so browsers stop showing old favicons:
+
+<link rel="icon" type="image/svg+xml" href="/dezcam-favicon.svg?v=4" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=4" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=4" />
+<link rel="shortcut icon" href="/favicon.ico?v=4" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=4" />
+<link rel="manifest" href="/site.webmanifest?v=4" />
+
+Update site.webmanifest:
+Make sure it references only the new icons, also with v=4 if appropriate:
+
+* /android-chrome-192x192.png?v=4
+* /android-chrome-512x512.png?v=4
+
+Critical:
+Do not change the website content, layout, copy, routing, services, styling, or navigation. Only work on favicon files and favicon references.
+
+Before committing, please confirm:
+
+1. You created the Option 8A favicon as a clean SVG.
+2. You regenerated all PNG/ICO favicon files from the new SVG.
+3. /favicon-32x32.png and /apple-touch-icon.png no longer show the old favicon.
+4. client/index.html references the v=4 favicon files.
+5. site.webmanifest references only the new icons.
+6. No old avatar/DC/favicon references remain.
+
+After confirming, commit and push only favicon-related changes with this message:
+“Create clean Option 8A split-D favicon”
